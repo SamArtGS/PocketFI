@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		545AF2B026CD7787003C7CEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2AF26CD7787003C7CEC /* AppDelegate.swift */; };
+		545AF2B226CD7787003C7CEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2B126CD7787003C7CEC /* SceneDelegate.swift */; };
+		545AF2B426CD7787003C7CEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2B326CD7787003C7CEC /* ViewController.swift */; };
+		545AF2B726CD7787003C7CEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545AF2B526CD7787003C7CEC /* Main.storyboard */; };
+		545AF2B926CD7789003C7CEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545AF2B826CD7789003C7CEC /* Assets.xcassets */; };
+		545AF2BC26CD7789003C7CEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545AF2BA26CD7789003C7CEC /* LaunchScreen.storyboard */; };
+		545AF2C726CD778A003C7CEC /* PocketFITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2C626CD778A003C7CEC /* PocketFITests.swift */; };
+		545AF2D226CD778A003C7CEC /* PocketFIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2D126CD778A003C7CEC /* PocketFIUITests.swift */; };
+		545AF2E526CDA877003C7CEC /* FacultadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2E426CDA877003C7CEC /* FacultadViewController.swift */; };
+		545AF2E726CDA88E003C7CEC /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2E626CDA88E003C7CEC /* PerfilViewController.swift */; };
+		545AF2E926CDA89A003C7CEC /* ClasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2E826CDA89A003C7CEC /* ClasesViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		545AF2C326CD778A003C7CEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 545AF2A426CD7787003C7CEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 545AF2AB26CD7787003C7CEC;
+			remoteInfo = PocketFI;
+		};
+		545AF2CE26CD778A003C7CEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 545AF2A426CD7787003C7CEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 545AF2AB26CD7787003C7CEC;
+			remoteInfo = PocketFI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		545AF2AC26CD7787003C7CEC /* PocketFI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketFI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		545AF2AF26CD7787003C7CEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		545AF2B126CD7787003C7CEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		545AF2B326CD7787003C7CEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		545AF2B626CD7787003C7CEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		545AF2B826CD7789003C7CEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		545AF2BB26CD7789003C7CEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		545AF2BD26CD7789003C7CEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		545AF2C226CD778A003C7CEC /* PocketFITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketFITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		545AF2C626CD778A003C7CEC /* PocketFITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketFITests.swift; sourceTree = "<group>"; };
+		545AF2C826CD778A003C7CEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		545AF2CD26CD778A003C7CEC /* PocketFIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketFIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		545AF2D126CD778A003C7CEC /* PocketFIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketFIUITests.swift; sourceTree = "<group>"; };
+		545AF2D326CD778A003C7CEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		545AF2E426CDA877003C7CEC /* FacultadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultadViewController.swift; sourceTree = "<group>"; };
+		545AF2E626CDA88E003C7CEC /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		545AF2E826CDA89A003C7CEC /* ClasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClasesViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		545AF2A926CD7787003C7CEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		545AF2BF26CD778A003C7CEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		545AF2CA26CD778A003C7CEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		545AF2A326CD7787003C7CEC = {
+			isa = PBXGroup;
+			children = (
+				545AF2AE26CD7787003C7CEC /* PocketFI */,
+				545AF2C526CD778A003C7CEC /* PocketFITests */,
+				545AF2D026CD778A003C7CEC /* PocketFIUITests */,
+				545AF2AD26CD7787003C7CEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		545AF2AD26CD7787003C7CEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				545AF2AC26CD7787003C7CEC /* PocketFI.app */,
+				545AF2C226CD778A003C7CEC /* PocketFITests.xctest */,
+				545AF2CD26CD778A003C7CEC /* PocketFIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		545AF2AE26CD7787003C7CEC /* PocketFI */ = {
+			isa = PBXGroup;
+			children = (
+				545AF2E326CD80E5003C7CEC /* New Group */,
+				545AF2E226CD80B8003C7CEC /* Extension */,
+				545AF2E126CD788D003C7CEC /* Controller */,
+				545AF2E026CD787A003C7CEC /* View */,
+				545AF2DF26CD786A003C7CEC /* Network */,
+				545AF2AF26CD7787003C7CEC /* AppDelegate.swift */,
+				545AF2B126CD7787003C7CEC /* SceneDelegate.swift */,
+				545AF2B326CD7787003C7CEC /* ViewController.swift */,
+				545AF2B526CD7787003C7CEC /* Main.storyboard */,
+				545AF2B826CD7789003C7CEC /* Assets.xcassets */,
+				545AF2BA26CD7789003C7CEC /* LaunchScreen.storyboard */,
+				545AF2BD26CD7789003C7CEC /* Info.plist */,
+			);
+			path = PocketFI;
+			sourceTree = "<group>";
+		};
+		545AF2C526CD778A003C7CEC /* PocketFITests */ = {
+			isa = PBXGroup;
+			children = (
+				545AF2C626CD778A003C7CEC /* PocketFITests.swift */,
+				545AF2C826CD778A003C7CEC /* Info.plist */,
+			);
+			path = PocketFITests;
+			sourceTree = "<group>";
+		};
+		545AF2D026CD778A003C7CEC /* PocketFIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				545AF2D126CD778A003C7CEC /* PocketFIUITests.swift */,
+				545AF2D326CD778A003C7CEC /* Info.plist */,
+			);
+			path = PocketFIUITests;
+			sourceTree = "<group>";
+		};
+		545AF2DF26CD786A003C7CEC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		545AF2E026CD787A003C7CEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		545AF2E126CD788D003C7CEC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				545AF2E426CDA877003C7CEC /* FacultadViewController.swift */,
+				545AF2E826CDA89A003C7CEC /* ClasesViewController.swift */,
+				545AF2E626CDA88E003C7CEC /* PerfilViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		545AF2E226CD80B8003C7CEC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		545AF2E326CD80E5003C7CEC /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		545AF2AB26CD7787003C7CEC /* PocketFI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 545AF2D626CD778A003C7CEC /* Build configuration list for PBXNativeTarget "PocketFI" */;
+			buildPhases = (
+				545AF2A826CD7787003C7CEC /* Sources */,
+				545AF2A926CD7787003C7CEC /* Frameworks */,
+				545AF2AA26CD7787003C7CEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PocketFI;
+			productName = PocketFI;
+			productReference = 545AF2AC26CD7787003C7CEC /* PocketFI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		545AF2C126CD778A003C7CEC /* PocketFITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 545AF2D926CD778A003C7CEC /* Build configuration list for PBXNativeTarget "PocketFITests" */;
+			buildPhases = (
+				545AF2BE26CD778A003C7CEC /* Sources */,
+				545AF2BF26CD778A003C7CEC /* Frameworks */,
+				545AF2C026CD778A003C7CEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				545AF2C426CD778A003C7CEC /* PBXTargetDependency */,
+			);
+			name = PocketFITests;
+			productName = PocketFITests;
+			productReference = 545AF2C226CD778A003C7CEC /* PocketFITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		545AF2CC26CD778A003C7CEC /* PocketFIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 545AF2DC26CD778A003C7CEC /* Build configuration list for PBXNativeTarget "PocketFIUITests" */;
+			buildPhases = (
+				545AF2C926CD778A003C7CEC /* Sources */,
+				545AF2CA26CD778A003C7CEC /* Frameworks */,
+				545AF2CB26CD778A003C7CEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				545AF2CF26CD778A003C7CEC /* PBXTargetDependency */,
+			);
+			name = PocketFIUITests;
+			productName = PocketFIUITests;
+			productReference = 545AF2CD26CD778A003C7CEC /* PocketFIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		545AF2A426CD7787003C7CEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					545AF2AB26CD7787003C7CEC = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					545AF2C126CD778A003C7CEC = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 545AF2AB26CD7787003C7CEC;
+					};
+					545AF2CC26CD778A003C7CEC = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 545AF2AB26CD7787003C7CEC;
+					};
+				};
+			};
+			buildConfigurationList = 545AF2A726CD7787003C7CEC /* Build configuration list for PBXProject "PocketFI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 545AF2A326CD7787003C7CEC;
+			productRefGroup = 545AF2AD26CD7787003C7CEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				545AF2AB26CD7787003C7CEC /* PocketFI */,
+				545AF2C126CD778A003C7CEC /* PocketFITests */,
+				545AF2CC26CD778A003C7CEC /* PocketFIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		545AF2AA26CD7787003C7CEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545AF2BC26CD7789003C7CEC /* LaunchScreen.storyboard in Resources */,
+				545AF2B926CD7789003C7CEC /* Assets.xcassets in Resources */,
+				545AF2B726CD7787003C7CEC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		545AF2C026CD778A003C7CEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		545AF2CB26CD778A003C7CEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		545AF2A826CD7787003C7CEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545AF2B426CD7787003C7CEC /* ViewController.swift in Sources */,
+				545AF2B026CD7787003C7CEC /* AppDelegate.swift in Sources */,
+				545AF2E526CDA877003C7CEC /* FacultadViewController.swift in Sources */,
+				545AF2B226CD7787003C7CEC /* SceneDelegate.swift in Sources */,
+				545AF2E726CDA88E003C7CEC /* PerfilViewController.swift in Sources */,
+				545AF2E926CDA89A003C7CEC /* ClasesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		545AF2BE26CD778A003C7CEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545AF2C726CD778A003C7CEC /* PocketFITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		545AF2C926CD778A003C7CEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				545AF2D226CD778A003C7CEC /* PocketFIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		545AF2C426CD778A003C7CEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 545AF2AB26CD7787003C7CEC /* PocketFI */;
+			targetProxy = 545AF2C326CD778A003C7CEC /* PBXContainerItemProxy */;
+		};
+		545AF2CF26CD778A003C7CEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 545AF2AB26CD7787003C7CEC /* PocketFI */;
+			targetProxy = 545AF2CE26CD778A003C7CEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		545AF2B526CD7787003C7CEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				545AF2B626CD7787003C7CEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		545AF2BA26CD7789003C7CEC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				545AF2BB26CD7789003C7CEC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		545AF2D426CD778A003C7CEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		545AF2D526CD778A003C7CEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		545AF2D726CD778A003C7CEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FDTCRD4BVY;
+				INFOPLIST_FILE = PocketFI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.garridomaceda.PocketFI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		545AF2D826CD778A003C7CEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FDTCRD4BVY;
+				INFOPLIST_FILE = PocketFI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.garridomaceda.PocketFI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		545AF2DA26CD778A003C7CEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FDTCRD4BVY;
+				INFOPLIST_FILE = PocketFITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.garridomaceda.PocketFITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketFI.app/PocketFI";
+			};
+			name = Debug;
+		};
+		545AF2DB26CD778A003C7CEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FDTCRD4BVY;
+				INFOPLIST_FILE = PocketFITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.garridomaceda.PocketFITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PocketFI.app/PocketFI";
+			};
+			name = Release;
+		};
+		545AF2DD26CD778A003C7CEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FDTCRD4BVY;
+				INFOPLIST_FILE = PocketFIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.garridomaceda.PocketFIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PocketFI;
+			};
+			name = Debug;
+		};
+		545AF2DE26CD778A003C7CEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FDTCRD4BVY;
+				INFOPLIST_FILE = PocketFIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.garridomaceda.PocketFIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PocketFI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		545AF2A726CD7787003C7CEC /* Build configuration list for PBXProject "PocketFI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				545AF2D426CD778A003C7CEC /* Debug */,
+				545AF2D526CD778A003C7CEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		545AF2D626CD778A003C7CEC /* Build configuration list for PBXNativeTarget "PocketFI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				545AF2D726CD778A003C7CEC /* Debug */,
+				545AF2D826CD778A003C7CEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		545AF2D926CD778A003C7CEC /* Build configuration list for PBXNativeTarget "PocketFITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				545AF2DA26CD778A003C7CEC /* Debug */,
+				545AF2DB26CD778A003C7CEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		545AF2DC26CD778A003C7CEC /* Build configuration list for PBXNativeTarget "PocketFIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				545AF2DD26CD778A003C7CEC /* Debug */,
+				545AF2DE26CD778A003C7CEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 545AF2A426CD7787003C7CEC /* Project object */;
+}
