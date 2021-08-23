@@ -13,14 +13,24 @@ class FacultyCollectionViewCell: UICollectionViewCell {
     var element: FacultyElement? {
         didSet{
             guard let unwrap = element else { return }
-            box.backgroundColor = unwrap.color
+            
+            if unwrap.labelText == "Mapa"{
+                let imageView = UIImageView(image: UIImage(named: "mapBackground"))
+                imageView.translatesAutoresizingMaskIntoConstraints = false
+                imageView.contentMode = .scaleToFill
+                imageView.clipsToBounds = true
+                imageView.layer.cornerRadius = 30
+                box = imageView
+            }else{
+                box.backgroundColor = unwrap.color
+            }
             imageicon.image = unwrap.image
             textTopic.text = unwrap.labelText
         }
     }
     
     
-    private let box: UIView = {
+    private var box: UIView = {
         let view = UIView()
         view.contentMode = .scaleAspectFit
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -56,7 +66,7 @@ class FacultyCollectionViewCell: UICollectionViewCell {
         box.addSubview(textTopic)
         NSLayoutConstraint.activate([
             box.topAnchor.constraint(equalTo: topAnchor,constant: 25),
-            box.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 25),
+            box.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 10),
             box.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -5),
             box.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -5),
             
@@ -64,9 +74,9 @@ class FacultyCollectionViewCell: UICollectionViewCell {
             textTopic.centerYAnchor.constraint(equalTo: box.centerYAnchor),
             
             imageicon.topAnchor.constraint(equalTo: topAnchor),
-            imageicon.leadingAnchor.constraint(equalTo: leadingAnchor),
-            imageicon.heightAnchor.constraint(equalToConstant: 70),
-            imageicon.widthAnchor.constraint(equalToConstant: 70),
+            imageicon.centerXAnchor.constraint(equalTo: centerXAnchor),
+            imageicon.heightAnchor.constraint(equalToConstant: 50),
+            imageicon.widthAnchor.constraint(equalToConstant: 50),
         ])
     }
     

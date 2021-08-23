@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		41C92DC335AC8EA5B9365ED2 /* Pods_PocketFI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9106A40DF4D282C9BF6EEB /* Pods_PocketFI.framework */; };
 		543BB96526D386A1006E8BF6 /* FacultyElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BB96426D386A1006E8BF6 /* FacultyElement.swift */; };
+		543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */; };
 		545AF2B026CD7787003C7CEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2AF26CD7787003C7CEC /* AppDelegate.swift */; };
 		545AF2B226CD7787003C7CEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2B126CD7787003C7CEC /* SceneDelegate.swift */; };
-		545AF2B426CD7787003C7CEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2B326CD7787003C7CEC /* ViewController.swift */; };
 		545AF2B726CD7787003C7CEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545AF2B526CD7787003C7CEC /* Main.storyboard */; };
 		545AF2B926CD7789003C7CEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 545AF2B826CD7789003C7CEC /* Assets.xcassets */; };
 		545AF2BC26CD7789003C7CEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545AF2BA26CD7789003C7CEC /* LaunchScreen.storyboard */; };
@@ -23,6 +23,9 @@
 		545AF2EB26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2EA26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift */; };
 		545AF2EF26CDAC17003C7CEC /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2EE26CDAC17003C7CEC /* ProfileCollectionViewCell.swift */; };
 		545AF2F126CDAC69003C7CEC /* ClassesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2F026CDAC69003C7CEC /* ClassesCollectionViewCell.swift */; };
+		546681E026D425BA0020CEEF /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546681DF26D425BA0020CEEF /* Notifications.swift */; };
+		546681E226D428A60020CEEF /* RoundedByCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546681E126D428A60020CEEF /* RoundedByCorners.swift */; };
+		546681E426D430E40020CEEF /* MapFacultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546681E326D430E40020CEEF /* MapFacultyViewController.swift */; };
 		547AD0AF26D025B400859A7C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AD0AE26D025B400859A7C /* TabBarController.swift */; };
 		547AD0B126D025F700859A7C /* PrincipalTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AD0B026D025F700859A7C /* PrincipalTabBar.swift */; };
 		547AD0B326D0352800859A7C /* NavigationLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AD0B226D0352800859A7C /* NavigationLarge.swift */; };
@@ -48,10 +51,10 @@
 
 /* Begin PBXFileReference section */
 		543BB96426D386A1006E8BF6 /* FacultyElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyElement.swift; sourceTree = "<group>"; };
+		543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowStreckyHeader.swift; sourceTree = "<group>"; };
 		545AF2AC26CD7787003C7CEC /* PocketFI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketFI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		545AF2AF26CD7787003C7CEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		545AF2B126CD7787003C7CEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		545AF2B326CD7787003C7CEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		545AF2B626CD7787003C7CEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		545AF2B826CD7789003C7CEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		545AF2BB26CD7789003C7CEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,6 +71,9 @@
 		545AF2EA26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FacultyCollectionViewCell.swift; path = PocketFI/View/Faculty/FacultyCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		545AF2EE26CDAC17003C7CEC /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		545AF2F026CDAC69003C7CEC /* ClassesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesCollectionViewCell.swift; sourceTree = "<group>"; };
+		546681DF26D425BA0020CEEF /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		546681E126D428A60020CEEF /* RoundedByCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedByCorners.swift; sourceTree = "<group>"; };
+		546681E326D430E40020CEEF /* MapFacultyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFacultyViewController.swift; sourceTree = "<group>"; };
 		547AD0AE26D025B400859A7C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		547AD0B026D025F700859A7C /* PrincipalTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalTabBar.swift; sourceTree = "<group>"; };
 		547AD0B226D0352800859A7C /* NavigationLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLarge.swift; sourceTree = "<group>"; };
@@ -170,7 +176,6 @@
 				545AF2E126CD788D003C7CEC /* Controller */,
 				545AF2AF26CD7787003C7CEC /* AppDelegate.swift */,
 				545AF2B126CD7787003C7CEC /* SceneDelegate.swift */,
-				545AF2B326CD7787003C7CEC /* ViewController.swift */,
 				545AF2B526CD7787003C7CEC /* Main.storyboard */,
 				545AF2B826CD7789003C7CEC /* Assets.xcassets */,
 				545AF2BA26CD7789003C7CEC /* LaunchScreen.storyboard */,
@@ -229,6 +234,7 @@
 		545AF2E226CD80B8003C7CEC /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				546681E126D428A60020CEEF /* RoundedByCorners.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -300,6 +306,9 @@
 			isa = PBXGroup;
 			children = (
 				545AF2E426CDA877003C7CEC /* FacultyViewController.swift */,
+				543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */,
+				546681DF26D425BA0020CEEF /* Notifications.swift */,
+				546681E326D430E40020CEEF /* MapFacultyViewController.swift */,
 			);
 			path = Faculty;
 			sourceTree = "<group>";
@@ -511,7 +520,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				545AF2B426CD7787003C7CEC /* ViewController.swift in Sources */,
+				546681E026D425BA0020CEEF /* Notifications.swift in Sources */,
 				545AF2EB26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift in Sources */,
 				547AD0B126D025F700859A7C /* PrincipalTabBar.swift in Sources */,
 				547AD0AF26D025B400859A7C /* TabBarController.swift in Sources */,
@@ -520,11 +529,14 @@
 				545AF2EF26CDAC17003C7CEC /* ProfileCollectionViewCell.swift in Sources */,
 				545AF2B026CD7787003C7CEC /* AppDelegate.swift in Sources */,
 				545AF2E526CDA877003C7CEC /* FacultyViewController.swift in Sources */,
+				546681E226D428A60020CEEF /* RoundedByCorners.swift in Sources */,
+				543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */,
 				545AF2F126CDAC69003C7CEC /* ClassesCollectionViewCell.swift in Sources */,
 				547AD0B326D0352800859A7C /* NavigationLarge.swift in Sources */,
 				545AF2B226CD7787003C7CEC /* SceneDelegate.swift in Sources */,
 				545AF2E726CDA88E003C7CEC /* ProfileViewController.swift in Sources */,
 				545AF2E926CDA89A003C7CEC /* ClassesViewController.swift in Sources */,
+				546681E426D430E40020CEEF /* MapFacultyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
