@@ -2,7 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZrM-bp-X4S">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -12,7 +15,7 @@
         <!--Perfil-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PocketFI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ProfileViewController" customModule="PocketFI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +30,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ppN-6a-DHp">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="profileCell" id="ppN-6a-DHp">
                                         <rect key="frame" x="0.0" y="250" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sIh-jZ-PQD">
@@ -71,7 +74,7 @@
         <!--Clases-->
         <scene sceneID="xsf-Ad-WA4">
             <objects>
-                <viewController id="ffn-6x-QJ1" sceneMemberID="viewController">
+                <viewController id="ffn-6x-QJ1" customClass="ClassesViewController" customModule="PocketFI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UoP-La-THd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +89,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sp8-QD-nFm">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="classesCell" id="sp8-QD-nFm">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gJc-n6-nnV">
@@ -112,53 +115,70 @@
             </objects>
             <point key="canvasLocation" x="2505.7971014492755" y="518.30357142857144"/>
         </scene>
-        <!--Facultad-->
+        <!--Bienvenido-->
         <scene sceneID="jS0-wO-2WD">
             <objects>
-                <viewController id="THB-jo-dON" sceneMemberID="viewController">
+                <viewController id="THB-jo-dON" customClass="FacultyViewController" customModule="PocketFI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qFj-Qp-kOL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T8s-ao-HzK">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T8s-ao-HzK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8No-bI-jsm">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="50" height="160"/>
-                                    <size key="footerReferenceSize" width="50" height="50"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <size key="itemSize" width="126" height="118"/>
+                                    <size key="headerReferenceSize" width="50" height="207"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="30"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DNS-xQ-JTy">
-                                        <rect key="frame" x="0.0" y="160" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="facultyCell" id="DNS-xQ-JTy" customClass="FacultyCollectionViewCell" customModule="PocketFI" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="217" width="126" height="118"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aP1-v4-8CK">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="126" height="118"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
+                                        <size key="customSize" width="126" height="118"/>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="awc-Dy-60B">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </collectionReusableView>
-                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ntZ-NM-0GQ">
-                                    <rect key="frame" x="0.0" y="288" width="414" height="50"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="welcome" id="LNe-bW-F18" customClass="WelcomeCollectionReusableView" customModule="PocketFI" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B9i-jY-XdV">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="207" id="Jsj-gn-I9B"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="B9i-jY-XdV" secondAttribute="trailing" id="Qco-PS-gyT"/>
+                                        <constraint firstAttribute="bottom" secondItem="B9i-jY-XdV" secondAttribute="bottom" id="eCt-Zz-Z0J"/>
+                                        <constraint firstItem="B9i-jY-XdV" firstAttribute="leading" secondItem="LNe-bW-F18" secondAttribute="leading" id="fIK-RH-xW8"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="imagenWelcome" destination="B9i-jY-XdV" id="zsz-5L-26u"/>
+                                    </connections>
                                 </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CsO-ZS-W7d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="T8s-ao-HzK" firstAttribute="bottom" secondItem="CsO-ZS-W7d" secondAttribute="bottom" id="B7e-TJ-zO8"/>
-                            <constraint firstItem="T8s-ao-HzK" firstAttribute="trailing" secondItem="CsO-ZS-W7d" secondAttribute="trailing" id="Rxu-CB-7Ba"/>
-                            <constraint firstItem="T8s-ao-HzK" firstAttribute="leading" secondItem="CsO-ZS-W7d" secondAttribute="leading" id="Svs-tf-ve5"/>
-                            <constraint firstItem="T8s-ao-HzK" firstAttribute="top" secondItem="CsO-ZS-W7d" secondAttribute="top" id="XQO-Oa-5rP"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Facultad" id="tn7-lD-91W"/>
+                    <navigationItem key="navigationItem" title="Bienvenido" id="tn7-lD-91W">
+                        <barButtonItem key="rightBarButtonItem" id="ru3-7b-ti4">
+                            <imageReference key="image" image="bell.badge.fill" catalog="system" symbolScale="default"/>
+                            <color key="tintColor" name="OroUNAM"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="facultyCollection" destination="T8s-ao-HzK" id="21V-fk-weh"/>
+                        <outlet property="goToNotificationsVC" destination="ru3-7b-ti4" id="Aoz-nW-sUW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Jm-d3-fkR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -167,11 +187,17 @@
         <!--Tab Bar Controller-->
         <scene sceneID="H8A-8N-3BR">
             <objects>
-                <tabBarController id="ZrM-bp-X4S" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c6O-Ee-0Ty">
+                <tabBarController id="ZrM-bp-X4S" customClass="TabBarController" customModule="PocketFI" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="c6O-Ee-0Ty" customClass="PrincipalTabBar" customModule="PocketFI" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="OrangeYellowCrayola"/>
+                        <color key="selectedImageTintColor" name="OroUNAM"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                <color key="value" name="AzulUNAM"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="not-Gj-1jG" kind="relationship" relationship="viewControllers" id="exT-XH-XoH"/>
@@ -187,11 +213,17 @@
         <scene sceneID="GP0-Sg-Msl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bg6-hY-I9v" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="7h3-xK-vMg"/>
+                    <tabBarItem key="tabBarItem" title="" image="Profile" id="7h3-xK-vMg">
+                        <color key="badgeColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="GRY-KU-esz">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="AzulUNAM"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -206,11 +238,17 @@
         <scene sceneID="1Ri-1H-0ir">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r7Y-qP-VDP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="text.book.closed.fill" catalog="system" id="s8f-sZ-8Qt"/>
+                    <tabBarItem key="tabBarItem" title="" image="Class" id="s8f-sZ-8Qt">
+                        <color key="badgeColor" systemColor="systemOrangeColor"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="OZJ-xl-kO2">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="AzulUNAM"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -225,11 +263,22 @@
         <scene sceneID="g9g-8J-bx9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="not-Gj-1jG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="graduationcap.fill" catalog="system" id="Jvp-dS-p2h"/>
+                    <tabBarItem key="tabBarItem" title="" image="Faculty" id="Jvp-dS-p2h">
+                        <color key="badgeColor" name="Emerald"/>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="9G7-wg-NwB">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleAspectFit" largeTitles="YES" id="9G7-wg-NwB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="121"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="AzulUNAM"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="40"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -242,11 +291,27 @@
         </scene>
     </scenes>
     <resources>
-        <image name="graduationcap.fill" catalog="system" width="128" height="108"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="text.book.closed.fill" catalog="system" width="115" height="128"/>
+        <image name="Class" width="37.5" height="37.5"/>
+        <image name="Faculty" width="37.5" height="37.5"/>
+        <image name="Profile" width="37.5" height="37.5"/>
+        <image name="bell.badge.fill" catalog="system" width="128" height="128"/>
+        <namedColor name="AzulUNAM">
+            <color red="0.0" green="0.16862745098039217" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Emerald">
+            <color red="0.26666666666666666" green="0.81176470588235294" blue="0.42352941176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="OrangeYellowCrayola">
+            <color red="1" green="0.81960784313725488" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="OroUNAM">
+            <color red="0.83529411764705885" green="0.62352941176470589" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
