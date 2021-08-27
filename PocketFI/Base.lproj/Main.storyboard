@@ -89,13 +89,29 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="classesCell" id="sp8-QD-nFm">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="classesCell" id="sp8-QD-nFm" customClass="ClassesCollectionViewCell" customModule="PocketFI" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gJc-n6-nnV">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pDn-pX-Lky">
+                                                    <rect key="frame" x="43" y="53.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pDn-pX-Lky" firstAttribute="centerY" secondItem="gJc-n6-nnV" secondAttribute="centerY" id="Eml-g0-zRh"/>
+                                                <constraint firstItem="pDn-pX-Lky" firstAttribute="centerX" secondItem="gJc-n6-nnV" secondAttribute="centerX" id="kl3-3c-LFG"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="textLbl" destination="pDn-pX-Lky" id="dRm-TK-yWx"/>
+                                            <segue destination="Mmh-4a-DTi" kind="show" id="fJZ-ma-LKI"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -110,10 +126,50 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Clases" id="SSm-b6-qgd"/>
+                    <connections>
+                        <outlet property="classesCollectionView" destination="DEu-4b-UYm" id="Le0-JW-9dI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBv-Ew-fut" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2505.7971014492755" y="518.30357142857144"/>
+        </scene>
+        <!--Pencil View Controller-->
+        <scene sceneID="8AV-yw-hkh">
+            <objects>
+                <viewController id="Mmh-4a-DTi" customClass="PencilViewController" customModule="PocketFI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3IV-EP-ruQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bmu-RN-Dhs" customClass="PKCanvasView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fQc-63-7N7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="du5-ex-pSs">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="czd-ip-8i9">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ktb-Xs-Gf6">
+                                <rect key="frame" x="352" y="7" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pencil"/>
+                            </button>
+                            <connections>
+                                <action selector="appearPencil:" destination="Mmh-4a-DTi" id="RLr-we-4aZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="canvasView" destination="Bmu-RN-Dhs" id="4XP-RB-Nrf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H4W-zg-Wwq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3360.8695652173915" y="518.30357142857144"/>
         </scene>
         <!--Bienvenido-->
         <scene sceneID="jS0-wO-2WD">

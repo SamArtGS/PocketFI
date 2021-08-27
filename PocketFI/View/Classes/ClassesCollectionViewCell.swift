@@ -9,4 +9,6 @@ import UIKit
 
 class ClassesCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var textLbl: UILabel!
+    
 }

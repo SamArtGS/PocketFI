@@ -30,6 +30,7 @@
 		547AD0B126D025F700859A7C /* PrincipalTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AD0B026D025F700859A7C /* PrincipalTabBar.swift */; };
 		547AD0B326D0352800859A7C /* NavigationLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AD0B226D0352800859A7C /* NavigationLarge.swift */; };
 		547AD0B726D047B700859A7C /* WelcomeCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AD0B626D047B700859A7C /* WelcomeCollectionReusableView.swift */; };
+		5BE87F9726D8B2C70077F565 /* PencilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE87F9626D8B2C60077F565 /* PencilViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		547AD0B026D025F700859A7C /* PrincipalTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalTabBar.swift; sourceTree = "<group>"; };
 		547AD0B226D0352800859A7C /* NavigationLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLarge.swift; sourceTree = "<group>"; };
 		547AD0B626D047B700859A7C /* WelcomeCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionReusableView.swift; sourceTree = "<group>"; };
+		5BE87F9626D8B2C60077F565 /* PencilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilViewController.swift; sourceTree = "<group>"; };
 		82857213533ED6F75F4FB061 /* Pods-PocketFI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketFI.release.xcconfig"; path = "Target Support Files/Pods-PocketFI/Pods-PocketFI.release.xcconfig"; sourceTree = "<group>"; };
 		DF9106A40DF4D282C9BF6EEB /* Pods_PocketFI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketFI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E663A4D36E6364510D4F6344 /* Pods-PocketFI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketFI.debug.xcconfig"; path = "Target Support Files/Pods-PocketFI/Pods-PocketFI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				545AF2F026CDAC69003C7CEC /* ClassesCollectionViewCell.swift */,
+				5BE87F9626D8B2C60077F565 /* PencilViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				547AD0B126D025F700859A7C /* PrincipalTabBar.swift in Sources */,
 				547AD0AF26D025B400859A7C /* TabBarController.swift in Sources */,
 				547AD0B726D047B700859A7C /* WelcomeCollectionReusableView.swift in Sources */,
+				5BE87F9726D8B2C70077F565 /* PencilViewController.swift in Sources */,
 				543BB96526D386A1006E8BF6 /* FacultyElement.swift in Sources */,
 				545AF2EF26CDAC17003C7CEC /* ProfileCollectionViewCell.swift in Sources */,
 				545AF2B026CD7787003C7CEC /* AppDelegate.swift in Sources */,
