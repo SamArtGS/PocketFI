@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41C92DC335AC8EA5B9365ED2 /* Pods_PocketFI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9106A40DF4D282C9BF6EEB /* Pods_PocketFI.framework */; };
 		543BB96526D386A1006E8BF6 /* FacultyElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BB96426D386A1006E8BF6 /* FacultyElement.swift */; };
 		543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */; };
 		545AF2B026CD7787003C7CEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2AF26CD7787003C7CEC /* AppDelegate.swift */; };
@@ -26,10 +25,14 @@
 		546681E026D425BA0020CEEF /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546681DF26D425BA0020CEEF /* Notifications.swift */; };
 		546681E226D428A60020CEEF /* RoundedByCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546681E126D428A60020CEEF /* RoundedByCorners.swift */; };
 		546681E426D430E40020CEEF /* MapFacultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546681E326D430E40020CEEF /* MapFacultyViewController.swift */; };
-		547AD0AF26D025B400859A7C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AD0AE26D025B400859A7C /* TabBarController.swift */; };
 		547AD0B126D025F700859A7C /* PrincipalTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AD0B026D025F700859A7C /* PrincipalTabBar.swift */; };
 		547AD0B326D0352800859A7C /* NavigationLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AD0B226D0352800859A7C /* NavigationLarge.swift */; };
 		547AD0B726D047B700859A7C /* WelcomeCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AD0B626D047B700859A7C /* WelcomeCollectionReusableView.swift */; };
+		54BFA46626D8C1E00050FD61 /* ProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46526D8C1E00050FD61 /* ProfileInfo.swift */; };
+		54BFA46A26D8C72E0050FD61 /* Pods_PocketFI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9106A40DF4D282C9BF6EEB /* Pods_PocketFI.framework */; };
+		54BFA46D26D8DCC10050FD61 /* CollectionImportantFaculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46C26D8DCC10050FD61 /* CollectionImportantFaculty.swift */; };
+		54BFA46F26D938C10050FD61 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46E26D938C10050FD61 /* UIImageView.swift */; };
+		54BFA47026D950B00050FD61 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54BFA46326D8BFF50050FD61 /* PassKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,10 +77,13 @@
 		546681DF26D425BA0020CEEF /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		546681E126D428A60020CEEF /* RoundedByCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedByCorners.swift; sourceTree = "<group>"; };
 		546681E326D430E40020CEEF /* MapFacultyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFacultyViewController.swift; sourceTree = "<group>"; };
-		547AD0AE26D025B400859A7C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		547AD0B026D025F700859A7C /* PrincipalTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalTabBar.swift; sourceTree = "<group>"; };
 		547AD0B226D0352800859A7C /* NavigationLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLarge.swift; sourceTree = "<group>"; };
 		547AD0B626D047B700859A7C /* WelcomeCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionReusableView.swift; sourceTree = "<group>"; };
+		54BFA46326D8BFF50050FD61 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
+		54BFA46526D8C1E00050FD61 /* ProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfo.swift; sourceTree = "<group>"; };
+		54BFA46C26D8DCC10050FD61 /* CollectionImportantFaculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionImportantFaculty.swift; sourceTree = "<group>"; };
+		54BFA46E26D938C10050FD61 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		82857213533ED6F75F4FB061 /* Pods-PocketFI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketFI.release.xcconfig"; path = "Target Support Files/Pods-PocketFI/Pods-PocketFI.release.xcconfig"; sourceTree = "<group>"; };
 		DF9106A40DF4D282C9BF6EEB /* Pods_PocketFI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketFI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E663A4D36E6364510D4F6344 /* Pods-PocketFI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketFI.debug.xcconfig"; path = "Target Support Files/Pods-PocketFI/Pods-PocketFI.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,7 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41C92DC335AC8EA5B9365ED2 /* Pods_PocketFI.framework in Frameworks */,
+				54BFA47026D950B00050FD61 /* PassKit.framework in Frameworks */,
+				54BFA46A26D8C72E0050FD61 /* Pods_PocketFI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,20 +173,20 @@
 		545AF2AE26CD7787003C7CEC /* PocketFI */ = {
 			isa = PBXGroup;
 			children = (
-				543BB96026D38651006E8BF6 /* Model */,
-				545AF2ED26CDABBD003C7CEC /* Utils */,
-				545AF2EC26CDABB6003C7CEC /* Storage */,
-				545AF2E326CD80E5003C7CEC /* Services */,
-				545AF2E226CD80B8003C7CEC /* Extension */,
-				545AF2E026CD787A003C7CEC /* View */,
-				545AF2DF26CD786A003C7CEC /* Network */,
-				545AF2E126CD788D003C7CEC /* Controller */,
+				545AF2BD26CD7789003C7CEC /* Info.plist */,
 				545AF2AF26CD7787003C7CEC /* AppDelegate.swift */,
 				545AF2B126CD7787003C7CEC /* SceneDelegate.swift */,
-				545AF2B526CD7787003C7CEC /* Main.storyboard */,
 				545AF2B826CD7789003C7CEC /* Assets.xcassets */,
+				545AF2E126CD788D003C7CEC /* Controller */,
+				545AF2E226CD80B8003C7CEC /* Extension */,
 				545AF2BA26CD7789003C7CEC /* LaunchScreen.storyboard */,
-				545AF2BD26CD7789003C7CEC /* Info.plist */,
+				545AF2B526CD7787003C7CEC /* Main.storyboard */,
+				543BB96026D38651006E8BF6 /* Model */,
+				545AF2DF26CD786A003C7CEC /* Network */,
+				545AF2E326CD80E5003C7CEC /* Services */,
+				545AF2EC26CDABB6003C7CEC /* Storage */,
+				545AF2ED26CDABBD003C7CEC /* Utils */,
+				545AF2E026CD787A003C7CEC /* View */,
 			);
 			path = PocketFI;
 			sourceTree = "<group>";
@@ -235,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				546681E126D428A60020CEEF /* RoundedByCorners.swift */,
+				54BFA46E26D938C10050FD61 /* UIImageView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -264,7 +272,9 @@
 		545AF2F426CDAF42003C7CEC /* Faculty */ = {
 			isa = PBXGroup;
 			children = (
+				547AD0B626D047B700859A7C /* WelcomeCollectionReusableView.swift */,
 				545AF2EA26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift */,
+				54BFA46C26D8DCC10050FD61 /* CollectionImportantFaculty.swift */,
 			);
 			path = Faculty;
 			sourceTree = "<group>";
@@ -273,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				545AF2EE26CDAC17003C7CEC /* ProfileCollectionViewCell.swift */,
+				54BFA46526D8C1E00050FD61 /* ProfileInfo.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -289,7 +300,6 @@
 			isa = PBXGroup;
 			children = (
 				547AD0B026D025F700859A7C /* PrincipalTabBar.swift */,
-				547AD0B626D047B700859A7C /* WelcomeCollectionReusableView.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -297,7 +307,6 @@
 		547AD0AA26D0255D00859A7C /* General */ = {
 			isa = PBXGroup;
 			children = (
-				547AD0AE26D025B400859A7C /* TabBarController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -341,6 +350,7 @@
 		D4D7C70288EF4EB7A80586A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				54BFA46326D8BFF50050FD61 /* PassKit.framework */,
 				DF9106A40DF4D282C9BF6EEB /* Pods_PocketFI.framework */,
 			);
 			name = Frameworks;
@@ -523,7 +533,6 @@
 				546681E026D425BA0020CEEF /* Notifications.swift in Sources */,
 				545AF2EB26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift in Sources */,
 				547AD0B126D025F700859A7C /* PrincipalTabBar.swift in Sources */,
-				547AD0AF26D025B400859A7C /* TabBarController.swift in Sources */,
 				547AD0B726D047B700859A7C /* WelcomeCollectionReusableView.swift in Sources */,
 				543BB96526D386A1006E8BF6 /* FacultyElement.swift in Sources */,
 				545AF2EF26CDAC17003C7CEC /* ProfileCollectionViewCell.swift in Sources */,
@@ -532,10 +541,13 @@
 				546681E226D428A60020CEEF /* RoundedByCorners.swift in Sources */,
 				543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */,
 				545AF2F126CDAC69003C7CEC /* ClassesCollectionViewCell.swift in Sources */,
+				54BFA46626D8C1E00050FD61 /* ProfileInfo.swift in Sources */,
+				54BFA46F26D938C10050FD61 /* UIImageView.swift in Sources */,
 				547AD0B326D0352800859A7C /* NavigationLarge.swift in Sources */,
 				545AF2B226CD7787003C7CEC /* SceneDelegate.swift in Sources */,
 				545AF2E726CDA88E003C7CEC /* ProfileViewController.swift in Sources */,
 				545AF2E926CDA89A003C7CEC /* ClassesViewController.swift in Sources */,
+				54BFA46D26D8DCC10050FD61 /* CollectionImportantFaculty.swift in Sources */,
 				546681E426D430E40020CEEF /* MapFacultyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -713,14 +725,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PocketFI/PocketFI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9DD36VF5BZ;
+				DEVELOPMENT_TEAM = 3J2N4BAJ49;
 				INFOPLIST_FILE = PocketFI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.garridomaceda.PocketFI2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.diploiOS.PocketFI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -733,14 +746,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PocketFI/PocketFI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9DD36VF5BZ;
+				DEVELOPMENT_TEAM = 3J2N4BAJ49;
 				INFOPLIST_FILE = PocketFI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.garridomaceda.PocketFI2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.diploiOS.PocketFI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

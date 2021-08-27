@@ -25,13 +25,13 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="U8g-S4-Uzy">
                                     <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="50" height="250"/>
+                                    <size key="headerReferenceSize" width="50" height="330"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="profileCell" id="ppN-6a-DHp">
-                                        <rect key="frame" x="0.0" y="250" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="profileCell" id="ppN-6a-DHp" customClass="ProfileCollectionViewCell" customModule="PocketFI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="330" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sIh-jZ-PQD">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -39,20 +39,9 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerProfileCell" id="hzf-P9-eDb">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerProfileCell" id="hzf-P9-eDb" customClass="ProfileInfo" customModule="PocketFI" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LHX-ir-4cx">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="LHX-ir-4cx" secondAttribute="trailing" id="LHa-8Z-VTA"/>
-                                        <constraint firstAttribute="bottom" secondItem="LHX-ir-4cx" secondAttribute="bottom" id="jiA-7f-HAb"/>
-                                        <constraint firstItem="LHX-ir-4cx" firstAttribute="top" secondItem="hzf-P9-eDb" secondAttribute="top" id="lcI-Hs-fWF"/>
-                                        <constraint firstItem="LHX-ir-4cx" firstAttribute="leading" secondItem="hzf-P9-eDb" secondAttribute="leading" id="xcw-0J-TX9"/>
-                                    </constraints>
                                 </collectionReusableView>
                             </collectionView>
                         </subviews>
@@ -65,7 +54,12 @@
                             <constraint firstItem="Fbr-e7-Znb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lhl-tg-D6t"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Perfil" id="ZkQ-oJ-ll1"/>
+                    <navigationItem key="navigationItem" title="Perfil" id="ZkQ-oJ-ll1">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="865-2y-5wn"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionaleView" destination="Fbr-e7-Znb" id="zOE-FV-fRG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,7 +109,29 @@
             </objects>
             <point key="canvasLocation" x="2505.7971014492755" y="518.30357142857144"/>
         </scene>
-        <!--Bienvenido-->
+        <!--View Controller-->
+        <scene sceneID="OuG-M4-mRJ">
+            <objects>
+                <viewController id="1FD-2f-QX2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5uY-yF-Xzt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zb7-9m-16D" customClass="LottieView" customModule="Lottie">
+                                <rect key="frame" x="87" y="345" width="240" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cbe-gW-itJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I2W-un-x08" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3425" y="519"/>
+        </scene>
+        <!--Hola, Samuel-->
         <scene sceneID="jS0-wO-2WD">
             <objects>
                 <viewController id="THB-jo-dON" customClass="FacultyViewController" customModule="PocketFI" customModuleProvider="target" sceneMemberID="viewController">
@@ -133,14 +149,22 @@
                                     <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="30"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="facultyCell" id="DNS-xQ-JTy" customClass="FacultyCollectionViewCell" customModule="PocketFI" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="200" width="126" height="118"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newsCell" id="DNS-xQ-JTy" customClass="CollectionImportantFaculty" customModule="PocketFI" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="205" width="126" height="118"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aP1-v4-8CK">
                                             <rect key="frame" x="0.0" y="0.0" width="126" height="118"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="126" height="118"/>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="facultyCell" id="aN6-J4-3xx" customClass="FacultyCollectionViewCell" customModule="PocketFI" customModuleProvider="target">
+                                        <rect key="frame" x="146" y="200" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OxS-rp-Ljl">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="welcome" id="nhP-jK-8hO" customClass="WelcomeCollectionReusableView" customModule="PocketFI" customModuleProvider="target">
@@ -172,7 +196,7 @@
                             <constraint firstItem="T8s-ao-HzK" firstAttribute="bottom" secondItem="CsO-ZS-W7d" secondAttribute="bottom" id="ktZ-Wh-Ta7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Bienvenido" id="tn7-lD-91W">
+                    <navigationItem key="navigationItem" title="Hola, Samuel" id="tn7-lD-91W">
                         <barButtonItem key="rightBarButtonItem" id="ru3-7b-ti4">
                             <imageReference key="image" image="notification" symbolScale="default"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -273,7 +297,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleAspectFit" largeTitles="YES" id="9G7-wg-NwB">
-                        <rect key="frame" x="0.0" y="44" width="414" height="161"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="141"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -283,7 +307,7 @@
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="80"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="60"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

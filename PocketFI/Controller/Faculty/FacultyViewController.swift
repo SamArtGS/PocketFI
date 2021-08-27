@@ -13,11 +13,11 @@ class FacultyViewController: UIViewController {
     
     let elements:[FacultyElement] = [
         FacultyElement(image: "infraestructura", labelText: "Infraestructura", color: .systemBlue),
-        FacultyElement(image: "tramites", labelText: "Trámites", color: .systemOrange),
+        FacultyElement(image: "infraestructura", labelText: "Infraestructura", color: .systemBlue),
+        FacultyElement(image: "tramites", labelText: "Preguntas \nfrecuentes", color: .systemOrange),
         FacultyElement(image: "mapa", labelText: "Mapa", color: .systemRed),
         FacultyElement(image: "gaceta", labelText: "Gaceta", color: .systemGreen),
         FacultyElement(image: "eventos", labelText: "Eventos", color: .systemPurple),
-        FacultyElement(image: "calendario", labelText: " Calendario \nEscolar", color: .systemPink),
         FacultyElement(image: "profesores", labelText: "Profesores", color: .systemTeal),
         FacultyElement(image: "contacto", labelText: "Contactos\n Oficiales", color: .systemYellow)
     ]
@@ -28,13 +28,18 @@ class FacultyViewController: UIViewController {
         super.viewDidLoad()
         facultyCollection.delegate = self
         facultyCollection.dataSource = self
-        
+        roundCollectionView()
+        addShadowToBar()
     }
     
     @IBAction func showNotifications(_ sender: Any) {
         present(Notifications(), animated: true) {
             print("vibracion")
         }
+    }
+    
+    func roundCollectionView(){
+        //self.facultyCollection.roundCorners(corners: [.topLeft, .topRight], radius: 15.0)
     }
     
 }
@@ -46,9 +51,17 @@ extension FacultyViewController: UICollectionViewDataSource{
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = facultyCollection.dequeueReusableCell(withReuseIdentifier: "facultyCell", for: indexPath) as! FacultyCollectionViewCell
-        cell.element = elements[indexPath.item]
-        return cell
+        
+        switch indexPath.item {
+        case 0:
+            let cell = facultyCollection.dequeueReusableCell(withReuseIdentifier: "newsCell", for: indexPath) as! CollectionImportantFaculty
+            return cell
+        default:
+            let cell = facultyCollection.dequeueReusableCell(withReuseIdentifier: "facultyCell", for: indexPath) as! FacultyCollectionViewCell
+            cell.element = elements[indexPath.item]
+            return cell
+        }
+        
     }
     
     
@@ -74,10 +87,12 @@ extension FacultyViewController: UICollectionViewDelegateFlowLayout{
         
         if UIDevice().userInterfaceIdiom == .phone {
             switch indexPath.item {
-            case 2:
+            case 0:
+                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width), height: (view.safeAreaLayoutGuide.layoutFrame.width/2))
+            case 3:
                 return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width/1.1), height: (view.safeAreaLayoutGuide.layoutFrame.width/2.5))
             default:
-                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width/2.2), height: (view.safeAreaLayoutGuide.layoutFrame.width/2.5))
+                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width/2.2), height: (view.safeAreaLayoutGuide.layoutFrame.width/3))
             }
             
         }else{
@@ -106,6 +121,13 @@ extension FacultyViewController: UICollectionViewDelegateFlowLayout{
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 3.0
+    }
+    func addShadowToBar() {
+        navigationController?.navigationBar.layer.masksToBounds = false
+        navigationController?.navigationBar.layer.shadowOpacity = 0.6 // your opacity
+        navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 2) // your offset
+        navigationController?.navigationBar.layer.shadowRadius =  6 //your radius
+        navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
     }
 }
 

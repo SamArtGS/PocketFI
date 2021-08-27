@@ -22,7 +22,9 @@ class FacultyCollectionViewCell: UICollectionViewCell {
                 imageView.layer.cornerRadius = 30
                 box = imageView
             }else{
-                box.backgroundColor = unwrap.color
+                box.layer.borderWidth = 1
+                box.layer.borderColor = unwrap.color.cgColor
+                
             }
             imageicon.image = unwrap.image
             textTopic.text = unwrap.labelText
@@ -34,7 +36,8 @@ class FacultyCollectionViewCell: UICollectionViewCell {
         let view = UIView()
         view.contentMode = .scaleAspectFit
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 30
+        view.backgroundColor = .white
+        view.layer.cornerRadius = 20
         view.clipsToBounds = true
         return view
     }()
@@ -50,7 +53,7 @@ class FacultyCollectionViewCell: UICollectionViewCell {
     private let textTopic : UILabel = {
         let etiqueta = UILabel()
         etiqueta.font = .systemFont(ofSize: 20, weight: .bold)
-        etiqueta.textColor = .white
+        etiqueta.textColor = UIColor(named: "AzulUNAM")
         etiqueta.lineBreakMode = .byWordWrapping
         etiqueta.numberOfLines = 0
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
@@ -61,6 +64,7 @@ class FacultyCollectionViewCell: UICollectionViewCell {
     
     
     override func draw(_ rect: CGRect) {
+        addShadow()
         addSubview(box)
         addSubview(imageicon)
         box.addSubview(textTopic)
@@ -80,4 +84,15 @@ class FacultyCollectionViewCell: UICollectionViewCell {
         ])
     }
     
+}
+extension UIView{
+    func addShadow(){
+        layer.cornerRadius = 15.0
+        layer.borderWidth = 0.0
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 3)
+        layer.shadowRadius = 3.0
+        layer.shadowOpacity = 0.7
+        layer.masksToBounds = false //<-
+    }
 }

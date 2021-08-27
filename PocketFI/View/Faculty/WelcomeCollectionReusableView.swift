@@ -18,6 +18,6 @@ class WelcomeCollectionReusableView: UICollectionReusableView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        imagenWelcome.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 15.0)
+        //imagenWelcome.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 15.0)
     }
 }

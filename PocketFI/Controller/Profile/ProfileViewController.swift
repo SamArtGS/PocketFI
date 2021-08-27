@@ -9,21 +9,44 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet var collectionaleView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionaleView.delegate = self
+        collectionaleView.dataSource = self
+    }
 
-        // Do any additional setup after loading the view.
+}
+
+extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionaleView.dequeueReusableCell(withReuseIdentifier: "profileCell", for: indexPath) as! ProfileCollectionViewCell
+        cell.backgroundColor = .red
+        return cell
     }
-    */
+}
 
+extension ProfileViewController: UICollectionViewDelegateFlowLayout{
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            let headerView = collectionaleView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerProfileCell", for: indexPath)
+            
+            guard let typedHeaderView = headerView as? ProfileInfo
+                else { return headerView }
+            
+            return typedHeaderView
+            
+        default:
+            assert(false, "Invalid element type")
+        }
+        
+    }
+    
 }
