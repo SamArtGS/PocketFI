@@ -19,7 +19,7 @@ class FacultyCollectionViewCell: UICollectionViewCell {
                 imageView.translatesAutoresizingMaskIntoConstraints = false
                 imageView.contentMode = .scaleToFill
                 imageView.clipsToBounds = true
-                imageView.layer.cornerRadius = 30
+                imageView.layer.cornerRadius = 15
                 box = imageView
             }else{
                 box.layer.borderWidth = 1
@@ -37,7 +37,7 @@ class FacultyCollectionViewCell: UICollectionViewCell {
         view.contentMode = .scaleAspectFit
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
-        view.layer.cornerRadius = 20
+        view.layer.cornerRadius = 15
         view.clipsToBounds = true
         return view
     }()
@@ -64,7 +64,7 @@ class FacultyCollectionViewCell: UICollectionViewCell {
     
     
     override func draw(_ rect: CGRect) {
-        addShadow()
+        addShadow(opacy: 0.5)
         addSubview(box)
         addSubview(imageicon)
         box.addSubview(textTopic)
@@ -86,13 +86,13 @@ class FacultyCollectionViewCell: UICollectionViewCell {
     
 }
 extension UIView{
-    func addShadow(){
+    func addShadow(opacy: Float){
         layer.cornerRadius = 15.0
         layer.borderWidth = 0.0
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 3)
         layer.shadowRadius = 3.0
-        layer.shadowOpacity = 0.7
+        layer.shadowOpacity = opacy
         layer.masksToBounds = false //<-
     }
 }

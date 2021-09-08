@@ -10,6 +10,7 @@ import UIKit
 class FacultyViewController: UIViewController {
 
     @IBOutlet var facultyCollection: UICollectionView!
+    let randomImageSelector = String(Int.random(in: 1..<6))
     
     let elements:[FacultyElement] = [
         FacultyElement(image: "infraestructura", labelText: "Infraestructura", color: .systemBlue),
@@ -22,24 +23,19 @@ class FacultyViewController: UIViewController {
         FacultyElement(image: "contacto", labelText: "Contactos\n Oficiales", color: .systemYellow)
     ]
     
+    
     // MARK: Life Cycle VC
     
     override func viewDidLoad() {
         super.viewDidLoad()
         facultyCollection.delegate = self
         facultyCollection.dataSource = self
-        roundCollectionView()
+
         addShadowToBar()
     }
     
     @IBAction func showNotifications(_ sender: Any) {
-        present(Notifications(), animated: true) {
-            print("vibracion")
-        }
-    }
-    
-    func roundCollectionView(){
-        //self.facultyCollection.roundCorners(corners: [.topLeft, .topRight], radius: 15.0)
+        navigationController?.pushViewController(Notifications(), animated: true)
     }
     
 }
@@ -54,17 +50,17 @@ extension FacultyViewController: UICollectionViewDataSource{
         
         switch indexPath.item {
         case 0:
+            collectionView.register(CollectionImportantFaculty.self, forCellWithReuseIdentifier: "newsCell")
             let cell = facultyCollection.dequeueReusableCell(withReuseIdentifier: "newsCell", for: indexPath) as! CollectionImportantFaculty
+            cell.setConstraints()
             return cell
         default:
             let cell = facultyCollection.dequeueReusableCell(withReuseIdentifier: "facultyCell", for: indexPath) as! FacultyCollectionViewCell
             cell.element = elements[indexPath.item]
             return cell
-        }
         
+        }
     }
-    
-    
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -74,9 +70,6 @@ extension FacultyViewController: UICollectionViewDataSource{
         default:
             return
         }
-        
-        
-        
     }
     
 }
@@ -88,13 +81,12 @@ extension FacultyViewController: UICollectionViewDelegateFlowLayout{
         if UIDevice().userInterfaceIdiom == .phone {
             switch indexPath.item {
             case 0:
-                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width), height: (view.safeAreaLayoutGuide.layoutFrame.width/2))
+                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width - 21), height: (view.safeAreaLayoutGuide.layoutFrame.width/1.4))
             case 3:
                 return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width/1.1), height: (view.safeAreaLayoutGuide.layoutFrame.width/2.5))
             default:
-                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width/2.2), height: (view.safeAreaLayoutGuide.layoutFrame.width/3))
+                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width/2.14), height: (view.safeAreaLayoutGuide.layoutFrame.width/2.2))
             }
-            
         }else{
             return CGSize(width: 150, height: 200)
         }
@@ -107,8 +99,7 @@ extension FacultyViewController: UICollectionViewDelegateFlowLayout{
             
             guard let typedHeaderView = headerView as? WelcomeCollectionReusableView
                 else { return headerView }
-            
-            typedHeaderView.imagenWelcome.image = UIImage(named: "welcome"+String(Int.random(in: 1..<6)))
+            typedHeaderView.imagenWelcome.image = UIImage(named: "welcome"+randomImageSelector)
             return typedHeaderView
             
         default:
@@ -117,49 +108,19 @@ extension FacultyViewController: UICollectionViewDelegateFlowLayout{
         
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 3.0
+        return 10
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 3.0
+        return 0
     }
     func addShadowToBar() {
         navigationController?.navigationBar.layer.masksToBounds = false
-        navigationController?.navigationBar.layer.shadowOpacity = 0.6 // your opacity
-        navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 2) // your offset
-        navigationController?.navigationBar.layer.shadowRadius =  6 //your radius
+        navigationController?.navigationBar.layer.shadowOpacity = 0.6
+        navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 2)
+        navigationController?.navigationBar.layer.shadowRadius =  6
         navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 10, left: 10, bottom: 20, right: 10)
+    }
 }
-
-
-
-//    private func addShape() {
-//        let shapeLayer = CAShapeLayer()
-//        let radious = 30.0
-//        shapeLayer.path = createPath()
-//        shapeLayer.strokeColor = UIColor.gray.withAlphaComponent(0.1).cgColor
-//        shapeLayer.fillColor = UIColor.white.cgColor
-//        shapeLayer.lineWidth = 2
-//        shapeLayer.shadowColor = UIColor.black.cgColor
-//        shapeLayer.shadowOffset = CGSize(width: 0   , height: -3);
-//        shapeLayer.shadowOpacity = 0.2
-//        shapeLayer.shadowPath =  UIBezierPath(roundedRect: facultyCollection.bounds, cornerRadius: CGFloat(radious)).cgPath
-//
-//
-//        if let oldShapeLayer = facultyCollection.shapeLayer {
-//            facultyCollection.layer.replaceSublayer(oldShapeLayer, with: shapeLayer)
-//        } else {
-//            facultyCollection.layer.insertSublayer(shapeLayer, at: 0)
-//        }
-//
-//        self.facultyCollection.layer = shapeLayer
-//    }
-//
-//    private func createPath() -> CGPath {
-//        let path = UIBezierPath(
-//            roundedRect: bounds,
-//            byRoundingCorners: [.topLeft, .topRight],
-//            cornerRadii: CGSize(width: 0.8, height: 0.0))
-//
-//        return path.cgPath
-//    }

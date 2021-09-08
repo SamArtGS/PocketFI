@@ -1,0 +1,14 @@
+{
+  "name": "pocketfi",
+  "version": "1.0.0",
+  "description": "Aplicacion express - proyecto final diplo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuel Arturo Garrido Sanchez",
+  "license": "ISC",
+  "dependencies": {
+    "passkit-generator": "^2.0.8"
+  }
+}

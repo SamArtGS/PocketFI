@@ -20,18 +20,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fbr-e7-Znb">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fbr-e7-Znb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="U8g-S4-Uzy">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="U8g-S4-Uzy" customClass="FlowStreckyHeader" customModule="PocketFI" customModuleProvider="target">
                                     <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="50" height="330"/>
+                                    <size key="headerReferenceSize" width="50" height="430"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="profileCell" id="ppN-6a-DHp" customClass="ProfileCollectionViewCell" customModule="PocketFI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="330" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="430" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sIh-jZ-PQD">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -40,7 +40,7 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerProfileCell" id="hzf-P9-eDb" customClass="ProfileInfo" customModule="PocketFI" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="430"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </collectionReusableView>
                             </collectionView>
@@ -48,15 +48,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Fbr-e7-Znb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="0k3-zJ-mlQ"/>
-                            <constraint firstItem="Fbr-e7-Znb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g9v-QR-8QI"/>
-                            <constraint firstItem="Fbr-e7-Znb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hCN-46-T9A"/>
-                            <constraint firstItem="Fbr-e7-Znb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lhl-tg-D6t"/>
+                            <constraint firstItem="Fbr-e7-Znb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IZa-PG-AC9"/>
+                            <constraint firstItem="Fbr-e7-Znb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="VIW-AF-2cy"/>
+                            <constraint firstItem="Fbr-e7-Znb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jiK-Qm-cn4"/>
+                            <constraint firstItem="Fbr-e7-Znb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mkn-rm-5Z2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Perfil" id="ZkQ-oJ-ll1">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="865-2y-5wn"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Perfil" id="ZkQ-oJ-ll1"/>
                     <connections>
                         <outlet property="collectionaleView" destination="Fbr-e7-Znb" id="zOE-FV-fRG"/>
                     </connections>
@@ -109,29 +107,7 @@
             </objects>
             <point key="canvasLocation" x="2505.7971014492755" y="518.30357142857144"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="OuG-M4-mRJ">
-            <objects>
-                <viewController id="1FD-2f-QX2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5uY-yF-Xzt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zb7-9m-16D" customClass="LottieView" customModule="Lottie">
-                                <rect key="frame" x="87" y="345" width="240" height="214"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="cbe-gW-itJ"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I2W-un-x08" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3425" y="519"/>
-        </scene>
-        <!--Hola, Samuel-->
+        <!--Buenos días-->
         <scene sceneID="jS0-wO-2WD">
             <objects>
                 <viewController id="THB-jo-dON" customClass="FacultyViewController" customModule="PocketFI" customModuleProvider="target" sceneMemberID="viewController">
@@ -142,24 +118,15 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" keyboardDismissMode="onDrag" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8s-ao-HzK">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oAR-NY-iBF" customClass="FlowStreckyHeader" customModule="PocketFI" customModuleProvider="target">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="oAR-NY-iBF" customClass="FlowStreckyHeader" customModule="PocketFI" customModuleProvider="target">
                                     <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="50" height="190"/>
+                                    <size key="headerReferenceSize" width="50" height="200"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="30"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="newsCell" id="DNS-xQ-JTy" customClass="CollectionImportantFaculty" customModule="PocketFI" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="205" width="126" height="118"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aP1-v4-8CK">
-                                            <rect key="frame" x="0.0" y="0.0" width="126" height="118"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="126" height="118"/>
-                                    </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="facultyCell" id="aN6-J4-3xx" customClass="FacultyCollectionViewCell" customModule="PocketFI" customModuleProvider="target">
-                                        <rect key="frame" x="146" y="200" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="200" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OxS-rp-Ljl">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -168,11 +135,11 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="welcome" id="nhP-jK-8hO" customClass="WelcomeCollectionReusableView" customModule="PocketFI" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DqT-ra-j21">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -196,7 +163,7 @@
                             <constraint firstItem="T8s-ao-HzK" firstAttribute="bottom" secondItem="CsO-ZS-W7d" secondAttribute="bottom" id="ktZ-Wh-Ta7"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Hola, Samuel" id="tn7-lD-91W">
+                    <navigationItem key="navigationItem" title="Buenos días" id="tn7-lD-91W">
                         <barButtonItem key="rightBarButtonItem" id="ru3-7b-ti4">
                             <imageReference key="image" image="notification" symbolScale="default"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -252,6 +219,10 @@
                         <color key="barTintColor" name="AzulUNAM"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>

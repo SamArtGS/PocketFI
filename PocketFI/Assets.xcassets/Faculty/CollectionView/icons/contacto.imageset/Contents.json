@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icons8-contacts.png",
+      "filename" : "icons8-user_groups.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icons8-contacts-1.png",
+      "filename" : "icons8-user_groups-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "icons8-contacts-2.png",
+      "filename" : "icons8-user_groups-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

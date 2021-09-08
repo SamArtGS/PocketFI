@@ -7,21 +7,39 @@
 
 import UIKit
 
+
 class ProfileViewController: UIViewController {
 
     @IBOutlet var collectionaleView: UICollectionView!
+    var bool: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionaleView.delegate = self
-        collectionaleView.dataSource = self
+        if bool{
+            collectionaleView.delegate = self
+            collectionaleView.dataSource = self
+        }else{
+            loggin()
+        }
     }
 
+    func loggin(){
+        
+        let label = UILabel()
+        label.text = "No has iniciado sesión"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(label)
+        
+        NSLayoutConstraint.activate([
+            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
 }
 
 extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -29,6 +47,9 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         cell.backgroundColor = .red
         return cell
     }
+    
+    
+    
 }
 
 extension ProfileViewController: UICollectionViewDelegateFlowLayout{
@@ -40,7 +61,7 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout{
             
             guard let typedHeaderView = headerView as? ProfileInfo
                 else { return headerView }
-            
+            typedHeaderView.delegate = self
             return typedHeaderView
             
         default:
@@ -49,4 +70,19 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout{
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (view.frame.width)/1.1, height: 100)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 15, left: 10, bottom: 20, right: 10)
+    }
+}
+
+extension ProfileViewController: ProfileCardDelegate{
+    func PKAddCredential() {
+        getCredential(studentID: 12345)
+    }
 }

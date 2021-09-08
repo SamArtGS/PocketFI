@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icons8-adventure-2.png",
+      "filename" : "icons8-location-2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icons8-adventure-1.png",
+      "filename" : "icons8-location-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "icons8-adventure.png",
+      "filename" : "icons8-location.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

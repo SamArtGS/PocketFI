@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "icons8-newsfeed-1.png",
+      "filename" : "icons8-typewriter_with_paper.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "icons8-newsfeed-2.png",
+      "filename" : "icons8-typewriter_with_paper-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "icons8-newsfeed.png",
+      "filename" : "icons8-typewriter_with_paper-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

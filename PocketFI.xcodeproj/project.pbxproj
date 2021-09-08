@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		543BB96526D386A1006E8BF6 /* FacultyElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BB96426D386A1006E8BF6 /* FacultyElement.swift */; };
 		543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */; };
+		543E678726E66B5F001BCE77 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E678626E66B5F001BCE77 /* Student.swift */; };
+		543E678926E6980A001BCE77 /* CredentialService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E678826E6980A001BCE77 /* CredentialService.swift */; };
+		545411DC26E56D05001A5154 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54BFA46326D8BFF50050FD61 /* PassKit.framework */; };
 		545AF2B026CD7787003C7CEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2AF26CD7787003C7CEC /* AppDelegate.swift */; };
 		545AF2B226CD7787003C7CEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2B126CD7787003C7CEC /* SceneDelegate.swift */; };
 		545AF2B726CD7787003C7CEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 545AF2B526CD7787003C7CEC /* Main.storyboard */; };
@@ -29,10 +32,10 @@
 		547AD0B326D0352800859A7C /* NavigationLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AD0B226D0352800859A7C /* NavigationLarge.swift */; };
 		547AD0B726D047B700859A7C /* WelcomeCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AD0B626D047B700859A7C /* WelcomeCollectionReusableView.swift */; };
 		54BFA46626D8C1E00050FD61 /* ProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46526D8C1E00050FD61 /* ProfileInfo.swift */; };
-		54BFA46A26D8C72E0050FD61 /* Pods_PocketFI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF9106A40DF4D282C9BF6EEB /* Pods_PocketFI.framework */; };
 		54BFA46D26D8DCC10050FD61 /* CollectionImportantFaculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46C26D8DCC10050FD61 /* CollectionImportantFaculty.swift */; };
 		54BFA46F26D938C10050FD61 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46E26D938C10050FD61 /* UIImageView.swift */; };
-		54BFA47026D950B00050FD61 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54BFA46326D8BFF50050FD61 /* PassKit.framework */; };
+		54DD5C9026E86B710010C23A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C8F26E86B710010C23A /* Alert.swift */; };
+		54DD5C9226E870840010C23A /* CredentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C9126E870840010C23A /* CredentialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +56,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		540105E726DE96140001FEC4 /* PocketFI.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = PocketFI.entitlements; sourceTree = "<group>"; };
 		543BB96426D386A1006E8BF6 /* FacultyElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyElement.swift; sourceTree = "<group>"; };
 		543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowStreckyHeader.swift; sourceTree = "<group>"; };
+		543E678626E66B5F001BCE77 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		543E678826E6980A001BCE77 /* CredentialService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialService.swift; sourceTree = "<group>"; };
 		545AF2AC26CD7787003C7CEC /* PocketFI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PocketFI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		545AF2AF26CD7787003C7CEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		545AF2B126CD7787003C7CEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,9 +90,8 @@
 		54BFA46526D8C1E00050FD61 /* ProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfo.swift; sourceTree = "<group>"; };
 		54BFA46C26D8DCC10050FD61 /* CollectionImportantFaculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionImportantFaculty.swift; sourceTree = "<group>"; };
 		54BFA46E26D938C10050FD61 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		82857213533ED6F75F4FB061 /* Pods-PocketFI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketFI.release.xcconfig"; path = "Target Support Files/Pods-PocketFI/Pods-PocketFI.release.xcconfig"; sourceTree = "<group>"; };
-		DF9106A40DF4D282C9BF6EEB /* Pods_PocketFI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketFI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E663A4D36E6364510D4F6344 /* Pods-PocketFI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketFI.debug.xcconfig"; path = "Target Support Files/Pods-PocketFI/Pods-PocketFI.debug.xcconfig"; sourceTree = "<group>"; };
+		54DD5C8F26E86B710010C23A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		54DD5C9126E870840010C23A /* CredentialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54BFA47026D950B00050FD61 /* PassKit.framework in Frameworks */,
-				54BFA46A26D8C72E0050FD61 /* Pods_PocketFI.framework in Frameworks */,
+				545411DC26E56D05001A5154 /* PassKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +148,7 @@
 		543BB96326D38675006E8BF6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				543E678626E66B5F001BCE77 /* Student.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -155,7 +160,6 @@
 				545AF2C526CD778A003C7CEC /* PocketFITests */,
 				545AF2D026CD778A003C7CEC /* PocketFIUITests */,
 				545AF2AD26CD7787003C7CEC /* Products */,
-				87DA091880EBCB9224400FBB /* Pods */,
 				D4D7C70288EF4EB7A80586A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -173,20 +177,20 @@
 		545AF2AE26CD7787003C7CEC /* PocketFI */ = {
 			isa = PBXGroup;
 			children = (
+				540105E726DE96140001FEC4 /* PocketFI.entitlements */,
 				545AF2BD26CD7789003C7CEC /* Info.plist */,
 				545AF2AF26CD7787003C7CEC /* AppDelegate.swift */,
 				545AF2B126CD7787003C7CEC /* SceneDelegate.swift */,
 				545AF2B826CD7789003C7CEC /* Assets.xcassets */,
+				543BB96026D38651006E8BF6 /* Model */,
+				545AF2E026CD787A003C7CEC /* View */,
 				545AF2E126CD788D003C7CEC /* Controller */,
-				545AF2E226CD80B8003C7CEC /* Extension */,
 				545AF2BA26CD7789003C7CEC /* LaunchScreen.storyboard */,
 				545AF2B526CD7787003C7CEC /* Main.storyboard */,
-				543BB96026D38651006E8BF6 /* Model */,
-				545AF2DF26CD786A003C7CEC /* Network */,
+				545AF2E226CD80B8003C7CEC /* Extension */,
 				545AF2E326CD80E5003C7CEC /* Services */,
 				545AF2EC26CDABB6003C7CEC /* Storage */,
 				545AF2ED26CDABBD003C7CEC /* Utils */,
-				545AF2E026CD787A003C7CEC /* View */,
 			);
 			path = PocketFI;
 			sourceTree = "<group>";
@@ -207,13 +211,6 @@
 				545AF2D326CD778A003C7CEC /* Info.plist */,
 			);
 			path = PocketFIUITests;
-			sourceTree = "<group>";
-		};
-		545AF2DF26CD786A003C7CEC /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
 			sourceTree = "<group>";
 		};
 		545AF2E026CD787A003C7CEC /* View */ = {
@@ -243,6 +240,7 @@
 			children = (
 				546681E126D428A60020CEEF /* RoundedByCorners.swift */,
 				54BFA46E26D938C10050FD61 /* UIImageView.swift */,
+				54DD5C8F26E86B710010C23A /* Alert.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -250,6 +248,7 @@
 		545AF2E326CD80E5003C7CEC /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				543E678826E6980A001BCE77 /* CredentialService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -284,6 +283,7 @@
 			children = (
 				545AF2EE26CDAC17003C7CEC /* ProfileCollectionViewCell.swift */,
 				54BFA46526D8C1E00050FD61 /* ProfileInfo.swift */,
+				54DD5C9126E870840010C23A /* CredentialView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -300,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				547AD0B026D025F700859A7C /* PrincipalTabBar.swift */,
+				543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -315,7 +316,6 @@
 			isa = PBXGroup;
 			children = (
 				545AF2E426CDA877003C7CEC /* FacultyViewController.swift */,
-				543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */,
 				546681DF26D425BA0020CEEF /* Notifications.swift */,
 				546681E326D430E40020CEEF /* MapFacultyViewController.swift */,
 			);
@@ -338,20 +338,10 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		87DA091880EBCB9224400FBB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E663A4D36E6364510D4F6344 /* Pods-PocketFI.debug.xcconfig */,
-				82857213533ED6F75F4FB061 /* Pods-PocketFI.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		D4D7C70288EF4EB7A80586A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				54BFA46326D8BFF50050FD61 /* PassKit.framework */,
-				DF9106A40DF4D282C9BF6EEB /* Pods_PocketFI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -363,11 +353,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 545AF2D626CD778A003C7CEC /* Build configuration list for PBXNativeTarget "PocketFI" */;
 			buildPhases = (
-				6F42462E7B9D549FEFFFD743 /* [CP] Check Pods Manifest.lock */,
 				545AF2A826CD7787003C7CEC /* Sources */,
 				545AF2A926CD7787003C7CEC /* Frameworks */,
 				545AF2AA26CD7787003C7CEC /* Resources */,
-				51FB431ECB2CB903409BCBD4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -483,48 +471,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		51FB431ECB2CB903409BCBD4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PocketFI/Pods-PocketFI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PocketFI/Pods-PocketFI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PocketFI/Pods-PocketFI-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6F42462E7B9D549FEFFFD743 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PocketFI-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		545AF2A826CD7787003C7CEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -533,10 +479,13 @@
 				546681E026D425BA0020CEEF /* Notifications.swift in Sources */,
 				545AF2EB26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift in Sources */,
 				547AD0B126D025F700859A7C /* PrincipalTabBar.swift in Sources */,
+				543E678726E66B5F001BCE77 /* Student.swift in Sources */,
 				547AD0B726D047B700859A7C /* WelcomeCollectionReusableView.swift in Sources */,
 				543BB96526D386A1006E8BF6 /* FacultyElement.swift in Sources */,
 				545AF2EF26CDAC17003C7CEC /* ProfileCollectionViewCell.swift in Sources */,
 				545AF2B026CD7787003C7CEC /* AppDelegate.swift in Sources */,
+				54DD5C9026E86B710010C23A /* Alert.swift in Sources */,
+				543E678926E6980A001BCE77 /* CredentialService.swift in Sources */,
 				545AF2E526CDA877003C7CEC /* FacultyViewController.swift in Sources */,
 				546681E226D428A60020CEEF /* RoundedByCorners.swift in Sources */,
 				543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */,
@@ -549,6 +498,7 @@
 				545AF2E926CDA89A003C7CEC /* ClassesViewController.swift in Sources */,
 				54BFA46D26D8DCC10050FD61 /* CollectionImportantFaculty.swift in Sources */,
 				546681E426D430E40020CEEF /* MapFacultyViewController.swift in Sources */,
+				54DD5C9226E870840010C23A /* CredentialView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,7 +671,6 @@
 		};
 		545AF2D726CD778A003C7CEC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E663A4D36E6364510D4F6344 /* Pods-PocketFI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -742,7 +691,6 @@
 		};
 		545AF2D826CD778A003C7CEC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82857213533ED6F75F4FB061 /* Pods-PocketFI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
