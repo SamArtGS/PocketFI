@@ -18,5 +18,6 @@ class WelcomeCollectionReusableView: UICollectionReusableView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
     }
 }

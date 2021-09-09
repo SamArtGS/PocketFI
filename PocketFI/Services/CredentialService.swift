@@ -23,7 +23,10 @@ extension ProfileViewController: PKAddPassesViewControllerDelegate{
               let passLibrary = PKPassLibrary()
    
               if passLibrary.containsPass(pass) {
-                self?.mostrarAlerta(title: "Crendencial repetida", message: "Esta credencial se encuentra en tu Wallet")
+                DispatchQueue.main.sync {
+                    self?.mostrarAlerta(title: "Crendencial repetida", message: "Esta credencial se encuentra en tu Wallet")
+                }
+                
               } else {
                 let pkvc = PKAddPassesViewController(pass: pass)
                 pkvc!.delegate = self

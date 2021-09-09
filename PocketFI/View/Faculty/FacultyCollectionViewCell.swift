@@ -22,8 +22,8 @@ class FacultyCollectionViewCell: UICollectionViewCell {
                 imageView.layer.cornerRadius = 15
                 box = imageView
             }else{
-                box.layer.borderWidth = 1
-                box.layer.borderColor = unwrap.color.cgColor
+                box.layer.borderWidth = 0.5
+                box.layer.borderColor = UIColor.gray.cgColor
                 
             }
             imageicon.image = unwrap.image
@@ -75,7 +75,7 @@ class FacultyCollectionViewCell: UICollectionViewCell {
             box.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -5),
             
             textTopic.centerXAnchor.constraint(equalTo: box.centerXAnchor),
-            textTopic.centerYAnchor.constraint(equalTo: box.centerYAnchor),
+            textTopic.centerYAnchor.constraint(equalTo: box.centerYAnchor, constant: 10),
             
             imageicon.topAnchor.constraint(equalTo: topAnchor),
             imageicon.centerXAnchor.constraint(equalTo: centerXAnchor),

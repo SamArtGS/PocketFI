@@ -34,7 +34,7 @@ class CellNews: UICollectionViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .clear
         view.layer.cornerRadius = 10
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(named: "whiteGray")
         view.clipsToBounds = true
         return view
     }()
@@ -63,7 +63,7 @@ class CellNews: UICollectionViewCell {
     private let textTopic : UILabel = {
         let etiqueta = UILabel()
         etiqueta.font = .systemFont(ofSize: 20, weight: .bold)
-        etiqueta.textColor = .black
+        etiqueta.textColor = UIColor(named: "Letter1")
         etiqueta.font = .systemFont(ofSize: 20, weight: .bold)
         etiqueta.numberOfLines = 2
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
@@ -81,9 +81,8 @@ class CellNews: UICollectionViewCell {
         box.sendSubviewToBack(imageNew)
         box.addShadow(opacy: 0.3)
         
-        imageNew.image = UIImage(named: "welcome1")
-        textTopic.text = "Prueba"
-        imageNew.clipsToBounds = true
+        imageNew.image = UIImage(named: "screen1")
+        textTopic.text = "Protocolos para el regreso a clases seguro :("
         
         NSLayoutConstraint.activate([
             box.topAnchor.constraint(equalTo: topAnchor, constant: 5),
@@ -138,7 +137,7 @@ class CollectionImportantFaculty: UICollectionViewCell{
         coleccionView.isPagingEnabled = true
         coleccionView.translatesAutoresizingMaskIntoConstraints = false
         coleccionView.register(CellNews.self, forCellWithReuseIdentifier: "cellMini")
-        coleccionView.backgroundColor = .white
+        coleccionView.backgroundColor = UIColor(named: "AccentColor")
         coleccionView.delegate = self
         coleccionView.dataSource = self
         return coleccionView
@@ -168,7 +167,7 @@ extension CollectionImportantFaculty: UICollectionViewDelegate, UICollectionView
 extension CollectionImportantFaculty: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: safeAreaLayoutGuide.layoutFrame.width, height: 290)
+        return CGSize(width: safeAreaLayoutGuide.layoutFrame.width, height: safeAreaLayoutGuide.layoutFrame.height - 10)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {

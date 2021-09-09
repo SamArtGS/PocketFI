@@ -29,3 +29,10 @@ class MapFacultyViewController: UIViewController {
     }
 
 }
+extension UINavigationController{
+    
+    open override func viewDidLayoutSubviews() {
+        navigationController?.navigationBar.backgroundColor = UIColor(named: "AzulUNAM")
+        navigationController?.navigationBar.tintColor = .white
+    }
+}

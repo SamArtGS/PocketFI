@@ -15,25 +15,13 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if bool{
+        if let token = UserDefaults.standard.value(forKey: "UserToken") as? String {
             collectionaleView.delegate = self
             collectionaleView.dataSource = self
-        }else{
+            print(token)
+        } else {
             loggin()
         }
-    }
-
-    func loggin(){
-        
-        let label = UILabel()
-        label.text = "No has iniciado sesión"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(label)
-        
-        NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
     }
 }
 

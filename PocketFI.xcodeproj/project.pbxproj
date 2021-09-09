@@ -35,7 +35,13 @@
 		54BFA46D26D8DCC10050FD61 /* CollectionImportantFaculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46C26D8DCC10050FD61 /* CollectionImportantFaculty.swift */; };
 		54BFA46F26D938C10050FD61 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46E26D938C10050FD61 /* UIImageView.swift */; };
 		54DD5C9026E86B710010C23A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C8F26E86B710010C23A /* Alert.swift */; };
-		54DD5C9226E870840010C23A /* CredentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C9126E870840010C23A /* CredentialView.swift */; };
+		54DD5C9426E96EB60010C23A /* Tab+NavBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C9326E96EB60010C23A /* Tab+NavBarConfig.swift */; };
+		54DD5C9826E970190010C23A /* CrendentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C9726E970180010C23A /* CrendentialView.swift */; };
+		54DD5C9A26E97C950010C23A /* UINavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C9926E97C950010C23A /* UINavController.swift */; };
+		54DD5C9C26E97F510010C23A /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DD5C9B26E97F510010C23A /* PushKit.framework */; };
+		54DD5C9E26E98C080010C23A /* APIEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C9D26E98C080010C23A /* APIEndPoints.swift */; };
+		54DD5CA126E98F620010C23A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C9F26E98F620010C23A /* LogInViewController.swift */; };
+		54DD5CA426E99ADF0010C23A /* ObserverHideShowKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CA326E99ADF0010C23A /* ObserverHideShowKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,7 +97,13 @@
 		54BFA46C26D8DCC10050FD61 /* CollectionImportantFaculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionImportantFaculty.swift; sourceTree = "<group>"; };
 		54BFA46E26D938C10050FD61 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		54DD5C8F26E86B710010C23A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		54DD5C9126E870840010C23A /* CredentialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialView.swift; sourceTree = "<group>"; };
+		54DD5C9326E96EB60010C23A /* Tab+NavBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+NavBarConfig.swift"; sourceTree = "<group>"; };
+		54DD5C9726E970180010C23A /* CrendentialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrendentialView.swift; sourceTree = "<group>"; };
+		54DD5C9926E97C950010C23A /* UINavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavController.swift; sourceTree = "<group>"; };
+		54DD5C9B26E97F510010C23A /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		54DD5C9D26E98C080010C23A /* APIEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
+		54DD5C9F26E98F620010C23A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		54DD5CA326E99ADF0010C23A /* ObserverHideShowKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverHideShowKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				545411DC26E56D05001A5154 /* PassKit.framework in Frameworks */,
+				54DD5C9C26E97F510010C23A /* PushKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +254,9 @@
 				546681E126D428A60020CEEF /* RoundedByCorners.swift */,
 				54BFA46E26D938C10050FD61 /* UIImageView.swift */,
 				54DD5C8F26E86B710010C23A /* Alert.swift */,
+				54DD5C9326E96EB60010C23A /* Tab+NavBarConfig.swift */,
+				54DD5C9926E97C950010C23A /* UINavController.swift */,
+				54DD5CA326E99ADF0010C23A /* ObserverHideShowKeyboard.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -249,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				543E678826E6980A001BCE77 /* CredentialService.swift */,
+				54DD5C9D26E98C080010C23A /* APIEndPoints.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -283,7 +300,8 @@
 			children = (
 				545AF2EE26CDAC17003C7CEC /* ProfileCollectionViewCell.swift */,
 				54BFA46526D8C1E00050FD61 /* ProfileInfo.swift */,
-				54DD5C9126E870840010C23A /* CredentialView.swift */,
+				54DD5C9726E970180010C23A /* CrendentialView.swift */,
+				54DD5C9F26E98F620010C23A /* LogInViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -341,6 +359,7 @@
 		D4D7C70288EF4EB7A80586A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				54DD5C9B26E97F510010C23A /* PushKit.framework */,
 				54BFA46326D8BFF50050FD61 /* PassKit.framework */,
 			);
 			name = Frameworks;
@@ -477,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				546681E026D425BA0020CEEF /* Notifications.swift in Sources */,
+				54DD5CA426E99ADF0010C23A /* ObserverHideShowKeyboard.swift in Sources */,
 				545AF2EB26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift in Sources */,
 				547AD0B126D025F700859A7C /* PrincipalTabBar.swift in Sources */,
 				543E678726E66B5F001BCE77 /* Student.swift in Sources */,
@@ -487,18 +507,22 @@
 				54DD5C9026E86B710010C23A /* Alert.swift in Sources */,
 				543E678926E6980A001BCE77 /* CredentialService.swift in Sources */,
 				545AF2E526CDA877003C7CEC /* FacultyViewController.swift in Sources */,
+				54DD5C9426E96EB60010C23A /* Tab+NavBarConfig.swift in Sources */,
+				54DD5C9826E970190010C23A /* CrendentialView.swift in Sources */,
 				546681E226D428A60020CEEF /* RoundedByCorners.swift in Sources */,
 				543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */,
 				545AF2F126CDAC69003C7CEC /* ClassesCollectionViewCell.swift in Sources */,
 				54BFA46626D8C1E00050FD61 /* ProfileInfo.swift in Sources */,
+				54DD5C9E26E98C080010C23A /* APIEndPoints.swift in Sources */,
 				54BFA46F26D938C10050FD61 /* UIImageView.swift in Sources */,
 				547AD0B326D0352800859A7C /* NavigationLarge.swift in Sources */,
+				54DD5CA126E98F620010C23A /* LogInViewController.swift in Sources */,
 				545AF2B226CD7787003C7CEC /* SceneDelegate.swift in Sources */,
 				545AF2E726CDA88E003C7CEC /* ProfileViewController.swift in Sources */,
 				545AF2E926CDA89A003C7CEC /* ClassesViewController.swift in Sources */,
 				54BFA46D26D8DCC10050FD61 /* CollectionImportantFaculty.swift in Sources */,
 				546681E426D430E40020CEEF /* MapFacultyViewController.swift in Sources */,
-				54DD5C9226E870840010C23A /* CredentialView.swift in Sources */,
+				54DD5C9A26E97C950010C23A /* UINavController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

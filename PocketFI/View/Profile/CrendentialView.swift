@@ -8,6 +8,12 @@
 import UIKit
 
 class CrendentialView: UIView {
+    
+    private let imageStudent: UIImageView = {
+        let image = UIImageView()
+        
+        return image
+    }()
 
     /*
     // Only override draw() if you perform custom drawing.

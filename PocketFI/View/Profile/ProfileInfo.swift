@@ -25,8 +25,8 @@ class ProfileInfo: UICollectionReusableView {
         return image
     }()
     
-    private let card: CredentialView = {
-       let card = CredentialView()
+    private let card: CrendentialView = {
+       let card = CrendentialView()
         card.backgroundColor = .white
         card.layer.cornerRadius = 15
         card.clipsToBounds = true

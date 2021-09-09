@@ -11,6 +11,7 @@ class FacultyViewController: UIViewController {
 
     @IBOutlet var facultyCollection: UICollectionView!
     let randomImageSelector = String(Int.random(in: 1..<6))
+    var observer: NSKeyValueObservation?
     
     let elements:[FacultyElement] = [
         FacultyElement(image: "infraestructura", labelText: "Infraestructura", color: .systemBlue),
@@ -30,7 +31,8 @@ class FacultyViewController: UIViewController {
         super.viewDidLoad()
         facultyCollection.delegate = self
         facultyCollection.dataSource = self
-
+        differentLargeTitle()
+        
         addShadowToBar()
     }
     
@@ -39,7 +41,6 @@ class FacultyViewController: UIViewController {
     }
     
 }
-
 
 extension FacultyViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -65,7 +66,7 @@ extension FacultyViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.item {
-        case 2:
+        case 3:
             navigationController?.pushViewController(MapFacultyViewController(), animated: true)
         default:
             return
@@ -81,11 +82,11 @@ extension FacultyViewController: UICollectionViewDelegateFlowLayout{
         if UIDevice().userInterfaceIdiom == .phone {
             switch indexPath.item {
             case 0:
-                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width - 21), height: (view.safeAreaLayoutGuide.layoutFrame.width/1.4))
+                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width - 21), height: (view.frame.width/1.4))
             case 3:
-                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width/1.1), height: (view.safeAreaLayoutGuide.layoutFrame.width/2.5))
+                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width/1.1), height: (view.safeAreaLayoutGuide.layoutFrame.width/3))
             default:
-                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width/2.14), height: (view.safeAreaLayoutGuide.layoutFrame.width/2.2))
+                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width/2.14), height: (view.safeAreaLayoutGuide.layoutFrame.width/3.5))
             }
         }else{
             return CGSize(width: 150, height: 200)
@@ -111,7 +112,7 @@ extension FacultyViewController: UICollectionViewDelegateFlowLayout{
         return 10
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 1
     }
     func addShadowToBar() {
         navigationController?.navigationBar.layer.masksToBounds = false
@@ -121,6 +122,25 @@ extension FacultyViewController: UICollectionViewDelegateFlowLayout{
         navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 10, left: 10, bottom: 20, right: 10)
+        return UIEdgeInsets(top: 10, left: 10, bottom: 30, right: 10)
+    }
+}
+
+extension FacultyViewController{
+    
+    func differentLargeTitle(){
+        self.observer = self.navigationController?.navigationBar.observe(\.bounds, options: [.new], changeHandler: { (navigationBar, changes) in
+            if let height = changes.newValue?.height {
+                if height > 44.0 {
+                    //Large Title
+                    self.navigationItem.title = "Bienvenido"
+                    self.tabBarController?.navigationItem.title = " "
+                } else {
+                    //Small Title
+                    self.navigationItem.title = "Facultad"
+                    self.tabBarController?.navigationItem.title = " "
+                }
+            }
+        })
     }
 }
