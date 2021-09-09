@@ -9,6 +9,7 @@
   "author": "Samuel Arturo Garrido Sanchez",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "passkit-generator": "^2.0.8"
   }
 }
