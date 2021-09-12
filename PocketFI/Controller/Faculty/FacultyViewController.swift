@@ -59,7 +59,6 @@ extension FacultyViewController: UICollectionViewDataSource{
             let cell = facultyCollection.dequeueReusableCell(withReuseIdentifier: "facultyCell", for: indexPath) as! FacultyCollectionViewCell
             cell.element = elements[indexPath.item]
             return cell
-        
         }
     }
     
@@ -86,7 +85,7 @@ extension FacultyViewController: UICollectionViewDelegateFlowLayout{
             case 3:
                 return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width/1.1), height: (view.safeAreaLayoutGuide.layoutFrame.width/3))
             default:
-                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width/2.14), height: (view.safeAreaLayoutGuide.layoutFrame.width/3.5))
+                return CGSize(width: (view.safeAreaLayoutGuide.layoutFrame.width/2.15), height: (view.safeAreaLayoutGuide.layoutFrame.width/3.5))
             }
         }else{
             return CGSize(width: 150, height: 200)
@@ -101,6 +100,7 @@ extension FacultyViewController: UICollectionViewDelegateFlowLayout{
             guard let typedHeaderView = headerView as? WelcomeCollectionReusableView
                 else { return headerView }
             typedHeaderView.imagenWelcome.image = UIImage(named: "welcome"+randomImageSelector)
+            
             return typedHeaderView
             
         default:
@@ -131,16 +131,56 @@ extension FacultyViewController{
     func differentLargeTitle(){
         self.observer = self.navigationController?.navigationBar.observe(\.bounds, options: [.new], changeHandler: { (navigationBar, changes) in
             if let height = changes.newValue?.height {
-                if height > 44.0 {
-                    //Large Title
+                if height > 40.0 {
                     self.navigationItem.title = "Bienvenido"
                     self.tabBarController?.navigationItem.title = " "
                 } else {
-                    //Small Title
                     self.navigationItem.title = "Facultad"
                     self.tabBarController?.navigationItem.title = " "
                 }
             }
         })
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        switch CheckIphoneModel.checkIphoneModel() {
+            case .iPhoneRegular:
+                print("Se fue por el regular")
+                return CGSize(width: view.frame.width, height: 400)
+            case .iPhoneXr:
+                print("Se fue por el XR")
+                return CGSize(width: view.frame.width, height: 200)
+            default:
+                return CGSize(width: view.frame.width, height: 200)
+            }
+        }
+}
+
+
+enum CheckIphoneModel {
+    case iPhonePequeño
+    case iPhoneRegular
+    case iPhonePlus
+    case iPhoneX
+    case iPhoneMax
+    case iPhoneXr
+    
+    static func checkIphoneModel() -> CheckIphoneModel{
+        switch UIScreen.main.nativeBounds.height {
+            case 1136: //5,5s,SE
+                return CheckIphoneModel.iPhonePequeño
+            case 1334: //6,7,8
+                return CheckIphoneModel.iPhoneRegular
+            case 1920, 2208:// 6+,7+,8+
+                return CheckIphoneModel.iPhonePlus
+            case 2436: // X, Xs, 11Pro
+                return CheckIphoneModel.iPhoneX
+            case 2688: // Xs Max, 11 Pro Max
+                return CheckIphoneModel.iPhoneMax
+            case 1792: // Xr, 11
+                return CheckIphoneModel.iPhoneXr
+            default:
+                return CheckIphoneModel.iPhoneRegular
+            }
     }
 }

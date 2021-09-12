@@ -101,7 +101,9 @@
                             <constraint firstItem="DEu-4b-UYm" firstAttribute="bottom" secondItem="Tgu-aR-fqM" secondAttribute="bottom" id="atm-oY-1NJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Clases" id="SSm-b6-qgd"/>
+                    <navigationItem key="navigationItem" title="Clases" id="SSm-b6-qgd">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="wwq-BZ-8Jg"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="Materials" destination="DEu-4b-UYm" id="GuS-oG-kk6"/>
                     </connections>
@@ -300,6 +302,7 @@
         <image name="Faculty" width="37.5" height="37.5"/>
         <image name="Profile" width="37.5" height="37.5"/>
         <image name="notification" width="25" height="25"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <namedColor name="AzulUNAM">
             <color red="0.0" green="0.16862745098039217" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

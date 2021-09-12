@@ -15,12 +15,15 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if let token = UserDefaults.standard.value(forKey: "UserToken") as? String {
             collectionaleView.delegate = self
             collectionaleView.dataSource = self
             print(token)
         } else {
-            loggin()
+            collectionaleView.delegate = self
+            collectionaleView.dataSource = self
+            //loggin()
         }
     }
 }

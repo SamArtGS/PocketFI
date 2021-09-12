@@ -1,0 +1,129 @@
+//
+//  TableViewForPDFs.swift
+//  PocketFI
+//
+//  Created by Samuel Arturo Garrido Sánchez on 9/9/21.
+//
+
+import UIKit
+
+class TableViewForPDFs: UIViewController{
+    
+    private var lista = [PDFelement]()
+    private var listaFiltrada = [PDFelement]()
+    private let titulo:String
+    fileprivate var observer: NSKeyValueObservation?
+    
+    private let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
+    
+    init(titulo:String,lista: [PDFelement]){
+        self.lista = lista
+        self.listaFiltrada = lista
+        self.titulo = titulo
+        super.init(nibName: nil, bundle: nil)
+        
+        setNavConfig(title: titulo)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    let searchController = UISearchController()
+        
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.searchController = searchController
+        
+        differentStyleForLargeTitle()
+        self.navigationItem.searchController?.searchBar.tintColor = .white
+        self.navigationItem.searchController?.searchBar.barTintColor = .white
+        if #available(iOS 13.0, *) {
+            self.navigationItem.searchController?.searchBar.searchTextField.textColor = .white
+            self.navigationItem.searchController?.searchBar.searchTextField.tintColor = .white
+        } else {
+            self.navigationItem.searchController?.searchBar.tintColor = .white
+        }
+        
+        tableView.backgroundColor = .clear
+        tableView.delegate = self
+        searchController.searchResultsUpdater = self
+        searchController.delegate = self
+        tableView.dataSource = self
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        setConstraints()
+        
+    }
+    
+    func setConstraints(){
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+}
+extension TableViewForPDFs: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listaFiltrada.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        cell.textLabel?.text = listaFiltrada[indexPath.item].name
+        return cell
+    }
+}
+
+extension TableViewForPDFs: UISearchControllerDelegate{
+    
+    
+}
+extension TableViewForPDFs: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else {
+            listaFiltrada = lista
+            return
+        }
+        listaFiltrada = lista.filter { resource in
+            resource.name.lowercased().contains(text.lowercased())
+        }
+        if listaFiltrada.isEmpty || text == ""{
+            listaFiltrada = lista
+        }
+        tableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let viewController = PDFViewController(pdfName: "Practica10-AlFin")
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+extension TableViewForPDFs{
+    
+    func differentStyleForLargeTitle(){
+        self.observer = self.navigationController?.navigationBar.observe(\.bounds, options: [.new], changeHandler: { (navigationBar, changes) in
+            if let height = changes.newValue?.height {
+                if height > 40.0 {
+                    self.navigationItem.title = "Bienvenido"
+                    self.tabBarController?.navigationItem.title = " "
+                } else {
+                    self.navigationItem.title = "Facultad"
+                    self.tabBarController?.navigationItem.title = " "
+                }
+            }
+        })
+    }
+}

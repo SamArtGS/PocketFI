@@ -25,6 +25,7 @@
 		545AF2EB26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2EA26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift */; };
 		545AF2EF26CDAC17003C7CEC /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2EE26CDAC17003C7CEC /* ProfileCollectionViewCell.swift */; };
 		545AF2F126CDAC69003C7CEC /* ClassesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2F026CDAC69003C7CEC /* ClassesCollectionViewCell.swift */; };
+		545B6DBC26ED59A3009D6A18 /* Practica10-AlFin.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 545B6DBB26ED59A2009D6A18 /* Practica10-AlFin.pdf */; };
 		546681E026D425BA0020CEEF /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546681DF26D425BA0020CEEF /* Notifications.swift */; };
 		546681E226D428A60020CEEF /* RoundedByCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546681E126D428A60020CEEF /* RoundedByCorners.swift */; };
 		546681E426D430E40020CEEF /* MapFacultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546681E326D430E40020CEEF /* MapFacultyViewController.swift */; };
@@ -42,6 +43,12 @@
 		54DD5C9E26E98C080010C23A /* APIEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C9D26E98C080010C23A /* APIEndPoints.swift */; };
 		54DD5CA126E98F620010C23A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C9F26E98F620010C23A /* LogInViewController.swift */; };
 		54DD5CA426E99ADF0010C23A /* ObserverHideShowKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CA326E99ADF0010C23A /* ObserverHideShowKeyboard.swift */; };
+		54DD5CA626E9AC3F0010C23A /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CA526E9AC3F0010C23A /* UIColors.swift */; };
+		54DD5CA826E9AEB00010C23A /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CA726E9AEB00010C23A /* Resource.swift */; };
+		54DD5CAA26E9BB540010C23A /* UIViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CA926E9BB540010C23A /* UIViewStyles.swift */; };
+		54DD5CAC26E9D8720010C23A /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CAB26E9D8720010C23A /* PDFViewController.swift */; };
+		54DD5CAE26E9D8AE0010C23A /* TableViewForPDFs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CAD26E9D8AE0010C23A /* TableViewForPDFs.swift */; };
+		54DD5CB026E9DF010010C23A /* Tarea1-SAGS.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 54DD5CAF26E9DF010010C23A /* Tarea1-SAGS.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +93,7 @@
 		545AF2EA26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FacultyCollectionViewCell.swift; path = PocketFI/View/Faculty/FacultyCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		545AF2EE26CDAC17003C7CEC /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		545AF2F026CDAC69003C7CEC /* ClassesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesCollectionViewCell.swift; sourceTree = "<group>"; };
+		545B6DBB26ED59A2009D6A18 /* Practica10-AlFin.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Practica10-AlFin.pdf"; path = "../../../../../Practica10-AlFin.pdf"; sourceTree = "<group>"; };
 		546681DF26D425BA0020CEEF /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		546681E126D428A60020CEEF /* RoundedByCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedByCorners.swift; sourceTree = "<group>"; };
 		546681E326D430E40020CEEF /* MapFacultyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFacultyViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +112,12 @@
 		54DD5C9D26E98C080010C23A /* APIEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndPoints.swift; sourceTree = "<group>"; };
 		54DD5C9F26E98F620010C23A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		54DD5CA326E99ADF0010C23A /* ObserverHideShowKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverHideShowKeyboard.swift; sourceTree = "<group>"; };
+		54DD5CA526E9AC3F0010C23A /* UIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColors.swift; sourceTree = "<group>"; };
+		54DD5CA726E9AEB00010C23A /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		54DD5CA926E9BB540010C23A /* UIViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewStyles.swift; sourceTree = "<group>"; };
+		54DD5CAB26E9D8720010C23A /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
+		54DD5CAD26E9D8AE0010C23A /* TableViewForPDFs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewForPDFs.swift; sourceTree = "<group>"; };
+		54DD5CAF26E9DF010010C23A /* Tarea1-SAGS.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Tarea1-SAGS.pdf"; path = "../../../../../Tarea1-SAGS.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +168,7 @@
 		543BB96226D3866D006E8BF6 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				54DD5CA726E9AEB00010C23A /* Resource.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -257,6 +272,7 @@
 				54DD5C9326E96EB60010C23A /* Tab+NavBarConfig.swift */,
 				54DD5C9926E97C950010C23A /* UINavController.swift */,
 				54DD5CA326E99ADF0010C23A /* ObserverHideShowKeyboard.swift */,
+				54DD5CA926E9BB540010C23A /* UIViewStyles.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -281,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				547AD0B226D0352800859A7C /* NavigationLarge.swift */,
+				54DD5CA526E9AC3F0010C23A /* UIColors.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -351,7 +368,11 @@
 		547AD0AD26D0256E00859A7C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				545B6DBB26ED59A2009D6A18 /* Practica10-AlFin.pdf */,
+				54DD5CAF26E9DF010010C23A /* Tarea1-SAGS.pdf */,
 				545AF2E826CDA89A003C7CEC /* ClassesViewController.swift */,
+				54DD5CAD26E9D8AE0010C23A /* TableViewForPDFs.swift */,
+				54DD5CAB26E9D8720010C23A /* PDFViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -468,9 +489,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54DD5CB026E9DF010010C23A /* Tarea1-SAGS.pdf in Resources */,
 				545AF2BC26CD7789003C7CEC /* LaunchScreen.storyboard in Resources */,
 				545AF2B926CD7789003C7CEC /* Assets.xcassets in Resources */,
 				545AF2B726CD7787003C7CEC /* Main.storyboard in Resources */,
+				545B6DBC26ED59A3009D6A18 /* Practica10-AlFin.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +521,7 @@
 				546681E026D425BA0020CEEF /* Notifications.swift in Sources */,
 				54DD5CA426E99ADF0010C23A /* ObserverHideShowKeyboard.swift in Sources */,
 				545AF2EB26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift in Sources */,
+				54DD5CA826E9AEB00010C23A /* Resource.swift in Sources */,
 				547AD0B126D025F700859A7C /* PrincipalTabBar.swift in Sources */,
 				543E678726E66B5F001BCE77 /* Student.swift in Sources */,
 				547AD0B726D047B700859A7C /* WelcomeCollectionReusableView.swift in Sources */,
@@ -505,12 +529,14 @@
 				545AF2EF26CDAC17003C7CEC /* ProfileCollectionViewCell.swift in Sources */,
 				545AF2B026CD7787003C7CEC /* AppDelegate.swift in Sources */,
 				54DD5C9026E86B710010C23A /* Alert.swift in Sources */,
+				54DD5CAC26E9D8720010C23A /* PDFViewController.swift in Sources */,
 				543E678926E6980A001BCE77 /* CredentialService.swift in Sources */,
 				545AF2E526CDA877003C7CEC /* FacultyViewController.swift in Sources */,
 				54DD5C9426E96EB60010C23A /* Tab+NavBarConfig.swift in Sources */,
 				54DD5C9826E970190010C23A /* CrendentialView.swift in Sources */,
 				546681E226D428A60020CEEF /* RoundedByCorners.swift in Sources */,
 				543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */,
+				54DD5CAA26E9BB540010C23A /* UIViewStyles.swift in Sources */,
 				545AF2F126CDAC69003C7CEC /* ClassesCollectionViewCell.swift in Sources */,
 				54BFA46626D8C1E00050FD61 /* ProfileInfo.swift in Sources */,
 				54DD5C9E26E98C080010C23A /* APIEndPoints.swift in Sources */,
@@ -519,8 +545,10 @@
 				54DD5CA126E98F620010C23A /* LogInViewController.swift in Sources */,
 				545AF2B226CD7787003C7CEC /* SceneDelegate.swift in Sources */,
 				545AF2E726CDA88E003C7CEC /* ProfileViewController.swift in Sources */,
+				54DD5CAE26E9D8AE0010C23A /* TableViewForPDFs.swift in Sources */,
 				545AF2E926CDA89A003C7CEC /* ClassesViewController.swift in Sources */,
 				54BFA46D26D8DCC10050FD61 /* CollectionImportantFaculty.swift in Sources */,
+				54DD5CA626E9AC3F0010C23A /* UIColors.swift in Sources */,
 				546681E426D430E40020CEEF /* MapFacultyViewController.swift in Sources */,
 				54DD5C9A26E97C950010C23A /* UINavController.swift in Sources */,
 			);

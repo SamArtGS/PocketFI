@@ -34,7 +34,7 @@ class CellNews: UICollectionViewCell {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .clear
         view.layer.cornerRadius = 10
-        view.backgroundColor = UIColor(named: "whiteGray")
+        view.backgroundColor = .gray1
         view.clipsToBounds = true
         return view
     }()

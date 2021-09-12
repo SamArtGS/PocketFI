@@ -14,7 +14,7 @@ extension ProfileViewController{
         let stack: UIStackView = {
            let stack:UIStackView = UIStackView()
             stack.axis = .vertical
-            stack.distribution = .fill
+            stack.distribution = .fillProportionally
             stack.alignment = .center
             stack.spacing = 10
             stack.translatesAutoresizingMaskIntoConstraints = false
@@ -56,9 +56,7 @@ extension ProfileViewController{
         
         NSLayoutConstraint.activate([
             stack.topAnchor.constraint(equalTo: view.topAnchor),
-            stack.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            stack.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            stack.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            stack.leadingAnchor.constraint(equalTo: view.leadingAnchor)
         ])
     }
 }

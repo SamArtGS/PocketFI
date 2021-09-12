@@ -27,6 +27,11 @@ class MapFacultyViewController: UIViewController {
             mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavBarColor(colorFondo: .red, colorLetras: .white)
+    }
 
 }
 extension UINavigationController{
