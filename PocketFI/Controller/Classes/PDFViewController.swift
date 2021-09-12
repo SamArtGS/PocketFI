@@ -12,6 +12,16 @@ class PDFViewController: UIViewController{
     
     private var document: PDFDocument?
     private var pdfName: String
+    private var link: String
+    private var activityIndicator = UIActivityIndicatorView(style: .gray)
+    
+    private let pdffileurl : URL = {
+        let fm = FileManager.default
+        let docsurl = try! fm.url(
+            for: .documentDirectory, in: .userDomainMask,
+            appropriateFor: nil, create: true)
+        return docsurl.appendingPathComponent("mypdf.pdf")
+    }()
    
     private let pdfView:PDFView = {
         let pdfView = PDFView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
@@ -23,8 +33,9 @@ class PDFViewController: UIViewController{
         return pdfView
     }()
     
-    init(pdfName: String) {
+    init(pdfName: String, link: String) {
         self.pdfName = pdfName
+        self.link = link
         super.init(nibName: nil, bundle: nil)
         self.title = pdfName
     }
@@ -33,24 +44,68 @@ class PDFViewController: UIViewController{
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        guard let path = Bundle.main.url(forResource: "Practica10-AlFin", withExtension: "pdf") else { return }
-        if let document = PDFDocument(url: path) {
-            self.document = document
-            pdfView.document = document
+    func loadPDF() {
+        let docsurl = try? FileManager.default.url(
+            for: .documentDirectory, in: .userDomainMask,
+            appropriateFor: nil, create: true)
+        if FileManager.default.fileExists(atPath: docsurl?.appendingPathComponent(pdfName).path ?? ""){
+            print("Encontró el archivo en el teléfono")
+            pdfView.document = PDFDocument(url: docsurl!.absoluteURL)
+            self.document = pdfView.document
             pdfView.autoScales = true
             pdfView.minScaleFactor = 0.6
             pdfView.maxScaleFactor = 12.0
-        }
+        }else{
+            DispatchQueue.global(qos: .userInteractive).async {
+                    if let url = URL(string: self.link) {
+                        if let pdfDocument = PDFDocument(url: url) {
+                            DispatchQueue.main.async {
+                                self.dismiss(animated: true)
+                                self.activityIndicator.stopAnimating()
+                                self.document = pdfDocument
+                                self.pdfView.autoScales = true
+                                self.pdfView.document = pdfDocument
+                                self.pdfView.minScaleFactor = 0.6
+                                self.pdfView.maxScaleFactor = 12.0
+                            }
+                        } else {
+                            DispatchQueue.main.async {
+                                self.dismiss(animated: true)
+                                self.activityIndicator.stopAnimating()
+                                self.navigationController?.popViewController(animated: true)
+                                self.mostrarAlerta(title: "Error PDF", message: "No se pudo mostrar el PDF")
+                            }
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                            self.dismiss(animated: true)
+                            self.navigationController?.popViewController(animated: true)
+                            self.mostrarAlerta(title: "Error URL", message: "Error el los links")
+                        }
+                    }
+                }
+            }
+    }
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = pdfView.backgroundColor
         setConstraints()
         setBarButtons()
+        mostrarAletraConIndicator(title: "Descargando", message: "Se está buscando el pdf", activityIndicator: &activityIndicator)
+        DispatchQueue.main.async {
+            self.loadPDF()
+        }
     }
+    
+    
     
     func setBarButtons(){
         if #available(iOS 13.0, *) {
             let BarButtonItemRight = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(sendToApp))
-            let BarButtonItemRightSave = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(savePDF))
+            let BarButtonItemRightSave = UIBarButtonItem(image: UIImage(systemName: "arrow.down.doc.fill"), style: .plain, target: self, action: #selector(savePDF))
             
             self.navigationItem.rightBarButtonItems = [BarButtonItemRight,BarButtonItemRightSave]
         } else {
@@ -60,9 +115,25 @@ class PDFViewController: UIViewController{
         }
     }
     
-    @objc func savePDF(){
+    @objc private func savePDF(){
         
-        
+    }
+    func downloadPDF(){
+        URLSession.shared.downloadTask(with: URL(string: link)!) { (url, resp, err) in
+            if let url = url {
+                let fm = FileManager.default
+                try? fm.removeItem(at: self.pdffileurl)
+                try? fm.moveItem(at: url, to: self.pdffileurl)
+                DispatchQueue.main.async {
+                    print(self.pdffileurl)
+                    let doc = PDFDocument(url: self.pdffileurl)
+                    self.pdfView.document = doc
+                    self.pdfView.autoScales = true
+                    self.pdfView.minScaleFactor = 0.6
+                    self.pdfView.maxScaleFactor = 12.0
+                }
+            }
+        }.resume()
     }
     
     @objc func sendToApp(){
@@ -72,17 +143,6 @@ class PDFViewController: UIViewController{
         let activityController = UIActivityViewController(activityItems: [data], applicationActivities: nil)
         activityController.popoverPresentationController?.sourceView = self.view
         present(activityController, animated: true)
-        
-        /*
-        let fileManager = FileManager.default
-        let docsurl = try! fileManager.url(for:.documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
-        let documentoPath =  docsurl.appendingPathComponent("yourfile.pdf")
-
-        if fileManager.fileExists(atPath: documentoPath){
-           let pdfData = NSData(contentsOfFile: documentoPath)
-            var activityViewController = UIActivityViewController(activityItems: ["Abrir con aplicación", pdfData], applicationActivities: nil)   // and present it
-            present(activityViewController, animated: true) {() -> Void in }
-        }*/
     }
 
     
@@ -90,12 +150,17 @@ class PDFViewController: UIViewController{
         super.viewWillAppear(animated)
         navigationItem.largeTitleDisplayMode = .never
         navigationController?.tabBarController?.tabBar.isHidden = true
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.myOrientation = .all
     }
        
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.tabBarController?.tabBar.isHidden = false
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.myOrientation = .portrait
+        UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
     }
     
 

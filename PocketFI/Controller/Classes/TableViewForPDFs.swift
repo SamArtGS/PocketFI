@@ -42,8 +42,7 @@ class TableViewForPDFs: UIViewController{
         navigationItem.searchController = searchController
         
         differentStyleForLargeTitle()
-        self.navigationItem.searchController?.searchBar.tintColor = .white
-        self.navigationItem.searchController?.searchBar.barTintColor = .white
+        
         if #available(iOS 13.0, *) {
             self.navigationItem.searchController?.searchBar.searchTextField.textColor = .white
             self.navigationItem.searchController?.searchBar.searchTextField.tintColor = .white
@@ -51,7 +50,7 @@ class TableViewForPDFs: UIViewController{
             self.navigationItem.searchController?.searchBar.tintColor = .white
         }
         
-        tableView.backgroundColor = .clear
+        tableView.backgroundColor = .gray1
         tableView.delegate = self
         searchController.searchResultsUpdater = self
         searchController.delegate = self
@@ -80,6 +79,7 @@ extension TableViewForPDFs: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         cell.textLabel?.text = listaFiltrada[indexPath.item].name
+        cell.backgroundColor = .gray1
         return cell
     }
 }
@@ -95,9 +95,9 @@ extension TableViewForPDFs: UISearchResultsUpdating {
             return
         }
         listaFiltrada = lista.filter { resource in
-            resource.name.lowercased().contains(text.lowercased())
+            resource.name.forSorting.lowercased().contains(text.forSorting.lowercased())
         }
-        if listaFiltrada.isEmpty || text == ""{
+        if listaFiltrada.isEmpty && text == "" {
             listaFiltrada = lista
         }
         tableView.reloadData()
@@ -105,7 +105,7 @@ extension TableViewForPDFs: UISearchResultsUpdating {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let viewController = PDFViewController(pdfName: "Practica10-AlFin")
+        let viewController = PDFViewController(pdfName: listaFiltrada[indexPath.item].name,link: listaFiltrada[indexPath.item].link)
         
         navigationController?.pushViewController(viewController, animated: true)
     }
@@ -116,7 +116,7 @@ extension TableViewForPDFs{
     func differentStyleForLargeTitle(){
         self.observer = self.navigationController?.navigationBar.observe(\.bounds, options: [.new], changeHandler: { (navigationBar, changes) in
             if let height = changes.newValue?.height {
-                if height > 40.0 {
+                if height > 44.0 {
                     self.navigationItem.title = "Bienvenido"
                     self.tabBarController?.navigationItem.title = " "
                 } else {

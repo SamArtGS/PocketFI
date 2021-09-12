@@ -21,6 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           }
     }
     
+    var myOrientation: UIInterfaceOrientationMask = .portrait
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+            return myOrientation
+    }
+    
     func getNotificationSettings() {
       UNUserNotificationCenter.current().getNotificationSettings { settings in
         guard settings.authorizationStatus == .authorized else { return }

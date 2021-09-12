@@ -64,9 +64,7 @@ class ClassesCollectionViewCell: UICollectionViewCell {
     func setConstraints(){
         titleText.font = .systemFont(ofSize: CGFloat(sizeLetters()), weight: .bold)
         self.layer.cornerRadius = 15
-        self.clipsToBounds = true
-        backgroundColor = .gray1
-        
+        self.clipsToBounds = true        
         addSubview(box)
         box.addSubview(stack)
         stack.addArrangedSubview(imageIcon)

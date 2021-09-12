@@ -15,7 +15,7 @@ extension UIView{
         layer.shadowOffset = CGSize(width: 0, height: 3)
         layer.shadowRadius = 3.0
         layer.shadowOpacity = opacy
-        layer.masksToBounds = false //<-
+        layer.masksToBounds = false 
     }
     func sizeLetters() -> Float {
         switch UIScreen.main.nativeBounds.height {

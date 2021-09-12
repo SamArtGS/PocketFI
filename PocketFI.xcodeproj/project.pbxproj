@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		540BE08826ED8AE20026C6B4 /* StringCaseSensitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE08726ED8AE20026C6B4 /* StringCaseSensitive.swift */; };
+		540BE08A26ED9A830026C6B4 /* CheckiPhoneVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE08926ED9A830026C6B4 /* CheckiPhoneVersion.swift */; };
+		540BE08C26EE45990026C6B4 /* Tareas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE08B26EE45990026C6B4 /* Tareas.swift */; };
 		543BB96526D386A1006E8BF6 /* FacultyElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BB96426D386A1006E8BF6 /* FacultyElement.swift */; };
 		543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */; };
 		543E678726E66B5F001BCE77 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E678626E66B5F001BCE77 /* Student.swift */; };
@@ -25,7 +28,6 @@
 		545AF2EB26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2EA26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift */; };
 		545AF2EF26CDAC17003C7CEC /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2EE26CDAC17003C7CEC /* ProfileCollectionViewCell.swift */; };
 		545AF2F126CDAC69003C7CEC /* ClassesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545AF2F026CDAC69003C7CEC /* ClassesCollectionViewCell.swift */; };
-		545B6DBC26ED59A3009D6A18 /* Practica10-AlFin.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 545B6DBB26ED59A2009D6A18 /* Practica10-AlFin.pdf */; };
 		546681E026D425BA0020CEEF /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546681DF26D425BA0020CEEF /* Notifications.swift */; };
 		546681E226D428A60020CEEF /* RoundedByCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546681E126D428A60020CEEF /* RoundedByCorners.swift */; };
 		546681E426D430E40020CEEF /* MapFacultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546681E326D430E40020CEEF /* MapFacultyViewController.swift */; };
@@ -35,7 +37,7 @@
 		54BFA46626D8C1E00050FD61 /* ProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46526D8C1E00050FD61 /* ProfileInfo.swift */; };
 		54BFA46D26D8DCC10050FD61 /* CollectionImportantFaculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46C26D8DCC10050FD61 /* CollectionImportantFaculty.swift */; };
 		54BFA46F26D938C10050FD61 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46E26D938C10050FD61 /* UIImageView.swift */; };
-		54DD5C9026E86B710010C23A /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C8F26E86B710010C23A /* Alert.swift */; };
+		54DD5C9026E86B710010C23A /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C8F26E86B710010C23A /* Alerts.swift */; };
 		54DD5C9426E96EB60010C23A /* Tab+NavBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C9326E96EB60010C23A /* Tab+NavBarConfig.swift */; };
 		54DD5C9826E970190010C23A /* CrendentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C9726E970180010C23A /* CrendentialView.swift */; };
 		54DD5C9A26E97C950010C23A /* UINavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C9926E97C950010C23A /* UINavController.swift */; };
@@ -48,7 +50,6 @@
 		54DD5CAA26E9BB540010C23A /* UIViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CA926E9BB540010C23A /* UIViewStyles.swift */; };
 		54DD5CAC26E9D8720010C23A /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CAB26E9D8720010C23A /* PDFViewController.swift */; };
 		54DD5CAE26E9D8AE0010C23A /* TableViewForPDFs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CAD26E9D8AE0010C23A /* TableViewForPDFs.swift */; };
-		54DD5CB026E9DF010010C23A /* Tarea1-SAGS.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 54DD5CAF26E9DF010010C23A /* Tarea1-SAGS.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,9 @@
 
 /* Begin PBXFileReference section */
 		540105E726DE96140001FEC4 /* PocketFI.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = PocketFI.entitlements; sourceTree = "<group>"; };
+		540BE08726ED8AE20026C6B4 /* StringCaseSensitive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCaseSensitive.swift; sourceTree = "<group>"; };
+		540BE08926ED9A830026C6B4 /* CheckiPhoneVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckiPhoneVersion.swift; sourceTree = "<group>"; };
+		540BE08B26EE45990026C6B4 /* Tareas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tareas.swift; sourceTree = "<group>"; };
 		543BB96426D386A1006E8BF6 /* FacultyElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyElement.swift; sourceTree = "<group>"; };
 		543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowStreckyHeader.swift; sourceTree = "<group>"; };
 		543E678626E66B5F001BCE77 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
@@ -93,7 +97,6 @@
 		545AF2EA26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FacultyCollectionViewCell.swift; path = PocketFI/View/Faculty/FacultyCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
 		545AF2EE26CDAC17003C7CEC /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		545AF2F026CDAC69003C7CEC /* ClassesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesCollectionViewCell.swift; sourceTree = "<group>"; };
-		545B6DBB26ED59A2009D6A18 /* Practica10-AlFin.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Practica10-AlFin.pdf"; path = "../../../../../Practica10-AlFin.pdf"; sourceTree = "<group>"; };
 		546681DF26D425BA0020CEEF /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		546681E126D428A60020CEEF /* RoundedByCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedByCorners.swift; sourceTree = "<group>"; };
 		546681E326D430E40020CEEF /* MapFacultyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapFacultyViewController.swift; sourceTree = "<group>"; };
@@ -104,7 +107,7 @@
 		54BFA46526D8C1E00050FD61 /* ProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfo.swift; sourceTree = "<group>"; };
 		54BFA46C26D8DCC10050FD61 /* CollectionImportantFaculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionImportantFaculty.swift; sourceTree = "<group>"; };
 		54BFA46E26D938C10050FD61 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		54DD5C8F26E86B710010C23A /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		54DD5C8F26E86B710010C23A /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		54DD5C9326E96EB60010C23A /* Tab+NavBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+NavBarConfig.swift"; sourceTree = "<group>"; };
 		54DD5C9726E970180010C23A /* CrendentialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrendentialView.swift; sourceTree = "<group>"; };
 		54DD5C9926E97C950010C23A /* UINavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavController.swift; sourceTree = "<group>"; };
@@ -117,7 +120,6 @@
 		54DD5CA926E9BB540010C23A /* UIViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewStyles.swift; sourceTree = "<group>"; };
 		54DD5CAB26E9D8720010C23A /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		54DD5CAD26E9D8AE0010C23A /* TableViewForPDFs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewForPDFs.swift; sourceTree = "<group>"; };
-		54DD5CAF26E9DF010010C23A /* Tarea1-SAGS.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Tarea1-SAGS.pdf"; path = "../../../../../Tarea1-SAGS.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,11 +270,12 @@
 			children = (
 				546681E126D428A60020CEEF /* RoundedByCorners.swift */,
 				54BFA46E26D938C10050FD61 /* UIImageView.swift */,
-				54DD5C8F26E86B710010C23A /* Alert.swift */,
+				54DD5C8F26E86B710010C23A /* Alerts.swift */,
 				54DD5C9326E96EB60010C23A /* Tab+NavBarConfig.swift */,
 				54DD5C9926E97C950010C23A /* UINavController.swift */,
 				54DD5CA326E99ADF0010C23A /* ObserverHideShowKeyboard.swift */,
 				54DD5CA926E9BB540010C23A /* UIViewStyles.swift */,
+				540BE08726ED8AE20026C6B4 /* StringCaseSensitive.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 			children = (
 				547AD0B226D0352800859A7C /* NavigationLarge.swift */,
 				54DD5CA526E9AC3F0010C23A /* UIColors.swift */,
+				540BE08926ED9A830026C6B4 /* CheckiPhoneVersion.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -368,11 +372,10 @@
 		547AD0AD26D0256E00859A7C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				545B6DBB26ED59A2009D6A18 /* Practica10-AlFin.pdf */,
-				54DD5CAF26E9DF010010C23A /* Tarea1-SAGS.pdf */,
 				545AF2E826CDA89A003C7CEC /* ClassesViewController.swift */,
 				54DD5CAD26E9D8AE0010C23A /* TableViewForPDFs.swift */,
 				54DD5CAB26E9D8720010C23A /* PDFViewController.swift */,
+				540BE08B26EE45990026C6B4 /* Tareas.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -489,11 +492,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54DD5CB026E9DF010010C23A /* Tarea1-SAGS.pdf in Resources */,
 				545AF2BC26CD7789003C7CEC /* LaunchScreen.storyboard in Resources */,
 				545AF2B926CD7789003C7CEC /* Assets.xcassets in Resources */,
 				545AF2B726CD7787003C7CEC /* Main.storyboard in Resources */,
-				545B6DBC26ED59A3009D6A18 /* Practica10-AlFin.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,11 +529,12 @@
 				543BB96526D386A1006E8BF6 /* FacultyElement.swift in Sources */,
 				545AF2EF26CDAC17003C7CEC /* ProfileCollectionViewCell.swift in Sources */,
 				545AF2B026CD7787003C7CEC /* AppDelegate.swift in Sources */,
-				54DD5C9026E86B710010C23A /* Alert.swift in Sources */,
+				54DD5C9026E86B710010C23A /* Alerts.swift in Sources */,
 				54DD5CAC26E9D8720010C23A /* PDFViewController.swift in Sources */,
 				543E678926E6980A001BCE77 /* CredentialService.swift in Sources */,
 				545AF2E526CDA877003C7CEC /* FacultyViewController.swift in Sources */,
 				54DD5C9426E96EB60010C23A /* Tab+NavBarConfig.swift in Sources */,
+				540BE08C26EE45990026C6B4 /* Tareas.swift in Sources */,
 				54DD5C9826E970190010C23A /* CrendentialView.swift in Sources */,
 				546681E226D428A60020CEEF /* RoundedByCorners.swift in Sources */,
 				543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */,
@@ -541,6 +543,8 @@
 				54BFA46626D8C1E00050FD61 /* ProfileInfo.swift in Sources */,
 				54DD5C9E26E98C080010C23A /* APIEndPoints.swift in Sources */,
 				54BFA46F26D938C10050FD61 /* UIImageView.swift in Sources */,
+				540BE08826ED8AE20026C6B4 /* StringCaseSensitive.swift in Sources */,
+				540BE08A26ED9A830026C6B4 /* CheckiPhoneVersion.swift in Sources */,
 				547AD0B326D0352800859A7C /* NavigationLarge.swift in Sources */,
 				54DD5CA126E98F620010C23A /* LogInViewController.swift in Sources */,
 				545AF2B226CD7787003C7CEC /* SceneDelegate.swift in Sources */,

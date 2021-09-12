@@ -12,16 +12,14 @@ class ClassesViewController: UIViewController {
     @IBOutlet weak var Materials: UICollectionView!
     
     let resources: [Resource] = [
-        Resource(id: 1, imageIcon: "tareas", resourceTitle: "Tareas", resources: [
-            PDFelement(id: 1, name: "Calculo integral", size: 40, link: "www.google.com"),
-            PDFelement(id: 1, name: "Calculo vectorial", size: 40, link: "www.google.com"),
-            PDFelement(id: 1, name: "Álgebra lineal", size: 40, link: "www.google.com"),
-            PDFelement(id: 1, name: "Metodología Investigación", size: 40, link: "www.google.com"),
-            PDFelement(id: 1, name: "General porfirio", size: 40, link: "www.google.com"),
-            
-        
+        Resource(id: 1, imageIcon: "tareas", resourceTitle: "Tareas"),
+        Resource(id: 2, imageIcon: "series", resourceTitle: "Series de Ejercicios",resources: [
+            PDFelement(id: 1, name: "Álgebra - Serie 1", size: 0, link: "https://www.ingenieria.unam.mx/programas_academicos/licenciatura/Computacion/2016/optativas_computacion_2016.pdf"),
+            PDFelement(id: 1, name: "Calculo vectorial", size: 0, link: "www.google.com"),
+            PDFelement(id: 1, name: "Álgebra lineal", size: 0, link: "www.google.com"),
+            PDFelement(id: 1, name: "Metodología Investigación", size: 0, link: "www.google.com"),
+            PDFelement(id: 1, name: "General porfirio", size: 0, link: "www.google.com")
         ]),
-        Resource(id: 2, imageIcon: "series", resourceTitle: "Series de Ejercicios"),
         Resource(id: 3, imageIcon: "manualLab", resourceTitle: "Manuales de Prácticas"),
         Resource(id: 4, imageIcon: "horario", resourceTitle: "Horario"),
         Resource(id: 5, imageIcon: "calendar", resourceTitle: "Calendario"),
@@ -59,9 +57,9 @@ extension ClassesViewController: UICollectionViewDelegate, UICollectionViewDataS
         
         switch index {
         case 0:
-            navigationController?.pushViewController(TableViewForPDFs(titulo: "Tareas", lista: resources), animated: true)
             break
         case 1:
+            navigationController?.pushViewController(TableViewForPDFs(titulo: "Series de ejercicios", lista: resources), animated: true)
             break
         case 2:
             break
