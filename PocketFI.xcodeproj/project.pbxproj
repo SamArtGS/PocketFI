@@ -9,9 +9,14 @@
 /* Begin PBXBuildFile section */
 		540BE08826ED8AE20026C6B4 /* StringCaseSensitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE08726ED8AE20026C6B4 /* StringCaseSensitive.swift */; };
 		540BE08A26ED9A830026C6B4 /* CheckiPhoneVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE08926ED9A830026C6B4 /* CheckiPhoneVersion.swift */; };
-		540BE08C26EE45990026C6B4 /* Tareas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE08B26EE45990026C6B4 /* Tareas.swift */; };
+		540BE08C26EE45990026C6B4 /* HomeWorkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE08B26EE45990026C6B4 /* HomeWorkVC.swift */; };
 		540BE08E26EE47BD0026C6B4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE08D26EE47BD0026C6B4 /* Data.swift */; };
 		540BE09026EE634D0026C6B4 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE08F26EE634D0026C6B4 /* Calendar.swift */; };
+		540BE09226EE656B0026C6B4 /* Homework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE09126EE656B0026C6B4 /* Homework.swift */; };
+		540BE09426EE74FD0026C6B4 /* ScheduleVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE09326EE74FD0026C6B4 /* ScheduleVController.swift */; };
+		540BE09626EE75120026C6B4 /* NewsVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE09526EE75120026C6B4 /* NewsVController.swift */; };
+		540BE09826EE753E0026C6B4 /* ArchitectureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE09726EE753E0026C6B4 /* ArchitectureViewController.swift */; };
+		540BE09A26EE75A90026C6B4 /* TeachersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE09926EE75A90026C6B4 /* TeachersViewController.swift */; };
 		543BB96526D386A1006E8BF6 /* FacultyElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BB96426D386A1006E8BF6 /* FacultyElement.swift */; };
 		543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */; };
 		543E678726E66B5F001BCE77 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E678626E66B5F001BCE77 /* Student.swift */; };
@@ -52,6 +57,7 @@
 		54DD5CAA26E9BB540010C23A /* UIViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CA926E9BB540010C23A /* UIViewStyles.swift */; };
 		54DD5CAC26E9D8720010C23A /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CAB26E9D8720010C23A /* PDFViewController.swift */; };
 		54DD5CAE26E9D8AE0010C23A /* TableViewForPDFs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CAD26E9D8AE0010C23A /* TableViewForPDFs.swift */; };
+		6EC54B9F9F367DC3FC4FEE8F /* libPods-PocketFI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB20BD68B032299AB8F7962B /* libPods-PocketFI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,9 +81,14 @@
 		540105E726DE96140001FEC4 /* PocketFI.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = PocketFI.entitlements; sourceTree = "<group>"; };
 		540BE08726ED8AE20026C6B4 /* StringCaseSensitive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCaseSensitive.swift; sourceTree = "<group>"; };
 		540BE08926ED9A830026C6B4 /* CheckiPhoneVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckiPhoneVersion.swift; sourceTree = "<group>"; };
-		540BE08B26EE45990026C6B4 /* Tareas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tareas.swift; sourceTree = "<group>"; };
+		540BE08B26EE45990026C6B4 /* HomeWorkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorkVC.swift; sourceTree = "<group>"; };
 		540BE08D26EE47BD0026C6B4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		540BE08F26EE634D0026C6B4 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
+		540BE09126EE656B0026C6B4 /* Homework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework.swift; sourceTree = "<group>"; };
+		540BE09326EE74FD0026C6B4 /* ScheduleVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleVController.swift; sourceTree = "<group>"; };
+		540BE09526EE75120026C6B4 /* NewsVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVController.swift; sourceTree = "<group>"; };
+		540BE09726EE753E0026C6B4 /* ArchitectureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureViewController.swift; sourceTree = "<group>"; };
+		540BE09926EE75A90026C6B4 /* TeachersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersViewController.swift; sourceTree = "<group>"; };
 		543BB96426D386A1006E8BF6 /* FacultyElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyElement.swift; sourceTree = "<group>"; };
 		543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowStreckyHeader.swift; sourceTree = "<group>"; };
 		543E678626E66B5F001BCE77 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
@@ -124,6 +135,9 @@
 		54DD5CA926E9BB540010C23A /* UIViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewStyles.swift; sourceTree = "<group>"; };
 		54DD5CAB26E9D8720010C23A /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		54DD5CAD26E9D8AE0010C23A /* TableViewForPDFs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewForPDFs.swift; sourceTree = "<group>"; };
+		AEC167A22779B682CFF65C87 /* Pods-PocketFI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketFI.debug.xcconfig"; path = "Target Support Files/Pods-PocketFI/Pods-PocketFI.debug.xcconfig"; sourceTree = "<group>"; };
+		DB20BD68B032299AB8F7962B /* libPods-PocketFI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PocketFI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFA64804DDE30A1D95ECC84C /* Pods-PocketFI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketFI.release.xcconfig"; path = "Target Support Files/Pods-PocketFI/Pods-PocketFI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +147,7 @@
 			files = (
 				545411DC26E56D05001A5154 /* PassKit.framework in Frameworks */,
 				54DD5C9C26E97F510010C23A /* PushKit.framework in Frameworks */,
+				6EC54B9F9F367DC3FC4FEE8F /* libPods-PocketFI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				54DD5CA726E9AEB00010C23A /* Resource.swift */,
+				540BE09126EE656B0026C6B4 /* Homework.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -196,6 +212,7 @@
 				545AF2D026CD778A003C7CEC /* PocketFIUITests */,
 				545AF2AD26CD7787003C7CEC /* Products */,
 				D4D7C70288EF4EB7A80586A8 /* Frameworks */,
+				A7F8D12F2DC8DBD40D16BD5C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -362,6 +379,9 @@
 				545AF2E426CDA877003C7CEC /* FacultyViewController.swift */,
 				546681DF26D425BA0020CEEF /* Notifications.swift */,
 				546681E326D430E40020CEEF /* MapFacultyViewController.swift */,
+				540BE09526EE75120026C6B4 /* NewsVController.swift */,
+				540BE09726EE753E0026C6B4 /* ArchitectureViewController.swift */,
+				540BE09926EE75A90026C6B4 /* TeachersViewController.swift */,
 			);
 			path = Faculty;
 			sourceTree = "<group>";
@@ -380,10 +400,20 @@
 				545AF2E826CDA89A003C7CEC /* ClassesViewController.swift */,
 				54DD5CAD26E9D8AE0010C23A /* TableViewForPDFs.swift */,
 				54DD5CAB26E9D8720010C23A /* PDFViewController.swift */,
-				540BE08B26EE45990026C6B4 /* Tareas.swift */,
+				540BE08B26EE45990026C6B4 /* HomeWorkVC.swift */,
 				540BE08F26EE634D0026C6B4 /* Calendar.swift */,
+				540BE09326EE74FD0026C6B4 /* ScheduleVController.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		A7F8D12F2DC8DBD40D16BD5C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AEC167A22779B682CFF65C87 /* Pods-PocketFI.debug.xcconfig */,
+				DFA64804DDE30A1D95ECC84C /* Pods-PocketFI.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		D4D7C70288EF4EB7A80586A8 /* Frameworks */ = {
@@ -391,6 +421,7 @@
 			children = (
 				54DD5C9B26E97F510010C23A /* PushKit.framework */,
 				54BFA46326D8BFF50050FD61 /* PassKit.framework */,
+				DB20BD68B032299AB8F7962B /* libPods-PocketFI.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -402,6 +433,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 545AF2D626CD778A003C7CEC /* Build configuration list for PBXNativeTarget "PocketFI" */;
 			buildPhases = (
+				7A9EB0F6D517F03593B2B370 /* [CP] Check Pods Manifest.lock */,
 				545AF2A826CD7787003C7CEC /* Sources */,
 				545AF2A926CD7787003C7CEC /* Frameworks */,
 				545AF2AA26CD7787003C7CEC /* Resources */,
@@ -520,6 +552,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7A9EB0F6D517F03593B2B370 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PocketFI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		545AF2A826CD7787003C7CEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -538,9 +595,10 @@
 				54DD5C9026E86B710010C23A /* Alerts.swift in Sources */,
 				54DD5CAC26E9D8720010C23A /* PDFViewController.swift in Sources */,
 				543E678926E6980A001BCE77 /* CredentialService.swift in Sources */,
+				540BE09626EE75120026C6B4 /* NewsVController.swift in Sources */,
 				545AF2E526CDA877003C7CEC /* FacultyViewController.swift in Sources */,
 				54DD5C9426E96EB60010C23A /* Tab+NavBarConfig.swift in Sources */,
-				540BE08C26EE45990026C6B4 /* Tareas.swift in Sources */,
+				540BE08C26EE45990026C6B4 /* HomeWorkVC.swift in Sources */,
 				54DD5C9826E970190010C23A /* CrendentialView.swift in Sources */,
 				546681E226D428A60020CEEF /* RoundedByCorners.swift in Sources */,
 				543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */,
@@ -557,8 +615,12 @@
 				545AF2B226CD7787003C7CEC /* SceneDelegate.swift in Sources */,
 				545AF2E726CDA88E003C7CEC /* ProfileViewController.swift in Sources */,
 				54DD5CAE26E9D8AE0010C23A /* TableViewForPDFs.swift in Sources */,
+				540BE09A26EE75A90026C6B4 /* TeachersViewController.swift in Sources */,
+				540BE09226EE656B0026C6B4 /* Homework.swift in Sources */,
+				540BE09826EE753E0026C6B4 /* ArchitectureViewController.swift in Sources */,
 				545AF2E926CDA89A003C7CEC /* ClassesViewController.swift in Sources */,
 				54BFA46D26D8DCC10050FD61 /* CollectionImportantFaculty.swift in Sources */,
+				540BE09426EE74FD0026C6B4 /* ScheduleVController.swift in Sources */,
 				54DD5CA626E9AC3F0010C23A /* UIColors.swift in Sources */,
 				540BE09026EE634D0026C6B4 /* Calendar.swift in Sources */,
 				546681E426D430E40020CEEF /* MapFacultyViewController.swift in Sources */,
@@ -735,6 +797,7 @@
 		};
 		545AF2D726CD778A003C7CEC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEC167A22779B682CFF65C87 /* Pods-PocketFI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -755,6 +818,7 @@
 		};
 		545AF2D826CD778A003C7CEC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFA64804DDE30A1D95ECC84C /* Pods-PocketFI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

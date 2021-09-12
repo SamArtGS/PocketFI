@@ -26,12 +26,15 @@ class MapFacultyViewController: UIViewController {
             mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavBarColor(colorFondo: .red, colorLetras: .white)
+        //coolourNavigationBar(colorBackground: .red, colorTint: .white, textColor: .blue)
     }
+    
+    
 
 }
 extension UINavigationController{

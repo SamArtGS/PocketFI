@@ -41,8 +41,6 @@ class TableViewForPDFs: UIViewController{
         
         navigationItem.searchController = searchController
         
-        differentStyleForLargeTitle()
-        
         if #available(iOS 13.0, *) {
             self.navigationItem.searchController?.searchBar.searchTextField.textColor = .white
             self.navigationItem.searchController?.searchBar.searchTextField.tintColor = .white

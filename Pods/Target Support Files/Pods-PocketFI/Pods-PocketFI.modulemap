@@ -1,0 +1,6 @@
+module Pods_PocketFI {
+  umbrella header "Pods-PocketFI-umbrella.h"
+
+  export *
+  module * { export * }
+}

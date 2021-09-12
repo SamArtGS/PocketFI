@@ -38,19 +38,20 @@ extension ClassesViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func seleccionarPath(index: Int) {
-        
-        guard let resources = resources[index].resources else { return }
-        
         switch index {
         case 0:
+            navigationController?.pushViewController(HomeWorkViewController(title: "Tareas"), animated: true)
             break
         case 1:
+            guard let resources = resources[index].resources else { return }
             navigationController?.pushViewController(TableViewForPDFs(titulo: "Serie de ejercicios", lista: resources), animated: true)
             break
         case 2:
+            guard let resources = resources[index].resources else { return }
             navigationController?.pushViewController(TableViewForPDFs(titulo: "Manual de prácticas", lista: resources), animated: true)
             break
         case 3:
+            navigationController?.pushViewController(ScheduleVController(title: "Horario"), animated: true)
             break
         case 4:
             break

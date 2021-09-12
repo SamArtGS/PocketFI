@@ -102,6 +102,8 @@ class PDFViewController: UIViewController{
             self.loadPDF()
         })
         
+        
+        
     }
     
     
@@ -109,6 +111,7 @@ class PDFViewController: UIViewController{
     func setBarButtons(){
         if #available(iOS 13.0, *) {
             let BarButtonItemRight = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(sendToApp))
+            
             let BarButtonItemRightSave = UIBarButtonItem(image: UIImage(systemName: "arrow.down.doc.fill"), style: .plain, target: self, action: #selector(savePDF))
             
             self.navigationItem.rightBarButtonItems = [BarButtonItemRight,BarButtonItemRightSave]

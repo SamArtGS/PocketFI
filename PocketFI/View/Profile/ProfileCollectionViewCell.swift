@@ -66,7 +66,6 @@ class ProfileCollectionViewCell: UICollectionViewCell {
         titleText.font = .systemFont(ofSize: CGFloat(sizeLetters()), weight: .bold)
         self.layer.cornerRadius = 15
         self.clipsToBounds = true
-        backgroundColor = .gray1
         
         addSubview(box)
         box.addSubview(stack)

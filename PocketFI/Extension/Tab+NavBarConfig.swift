@@ -9,16 +9,22 @@ import UIKit
 
 extension UIViewController: UINavigationControllerDelegate{
     
-    func setNavBarColor(colorFondo: UIColor, colorLetras: UIColor){
-        let apariencia = UINavigationBar.appearance()
-        
-        apariencia.titleTextAttributes = [
-            NSAttributedString.Key.foregroundColor: colorLetras,
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .regular)
-        ]
-        apariencia.tintColor = colorLetras
-        navigationController?.delegate = self
+    func coolourNavigationBar(colorBackground: UIColor, colorTint: UIColor, textColor: UIColor){
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            let appearanceNormal = UINavigationBarAppearance()
+
+            appearance.backgroundColor = .clear
+            appearanceNormal.backgroundColor = colorBackground
+            
+            //self.navigationBar.standardAppearance = appearance
+        }else{
+            self.navigationController?.navigationBar.barTintColor = colorBackground
+            self.navigationController?.navigationBar.isTranslucent = true
+        }
     }
+    
+    
 }
 
 
