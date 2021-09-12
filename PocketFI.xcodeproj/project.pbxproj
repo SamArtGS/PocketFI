@@ -10,6 +10,8 @@
 		540BE08826ED8AE20026C6B4 /* StringCaseSensitive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE08726ED8AE20026C6B4 /* StringCaseSensitive.swift */; };
 		540BE08A26ED9A830026C6B4 /* CheckiPhoneVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE08926ED9A830026C6B4 /* CheckiPhoneVersion.swift */; };
 		540BE08C26EE45990026C6B4 /* Tareas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE08B26EE45990026C6B4 /* Tareas.swift */; };
+		540BE08E26EE47BD0026C6B4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE08D26EE47BD0026C6B4 /* Data.swift */; };
+		540BE09026EE634D0026C6B4 /* Calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE08F26EE634D0026C6B4 /* Calendar.swift */; };
 		543BB96526D386A1006E8BF6 /* FacultyElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BB96426D386A1006E8BF6 /* FacultyElement.swift */; };
 		543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */; };
 		543E678726E66B5F001BCE77 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E678626E66B5F001BCE77 /* Student.swift */; };
@@ -74,6 +76,8 @@
 		540BE08726ED8AE20026C6B4 /* StringCaseSensitive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCaseSensitive.swift; sourceTree = "<group>"; };
 		540BE08926ED9A830026C6B4 /* CheckiPhoneVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckiPhoneVersion.swift; sourceTree = "<group>"; };
 		540BE08B26EE45990026C6B4 /* Tareas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tareas.swift; sourceTree = "<group>"; };
+		540BE08D26EE47BD0026C6B4 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		540BE08F26EE634D0026C6B4 /* Calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar.swift; sourceTree = "<group>"; };
 		543BB96426D386A1006E8BF6 /* FacultyElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyElement.swift; sourceTree = "<group>"; };
 		543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowStreckyHeader.swift; sourceTree = "<group>"; };
 		543E678626E66B5F001BCE77 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 		543BB96026D38651006E8BF6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				540BE08D26EE47BD0026C6B4 /* Data.swift */,
 				543BB96126D38664006E8BF6 /* Faculty */,
 				543BB96326D38675006E8BF6 /* Profile */,
 				543BB96226D3866D006E8BF6 /* Class */,
@@ -376,6 +381,7 @@
 				54DD5CAD26E9D8AE0010C23A /* TableViewForPDFs.swift */,
 				54DD5CAB26E9D8720010C23A /* PDFViewController.swift */,
 				540BE08B26EE45990026C6B4 /* Tareas.swift */,
+				540BE08F26EE634D0026C6B4 /* Calendar.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -543,6 +549,7 @@
 				54BFA46626D8C1E00050FD61 /* ProfileInfo.swift in Sources */,
 				54DD5C9E26E98C080010C23A /* APIEndPoints.swift in Sources */,
 				54BFA46F26D938C10050FD61 /* UIImageView.swift in Sources */,
+				540BE08E26EE47BD0026C6B4 /* Data.swift in Sources */,
 				540BE08826ED8AE20026C6B4 /* StringCaseSensitive.swift in Sources */,
 				540BE08A26ED9A830026C6B4 /* CheckiPhoneVersion.swift in Sources */,
 				547AD0B326D0352800859A7C /* NavigationLarge.swift in Sources */,
@@ -553,6 +560,7 @@
 				545AF2E926CDA89A003C7CEC /* ClassesViewController.swift in Sources */,
 				54BFA46D26D8DCC10050FD61 /* CollectionImportantFaculty.swift in Sources */,
 				54DD5CA626E9AC3F0010C23A /* UIColors.swift in Sources */,
+				540BE09026EE634D0026C6B4 /* Calendar.swift in Sources */,
 				546681E426D430E40020CEEF /* MapFacultyViewController.swift in Sources */,
 				54DD5C9A26E97C950010C23A /* UINavController.swift in Sources */,
 			);

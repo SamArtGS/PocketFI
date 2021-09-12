@@ -49,44 +49,46 @@ class PDFViewController: UIViewController{
             for: .documentDirectory, in: .userDomainMask,
             appropriateFor: nil, create: true)
         if FileManager.default.fileExists(atPath: docsurl?.appendingPathComponent(pdfName).path ?? ""){
-            print("Encontró el archivo en el teléfono")
+            self.activityIndicator.stopAnimating()
+            self.dismiss(animated: true)
             pdfView.document = PDFDocument(url: docsurl!.absoluteURL)
             self.document = pdfView.document
             pdfView.autoScales = true
             pdfView.minScaleFactor = 0.6
             pdfView.maxScaleFactor = 12.0
         }else{
-            DispatchQueue.global(qos: .userInteractive).async {
+            DispatchQueue.main.async {
                     if let url = URL(string: self.link) {
                         if let pdfDocument = PDFDocument(url: url) {
-                            DispatchQueue.main.async {
-                                self.dismiss(animated: true)
-                                self.activityIndicator.stopAnimating()
-                                self.document = pdfDocument
-                                self.pdfView.autoScales = true
-                                self.pdfView.document = pdfDocument
-                                self.pdfView.minScaleFactor = 0.6
-                                self.pdfView.maxScaleFactor = 12.0
-                            }
+                            
+                            self.document = pdfDocument
+                            self.pdfView.autoScales = true
+                            self.pdfView.document = pdfDocument
+                            self.pdfView.minScaleFactor = 0.6
+                            self.pdfView.maxScaleFactor = 12.0
+                            self.activityIndicator.stopAnimating()
+                            self.dismiss(animated: true)
                         } else {
-                            DispatchQueue.main.async {
-                                self.dismiss(animated: true)
-                                self.activityIndicator.stopAnimating()
-                                self.navigationController?.popViewController(animated: true)
-                                self.mostrarAlerta(title: "Error PDF", message: "No se pudo mostrar el PDF")
-                            }
-                        }
-                    } else {
-                        DispatchQueue.main.async {
+                            self.activityIndicator.stopAnimating()
                             self.dismiss(animated: true)
                             self.navigationController?.popViewController(animated: true)
-                            self.mostrarAlerta(title: "Error URL", message: "Error el los links")
+                            self.mostrarAlerta(title: "Error PDF", message: "No se pudo mostrar el PDF")
+                            
                         }
+                    } else {
+                        print("HUBO ERROR en URL")
+                        self.dismiss(animated: true)
+                        self.activityIndicator.stopAnimating()
+                        self.navigationController?.popViewController(animated: true)
+                        self.mostrarAlerta(title: "Error URL", message: "Error el los links")
                     }
                 }
             }
     }
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        mostrarAletraConIndicator(title: "Descargando", activityIndicator: &activityIndicator)
+    }
     
     
     override func viewDidLoad() {
@@ -94,10 +96,12 @@ class PDFViewController: UIViewController{
         view.backgroundColor = pdfView.backgroundColor
         setConstraints()
         setBarButtons()
-        mostrarAletraConIndicator(title: "Descargando", message: "Se está buscando el pdf", activityIndicator: &activityIndicator)
-        DispatchQueue.main.async {
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
             self.loadPDF()
-        }
+        })
+        
     }
     
     

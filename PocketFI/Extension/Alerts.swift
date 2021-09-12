@@ -15,19 +15,22 @@ extension UIViewController{
         present(alertVC, animated: true, completion: nil)
     }
     
-    func mostrarAletraConIndicator(title: String, message: String, activityIndicator: inout UIActivityIndicatorView){
+    func mostrarAletraConIndicator(alertController: UIAlertController? = nil,title: String, activityIndicator: inout UIActivityIndicatorView){
         let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
         
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.isUserInteractionEnabled = false
         activityIndicator.startAnimating()
         
-        
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: { alert in
+            self.navigationController?.popViewController(animated: true)
+        }))
+
         alert.view.addSubview(activityIndicator)
-        alert.view.heightAnchor.constraint(equalToConstant: 95).isActive = true
+        alert.view.heightAnchor.constraint(equalToConstant: 130).isActive = true
 
         activityIndicator.centerXAnchor.constraint(equalTo: alert.view.centerXAnchor, constant: 0).isActive = true
-        activityIndicator.bottomAnchor.constraint(equalTo: alert.view.bottomAnchor, constant: -20).isActive = true
+        activityIndicator.bottomAnchor.constraint(equalTo: alert.view.bottomAnchor, constant: -60).isActive = true
 
         present(alert, animated: true)
     }

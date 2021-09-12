@@ -25,7 +25,7 @@ class TableViewForPDFs: UIViewController{
         self.listaFiltrada = lista
         self.titulo = titulo
         super.init(nibName: nil, bundle: nil)
-        
+        tableView.layoutMargins = UIEdgeInsets(top: 0, left: 5, bottom: 30, right: 5)
         setNavConfig(title: titulo)
     }
     
@@ -67,7 +67,7 @@ class TableViewForPDFs: UIViewController{
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor,constant: -10)
         ])
     }
 }
@@ -85,7 +85,6 @@ extension TableViewForPDFs: UITableViewDelegate, UITableViewDataSource{
 }
 
 extension TableViewForPDFs: UISearchControllerDelegate{
-    
     
 }
 extension TableViewForPDFs: UISearchResultsUpdating {

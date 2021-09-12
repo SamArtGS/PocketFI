@@ -11,21 +11,7 @@ class ClassesViewController: UIViewController {
     
     @IBOutlet weak var Materials: UICollectionView!
     
-    let resources: [Resource] = [
-        Resource(id: 1, imageIcon: "tareas", resourceTitle: "Tareas"),
-        Resource(id: 2, imageIcon: "series", resourceTitle: "Series de Ejercicios",resources: [
-            PDFelement(id: 1, name: "Álgebra - Serie 1", size: 0, link: "https://www.ingenieria.unam.mx/programas_academicos/licenciatura/Computacion/2016/optativas_computacion_2016.pdf"),
-            PDFelement(id: 1, name: "Calculo vectorial", size: 0, link: "www.google.com"),
-            PDFelement(id: 1, name: "Álgebra lineal", size: 0, link: "www.google.com"),
-            PDFelement(id: 1, name: "Metodología Investigación", size: 0, link: "www.google.com"),
-            PDFelement(id: 1, name: "General porfirio", size: 0, link: "www.google.com")
-        ]),
-        Resource(id: 3, imageIcon: "manualLab", resourceTitle: "Manuales de Prácticas"),
-        Resource(id: 4, imageIcon: "horario", resourceTitle: "Horario"),
-        Resource(id: 5, imageIcon: "calendar", resourceTitle: "Calendario"),
-        Resource(id: 6, imageIcon: "asesoria", resourceTitle: "Asesorías"),
-        Resource(id: 7, imageIcon: "examenes", resourceTitle: "Exámenes pasados")
-    ]
+    let resources: [Resource] = DataClasses.resources
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,9 +45,10 @@ extension ClassesViewController: UICollectionViewDelegate, UICollectionViewDataS
         case 0:
             break
         case 1:
-            navigationController?.pushViewController(TableViewForPDFs(titulo: "Series de ejercicios", lista: resources), animated: true)
+            navigationController?.pushViewController(TableViewForPDFs(titulo: "Serie de ejercicios", lista: resources), animated: true)
             break
         case 2:
+            navigationController?.pushViewController(TableViewForPDFs(titulo: "Manual de prácticas", lista: resources), animated: true)
             break
         case 3:
             break
