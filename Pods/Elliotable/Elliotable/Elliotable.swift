@@ -32,10 +32,10 @@ public enum roundOption: Int {
 
 @IBDesignable public class Elliotable: UIView {
     private let controller     = ElliotableController()
-    private let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
+    public let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
     
-    public let defaultMinHour: Int = 9
-    public let defaultMaxEnd : Int = 17
+    public let defaultMinHour: Int = 7
+    public let defaultMaxEnd : Int = 22
     
     public var userDaySymbol: [String]?
     public var delegate: ElliotableDelegate?
@@ -219,7 +219,7 @@ public enum roundOption: Int {
     private func initialize() {
         controller.elliotable = self
         controller.collectionView = collectionView
-        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.dataSource = controller
         collectionView.delegate = controller
         collectionView.backgroundColor = backgroundColor
@@ -388,8 +388,8 @@ public enum roundOption: Int {
     }
     
     @objc func lectureTapped(_ sender: UITapGestureRecognizer) {
-        //let course = courseItems[(sender.view!).tag]
-        //self.delegate?.elliotable(elliotable: self, didSelectCourse: course)
+        let course = courseItems[(sender.view!).tag]
+        self.delegate?.elliotable(elliotable: self, didSelectCourse: course)
     }
     
     public func reloadData() {

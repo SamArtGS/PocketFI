@@ -12,5 +12,6 @@ extension UIColor{
     static let gray1 = UIColor(named: "whiteGray")
     static let whiteLetter = UIColor(named: "AccentColor")
     
-    static let azulUnam = UIColor(named: "AzulUNAM")
+    static let azulUnam = UIColor(named: "AzulUNAM")!
+    static let oroUnam = UIColor(named: "OroUNAM")!
 }

@@ -28,21 +28,10 @@ class ProfileViewController: UIViewController {
     }
     
     let resources: [Resource] = [
-        Resource(id: 1, imageIcon: "tareas", resourceTitle: "Tareas"),
-        
-        Resource(id: 2, imageIcon: "series", resourceTitle: "Series de Ejercicios",resources: [
-            PDFelement(id: 1, name: "Álgebra - Serie 1", size: 0, link: "www.google.com"),
-            PDFelement(id: 1, name: "Calculo vectorial", size: 0, link: "www.google.com"),
-            PDFelement(id: 1, name: "Álgebra lineal", size: 0, link: "www.google.com"),
-            PDFelement(id: 1, name: "Metodología Investigación", size: 0, link: "www.google.com"),
-            PDFelement(id: 1, name: "General porfirio", size: 0, link: "www.google.com"),
-        ]),
-        
-        Resource(id: 3, imageIcon: "manualLab", resourceTitle: "Manuales de Prácticas"),
-        Resource(id: 4, imageIcon: "horario", resourceTitle: "Horario"),
-        Resource(id: 5, imageIcon: "calendar", resourceTitle: "Calendario"),
-        Resource(id: 6, imageIcon: "asesoria", resourceTitle: "Asesorías"),
-        Resource(id: 7, imageIcon: "examenes", resourceTitle: "Exámenes pasados")
+        Resource(id: 1, imageIcon: "icons8-rating", resourceTitle: "Avance Curricular"),
+        Resource(id: 2, imageIcon: "icons8-contract", resourceTitle: "Constancias"),
+        Resource(id: 4, imageIcon: "icons8-goal", resourceTitle: "Servicio Social"),
+        Resource(id: 4, imageIcon: "icons8-business_network", resourceTitle: "Ofertas laborales")
     ]
 }
 
@@ -80,13 +69,17 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout{
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.frame.width)/1.1, height: 100)
+        return CGSize(width: (view.frame.width)/1.1, height: 80)
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 15, left: 10, bottom: 20, right: 10)
+        return UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 15
     }
 }
 

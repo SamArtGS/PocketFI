@@ -34,7 +34,9 @@ class HomeWorkViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         setConstraints()
+        setBarButtons()
     }
+
     
     func setConstraints(){
         view.addSubview(tableView)
@@ -44,6 +46,16 @@ class HomeWorkViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+    }
+    func setBarButtons(){
+        if #available(iOS 13.0, *) {
+            let BarButtonItemRight = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(didTapAdd))
+            
+            self.navigationItem.rightBarButtonItems = [BarButtonItemRight]
+        } else {
+            let BarButtonItemRight = UIBarButtonItem(image: UIImage(named: "icons8-plus_math"), style: .plain, target: self, action: #selector(didTapAdd))
+            self.navigationItem.rightBarButtonItems = [BarButtonItemRight]
+        }
     }
     
     

@@ -20,6 +20,7 @@ class MapFacultyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(mapView)
+        setNavConfig(title: "Mapa Facultad")
         NSLayoutConstraint.activate([
             mapView.topAnchor.constraint(equalTo: view.topAnchor),
             mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -31,7 +32,11 @@ class MapFacultyViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //coolourNavigationBar(colorBackground: .red, colorTint: .white, textColor: .blue)
+        navigationItem.largeTitleDisplayMode = .never
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationItem.largeTitleDisplayMode = .automatic
     }
     
     

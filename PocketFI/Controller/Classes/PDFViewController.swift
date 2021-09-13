@@ -96,14 +96,9 @@ class PDFViewController: UIViewController{
         view.backgroundColor = pdfView.backgroundColor
         setConstraints()
         setBarButtons()
-        
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {
             self.loadPDF()
         })
-        
-        
-        
     }
     
     

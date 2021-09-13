@@ -79,12 +79,12 @@ class ProfileCollectionViewCell: UICollectionViewCell {
             box.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5),
             box.bottomAnchor.constraint(equalTo: bottomAnchor,constant: -10),
             
-            stack.topAnchor.constraint(equalTo: box.topAnchor,constant: 15),
-            stack.leadingAnchor.constraint(equalTo: box.leadingAnchor,constant: 5),
+            stack.topAnchor.constraint(equalTo: box.topAnchor,constant: 13),
+            stack.leadingAnchor.constraint(equalTo: box.leadingAnchor,constant: 10),
             
             
-            imageIcon.widthAnchor.constraint(equalToConstant: 50),
-            imageIcon.heightAnchor.constraint(equalToConstant: 50)
+            imageIcon.widthAnchor.constraint(equalToConstant: 35),
+            imageIcon.heightAnchor.constraint(equalToConstant: 35)
         ])
     }
     

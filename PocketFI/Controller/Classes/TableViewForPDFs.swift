@@ -27,6 +27,7 @@ class TableViewForPDFs: UIViewController{
         super.init(nibName: nil, bundle: nil)
         tableView.layoutMargins = UIEdgeInsets(top: 0, left: 5, bottom: 30, right: 5)
         setNavConfig(title: titulo)
+        searchController.obscuresBackgroundDuringPresentation = false
     }
     
     required init?(coder: NSCoder) {

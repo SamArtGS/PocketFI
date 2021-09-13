@@ -40,13 +40,11 @@ extension UIView{
 extension UIViewController{
     
     func setNavConfig(title: String){
-        view.backgroundColor = .white
         self.navigationItem.title = title
         self.navigationItem.hidesSearchBarWhenScrolling = false
         self.navigationItem.searchController?.obscuresBackgroundDuringPresentation = false
         self.tabBarController?.navigationItem.title = " "
-        self.navigationController?.navigationBar.tintColor = .azulUnam
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.azulUnam!]
+        self.navigationController?.navigationBar.tintColor = .oroUnam
     }
     
     func UIBarButtonCustom(_ target: Any?, action: Selector, imageName: String, imageSelected: String? = nil) -> UIBarButtonItem {
