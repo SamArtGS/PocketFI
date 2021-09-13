@@ -135,7 +135,7 @@ class ScheduleVController:  UIViewController {
                      courseDay: .wednesday,
                      startTime: "17:00",
                      endTime: "19:00",
-                     backgroundColor: .systemPink),
+                     backgroundColor: .oroUnam),
         
         ElliottEvent(courseId: "2954",
                      courseName: "Seguridad Inf. Avanzada",
@@ -147,14 +147,13 @@ class ScheduleVController:  UIViewController {
                      backgroundColor: .systemTeal),
         
         ElliottEvent(courseId: "2954",
-                     courseName: "Seguridad Inf. Avanzada",
+                     courseName: "Lab. Seguridad Inf. Avanzada",
                      roomName: "Y112",
                      professor: "César Pineda",
                      courseDay: .saturday,
                      startTime: "7:00",
                      endTime: "9:00",
-                     backgroundColor: .systemTeal)
-    
+                     backgroundColor: .blue)
     ]
     
     private let daySymbol = ["Lun", "Mar", "Mie", "Jue", "Vie","Sab"]
@@ -204,6 +203,19 @@ class ScheduleVController:  UIViewController {
             scheduler.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -70)
         ])
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.myOrientation = .all
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.myOrientation = .portrait
+        UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+    }
 
 }
 extension ScheduleVController : ElliotableDelegate, ElliotableDataSource {
@@ -213,7 +225,8 @@ extension ScheduleVController : ElliotableDelegate, ElliotableDataSource {
     }
     
     func elliotable(elliotable: Elliotable, didLongSelectCourse longSelectedCourse: ElliottEvent) {
-        print("Nada")
+        print(longSelectedCourse.professor)
+        print("Nada x2 x2")
     }
     
     func elliotable(elliotable: Elliotable, at textPerIndex: Int) -> String {
