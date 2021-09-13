@@ -1,20 +1,24 @@
 PODS:
   - Elliotable (1.2.5)
+  - JTAppleCalendar (8.0.3)
   - lottie-ios (3.2.3)
 
 DEPENDENCIES:
   - Elliotable
+  - JTAppleCalendar
   - lottie-ios
 
 SPEC REPOS:
   trunk:
     - Elliotable
+    - JTAppleCalendar
     - lottie-ios
 
 SPEC CHECKSUMS:
   Elliotable: e669fa7a974658c4e0ee4be4b335f6a561f1b2cb
+  JTAppleCalendar: 932cadea40b1051beab10f67843451d48ba16c99
   lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
 
-PODFILE CHECKSUM: 35aef5ec08c98995ad4c1d4caab59adb326a9eea
+PODFILE CHECKSUM: 77bfb99fca5048891986865233a2ec766a306488
 
 COCOAPODS: 1.9.3

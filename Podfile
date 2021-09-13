@@ -6,4 +6,5 @@ target 'PocketFI' do
   # use_frameworks!
   pod 'lottie-ios'
   pod 'Elliotable'
+  pod 'JTAppleCalendar'
 end
