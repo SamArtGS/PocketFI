@@ -55,8 +55,8 @@ extension ProfileViewController{
         stack.addArrangedSubview(passwordTextField)
         
         NSLayoutConstraint.activate([
-            stack.topAnchor.constraint(equalTo: view.topAnchor),
-            stack.leadingAnchor.constraint(equalTo: view.leadingAnchor)
+            stack.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            stack.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 }
