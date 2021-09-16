@@ -18,6 +18,7 @@ extension UIViewController{
     func mostrarAletraConIndicator(alertController: UIAlertController? = nil,title: String, activityIndicator: inout UIActivityIndicatorView){
         let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
         
+        activityIndicator.tintColor = .gray1
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.isUserInteractionEnabled = false
         activityIndicator.startAnimating()

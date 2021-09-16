@@ -28,11 +28,17 @@ extension ProfileViewController: PKAddPassesViewControllerDelegate{
                 }
                 
               } else {
-                let pkvc = PKAddPassesViewController(pass: pass)
-                pkvc!.delegate = self
-                DispatchQueue.main.sync {
-                    self?.navigationController?.present(pkvc!, animated: true)
+                if let pkvc = PKAddPassesViewController(pass: pass){
+                    pkvc.delegate = self
+                    DispatchQueue.main.sync {
+                        self?.navigationController?.present(pkvc, animated: true)
+                    }
+                }else{
+                    DispatchQueue.main.sync {
+                        self?.mostrarAlerta(title: "Dispositivo No permitido", message: "Esta opción solo está disponibles en iPhone")
+                    }
                 }
+                
             }
         }catch{
             self?.mostrarAlerta(title: "ERROR", message: "Error al cargar el pase")

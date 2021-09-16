@@ -7,9 +7,11 @@
 
 import UIKit
 import UserNotifications
+import Firebase
+import CoreData
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate{
 
     func registerForPushNotifications() {
         UNUserNotificationCenter.current()
@@ -46,8 +48,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        registerForPushNotifications()
+        FirebaseApp.configure()
+        // En caso de servidor propio: registerForPushNotifications()
+        registerPushMessagingFirebase()
+        application.registerForRemoteNotifications()
         return true
     }
 
@@ -68,5 +72,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    
+    // MARK: - Core Data stack
+
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "PocketFI")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        })
+        return container
+    }()
+
+    // MARK: - Core Data Saving support
+
+    func saveContext () {
+        let context = persistentContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
+        }
+    }
 }
 
+extension AppDelegate: MessagingDelegate, UNUserNotificationCenterDelegate{
+    func registerPushMessagingFirebase(){
+        UNUserNotificationCenter.current().delegate = self
+        Messaging.messaging().delegate = self
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { success, error in
+            
+            guard success else{
+                return
+            }
+            debugPrint("APN Registrado")
+        }
+    }
+    
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        messaging.token { token, error in
+            guard let token = token else { return }
+            debugPrint("Token: \(token)")
+        }
+    }
+}

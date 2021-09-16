@@ -104,10 +104,11 @@ extension FacultyViewController: UICollectionViewDelegateFlowLayout{
             return typedHeaderView
             
         default:
-            assert(false, "Invalid element type")
+           return UICollectionReusableView()
         }
         
     }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 10
     }
@@ -124,6 +125,14 @@ extension FacultyViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 10, left: 10, bottom: 30, right: 10)
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        switch CheckIphoneModel.checkIphoneModel() {
+            case .iPhoneRegular,.iPhonePequeño, .iPhonePlus:
+                return CGSize(width: view.frame.width, height: 170)
+            case .iPhoneXr, .iPhoneX, .iPhoneMax:
+                return CGSize(width: view.frame.width, height: 200)
+            }
+        }
 }
 
 extension FacultyViewController{
@@ -142,16 +151,5 @@ extension FacultyViewController{
         })
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        switch CheckIphoneModel.checkIphoneModel() {
-            case .iPhoneRegular:
-                print("Se fue por el regular")
-                return CGSize(width: view.frame.width, height: 400)
-            case .iPhoneXr:
-                print("Se fue por el XR")
-                return CGSize(width: view.frame.width, height: 200)
-            default:
-                return CGSize(width: view.frame.width, height: 200)
-            }
-        }
+    
 }

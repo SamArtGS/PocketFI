@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,6 +42,10 @@
 		547AD0B126D025F700859A7C /* PrincipalTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AD0B026D025F700859A7C /* PrincipalTabBar.swift */; };
 		547AD0B326D0352800859A7C /* NavigationLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AD0B226D0352800859A7C /* NavigationLarge.swift */; };
 		547AD0B726D047B700859A7C /* WelcomeCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547AD0B626D047B700859A7C /* WelcomeCollectionReusableView.swift */; };
+		54AA9D0326F39C5E009B2A16 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54AA9D0226F39C5D009B2A16 /* GoogleService-Info.plist */; };
+		54AA9D0626F3CCE8009B2A16 /* ClassesModules.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54AA9D0426F3CCE8009B2A16 /* ClassesModules.xcdatamodeld */; };
+		54AA9D0926F3CE58009B2A16 /* Homework+CoreDataClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AA9D0726F3CE55009B2A16 /* Homework+CoreDataClass copy.swift */; };
+		54AA9D0A26F3CE58009B2A16 /* Homework+CoreDataProperties copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54AA9D0826F3CE58009B2A16 /* Homework+CoreDataProperties copy.swift */; };
 		54BFA46626D8C1E00050FD61 /* ProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46526D8C1E00050FD61 /* ProfileInfo.swift */; };
 		54BFA46D26D8DCC10050FD61 /* CollectionImportantFaculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46C26D8DCC10050FD61 /* CollectionImportantFaculty.swift */; };
 		54BFA46F26D938C10050FD61 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46E26D938C10050FD61 /* UIImageView.swift */; };
@@ -120,6 +124,10 @@
 		547AD0B026D025F700859A7C /* PrincipalTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalTabBar.swift; sourceTree = "<group>"; };
 		547AD0B226D0352800859A7C /* NavigationLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLarge.swift; sourceTree = "<group>"; };
 		547AD0B626D047B700859A7C /* WelcomeCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionReusableView.swift; sourceTree = "<group>"; };
+		54AA9D0226F39C5D009B2A16 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		54AA9D0526F3CCE8009B2A16 /* ClassesModules.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClassesModules.xcdatamodel; sourceTree = "<group>"; };
+		54AA9D0726F3CE55009B2A16 /* Homework+CoreDataClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Homework+CoreDataClass copy.swift"; sourceTree = "<group>"; };
+		54AA9D0826F3CE58009B2A16 /* Homework+CoreDataProperties copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Homework+CoreDataProperties copy.swift"; sourceTree = "<group>"; };
 		54BFA46326D8BFF50050FD61 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		54BFA46526D8C1E00050FD61 /* ProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfo.swift; sourceTree = "<group>"; };
 		54BFA46C26D8DCC10050FD61 /* CollectionImportantFaculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionImportantFaculty.swift; sourceTree = "<group>"; };
@@ -231,6 +239,7 @@
 		545AF2AE26CD7787003C7CEC /* PocketFI */ = {
 			isa = PBXGroup;
 			children = (
+				54AA9D0226F39C5D009B2A16 /* GoogleService-Info.plist */,
 				540105E726DE96140001FEC4 /* PocketFI.entitlements */,
 				545AF2BD26CD7789003C7CEC /* Info.plist */,
 				545AF2AF26CD7787003C7CEC /* AppDelegate.swift */,
@@ -316,6 +325,9 @@
 		545AF2EC26CDABB6003C7CEC /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				54AA9D0426F3CCE8009B2A16 /* ClassesModules.xcdatamodeld */,
+				54AA9D0826F3CE58009B2A16 /* Homework+CoreDataProperties copy.swift */,
+				54AA9D0726F3CE55009B2A16 /* Homework+CoreDataClass copy.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -440,6 +452,7 @@
 				545AF2A826CD7787003C7CEC /* Sources */,
 				545AF2A926CD7787003C7CEC /* Frameworks */,
 				545AF2AA26CD7787003C7CEC /* Resources */,
+				C0A2AE5B8AA2E995A5969955 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -533,6 +546,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54AA9D0326F39C5E009B2A16 /* GoogleService-Info.plist in Resources */,
 				545AF2BC26CD7789003C7CEC /* LaunchScreen.storyboard in Resources */,
 				545AF2B926CD7789003C7CEC /* Assets.xcassets in Resources */,
 				545AF2B726CD7787003C7CEC /* Main.storyboard in Resources */,
@@ -578,6 +592,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C0A2AE5B8AA2E995A5969955 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PocketFI/Pods-PocketFI-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PocketFI/Pods-PocketFI-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PocketFI/Pods-PocketFI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -586,6 +617,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				546681E026D425BA0020CEEF /* Notifications.swift in Sources */,
+				54AA9D0926F3CE58009B2A16 /* Homework+CoreDataClass copy.swift in Sources */,
 				54DD5CA426E99ADF0010C23A /* ObserverHideShowKeyboard.swift in Sources */,
 				545AF2EB26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift in Sources */,
 				54DD5CA826E9AEB00010C23A /* Resource.swift in Sources */,
@@ -597,6 +629,7 @@
 				545AF2B026CD7787003C7CEC /* AppDelegate.swift in Sources */,
 				54DD5C9026E86B710010C23A /* Alerts.swift in Sources */,
 				54DD5CAC26E9D8720010C23A /* PDFViewController.swift in Sources */,
+				54AA9D0626F3CCE8009B2A16 /* ClassesModules.xcdatamodeld in Sources */,
 				543E678926E6980A001BCE77 /* CredentialService.swift in Sources */,
 				540BE09626EE75120026C6B4 /* NewsVController.swift in Sources */,
 				545AF2E526CDA877003C7CEC /* FacultyViewController.swift in Sources */,
@@ -625,6 +658,7 @@
 				545AF2E926CDA89A003C7CEC /* ClassesViewController.swift in Sources */,
 				54BFA46D26D8DCC10050FD61 /* CollectionImportantFaculty.swift in Sources */,
 				540BE09426EE74FD0026C6B4 /* ScheduleVController.swift in Sources */,
+				54AA9D0A26F3CE58009B2A16 /* Homework+CoreDataProperties copy.swift in Sources */,
 				54DD5CA626E9AC3F0010C23A /* UIColors.swift in Sources */,
 				540BE09026EE634D0026C6B4 /* Calendar.swift in Sources */,
 				546681E426D430E40020CEEF /* MapFacultyViewController.swift in Sources */,
@@ -816,7 +850,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.diploiOS.PocketFI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -837,7 +871,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.diploiOS.PocketFI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -965,6 +999,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		54AA9D0426F3CCE8009B2A16 /* ClassesModules.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				54AA9D0526F3CCE8009B2A16 /* ClassesModules.xcdatamodel */,
+			);
+			currentVersion = 54AA9D0526F3CCE8009B2A16 /* ClassesModules.xcdatamodel */;
+			path = ClassesModules.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 545AF2A426CD7787003C7CEC /* Project object */;
 }

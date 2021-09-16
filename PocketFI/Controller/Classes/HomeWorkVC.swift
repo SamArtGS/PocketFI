@@ -10,7 +10,11 @@ import UIKit
 
 class HomeWorkViewController: UIViewController {
 
-    var models = [Homework]()
+    var models = [HomeworkToDo]()
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -37,6 +41,42 @@ class HomeWorkViewController: UIViewController {
         setBarButtons()
     }
 
+    func getAllItems(){
+        let items = try? context.fetch(HomeworkToDoList.fetchRequest())
+    }
+    
+    func saveInDatabase(title: String, date: Date, subject: String){
+        let newHW = HomeworkToDoList(context: context)
+        newHW.title = title
+        newHW.dateScheduled = date
+        newHW.subject = subject
+        
+        do{
+            try context.save()
+        }catch{
+            mostrarAlerta(title: "Error", message: "Error al guardar la tarea")
+        }
+    }
+    
+    func deleteFromDatabase(item: HomeworkToDoList){
+        context.delete(item)
+        do{
+            try context.save()
+        }catch{
+            mostrarAlerta(title: "Error", message: "Error al remover la tarea")
+        }
+    }
+    
+    func updateFromDatabase(item: HomeworkToDoList, newTitle: String, newDate: Date, newSubject: String){
+        item.title = newTitle
+        item.dateScheduled = newDate
+        item.subject = newSubject
+        do{
+            try context.save()
+        }catch{
+            mostrarAlerta(title: "Error", message: "Error al actualizar la tarea")
+        }
+    }
     
     func setConstraints(){
         view.addSubview(tableView)
@@ -61,10 +101,11 @@ class HomeWorkViewController: UIViewController {
     
 
     @objc func didTapAdd() {
-        // show add vc
-       
-//        vc.title = "New Reminder"
-//        vc.navigationItem.largeTitleDisplayMode = .never
+        let vc = AddHomeWorkViewController(title: "Nueva tarea")
+
+        vc.navigationItem.largeTitleDisplayMode = .always
+        
+        
 //        vc.completion = { title, body, date in
 //        DispatchQueue.main.async {
 //                self.navigationController?.popToRootViewController(animated: true)
@@ -90,7 +131,11 @@ class HomeWorkViewController: UIViewController {
 //                })
 //            }
 //        }
-//        navigationController?.pushViewController(vc, animated: true)
+        present(vc, animated: true) { [weak self] in
+            
+            
+            self?.tableView.reloadData()
+        }
 
     }
 
@@ -156,5 +201,116 @@ extension HomeWorkViewController: UITableViewDataSource {
         cell.detailTextLabel?.font = UIFont(name: "Arial", size: 22)
         return cell
     }
+    
+    
 
+}
+
+class AddHomeWorkViewController: UIViewController{
+    
+    private let stackView: UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.distribution = .fillEqually
+        stack.alignment = .center
+        stack.spacing = 0
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+    
+    let titleTextField: UITextField = {
+        let textField = UITextField()
+        textField.borderStyle  = .line
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        return textField
+    }()
+    
+    let noteTextField: UITextField = {
+        let textField = UITextField()
+        textField.borderStyle  = .line
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        return textField
+    }()
+    
+    let picker: UIPickerView = {
+        let pickerView = UIPickerView()
+        pickerView.translatesAutoresizingMaskIntoConstraints = false
+        return pickerView
+    }()
+    
+    let dateTimePicker: UIDatePicker = {
+        let datePicker = UIDatePicker()
+        datePicker.translatesAutoresizingMaskIntoConstraints = false
+        datePicker.calendar = .current
+        return datePicker
+    }()
+    
+    init(title: String){
+        super.init(nibName: nil, bundle: nil)
+        self.title = title
+        view.backgroundColor = .gray1
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setConstraints(){
+        view.addSubview(stackView)
+        stackView.addArrangedSubview(titleTextField)
+        stackView.addArrangedSubview(noteTextField)
+        stackView.addArrangedSubview(dateTimePicker)
+        
+        
+        
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: view.topAnchor),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        
+        ])
+        
+        
+    }
+    
+}
+
+
+extension AddHomeWorkViewController: UITextFieldDelegate{
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.titleTextField.text = ""
+        self.noteTextField.text = ""
+        self.titleTextField.endEditing(true)
+        self.noteTextField.endEditing(true)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder()
+            return true
+    }
+    
+    
+    @objc override func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height - view.safeAreaInsets.bottom
+                
+            }
+        }
+    }
+
+    @objc override func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+            
+        }
+    }
+    
+    func showAlert(title: String, message: String){
+        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertVC.addAction(okAction)
+        present(alertVC, animated: true, completion: nil)
+    }
 }

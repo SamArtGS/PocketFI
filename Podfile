@@ -7,4 +7,8 @@ target 'PocketFI' do
   pod 'lottie-ios'
   pod 'Elliotable'
   pod 'JTAppleCalendar'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Firestore'
 end

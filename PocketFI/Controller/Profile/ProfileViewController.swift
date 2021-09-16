@@ -53,6 +53,7 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
 extension ProfileViewController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
         switch kind {
         case UICollectionView.elementKindSectionHeader:
             let headerView = collectionaleView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerProfileCell", for: indexPath)
@@ -63,7 +64,7 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout{
             return typedHeaderView
             
         default:
-            assert(false, "Invalid element type")
+            return UICollectionReusableView()
         }
         
     }

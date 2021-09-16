@@ -7,8 +7,10 @@
 
 import Foundation
 
-struct Homework {
+struct HomeworkToDo {
+    let identifier: Int
     let title: String
     let date: Date
-    let identifier: String
+    let notes: String
+    let subject: String
 }

@@ -186,7 +186,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="H8A-8N-3BR">
             <objects>
-                <tabBarController id="ZrM-bp-X4S" customClass="TabBarController" customModule="PocketFI" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="ZrM-bp-X4S" sceneMemberID="viewController">
                     <tabBar key="tabBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="c6O-Ee-0Ty" customClass="PrincipalTabBar" customModule="PocketFI" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
