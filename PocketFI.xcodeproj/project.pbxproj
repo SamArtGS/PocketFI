@@ -18,6 +18,9 @@
 		540BE09826EE753E0026C6B4 /* ArchitectureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE09726EE753E0026C6B4 /* ArchitectureViewController.swift */; };
 		540BE09A26EE75A90026C6B4 /* TeachersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE09926EE75A90026C6B4 /* TeachersViewController.swift */; };
 		540BE09C26EF2C350026C6B4 /* CodeDayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE09B26EF2C350026C6B4 /* CodeDayCellView.swift */; };
+		542DD53E26F4EEDF00078479 /* newsOne.json in Resources */ = {isa = PBXBuildFile; fileRef = 542DD53D26F4EEDF00078479 /* newsOne.json */; };
+		542DD54026F4EEE600078479 /* newsTwo.json in Resources */ = {isa = PBXBuildFile; fileRef = 542DD53F26F4EEE600078479 /* newsTwo.json */; };
+		542DD54226F4EEEA00078479 /* newsThree.json in Resources */ = {isa = PBXBuildFile; fileRef = 542DD54126F4EEEA00078479 /* newsThree.json */; };
 		543BB96526D386A1006E8BF6 /* FacultyElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BB96426D386A1006E8BF6 /* FacultyElement.swift */; };
 		543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */; };
 		543E678726E66B5F001BCE77 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E678626E66B5F001BCE77 /* Student.swift */; };
@@ -49,6 +52,8 @@
 		54BFA46626D8C1E00050FD61 /* ProfileInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46526D8C1E00050FD61 /* ProfileInfo.swift */; };
 		54BFA46D26D8DCC10050FD61 /* CollectionImportantFaculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46C26D8DCC10050FD61 /* CollectionImportantFaculty.swift */; };
 		54BFA46F26D938C10050FD61 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BFA46E26D938C10050FD61 /* UIImageView.swift */; };
+		54D3FD6226F4D69300DC80D9 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D3FD6126F4D69300DC80D9 /* News.swift */; };
+		54D3FD6426F4D6DB00DC80D9 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D3FD6326F4D6DB00DC80D9 /* NewsCell.swift */; };
 		54DD5C9026E86B710010C23A /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C8F26E86B710010C23A /* Alerts.swift */; };
 		54DD5C9426E96EB60010C23A /* Tab+NavBarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C9326E96EB60010C23A /* Tab+NavBarConfig.swift */; };
 		54DD5C9826E970190010C23A /* CrendentialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5C9726E970180010C23A /* CrendentialView.swift */; };
@@ -64,6 +69,10 @@
 		54DD5CAE26E9D8AE0010C23A /* TableViewForPDFs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CAD26E9D8AE0010C23A /* TableViewForPDFs.swift */; };
 		54FB725826F3F66900A279E9 /* AddHomeWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB725726F3F66900A279E9 /* AddHomeWorkViewController.swift */; };
 		54FB725A26F3F9B700A279E9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB725926F3F9B700A279E9 /* CustomButton.swift */; };
+		54FB725D26F46CBC00A279E9 /* HomeworkViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB725B26F46CBC00A279E9 /* HomeworkViewCell.swift */; };
+		54FB725E26F46CBC00A279E9 /* HomeworkViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FB725C26F46CBC00A279E9 /* HomeworkViewCell.xib */; };
+		54FB726226F4803F00A279E9 /* PDFViewGacetaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB726126F4803F00A279E9 /* PDFViewGacetaController.swift */; };
+		54FB726426F480A600A279E9 /* OfficialContactsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB726326F480A600A279E9 /* OfficialContactsCollectionViewController.swift */; };
 		6EC54B9F9F367DC3FC4FEE8F /* libPods-PocketFI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB20BD68B032299AB8F7962B /* libPods-PocketFI.a */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +106,9 @@
 		540BE09726EE753E0026C6B4 /* ArchitectureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureViewController.swift; sourceTree = "<group>"; };
 		540BE09926EE75A90026C6B4 /* TeachersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersViewController.swift; sourceTree = "<group>"; };
 		540BE09B26EF2C350026C6B4 /* CodeDayCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDayCellView.swift; sourceTree = "<group>"; };
+		542DD53D26F4EEDF00078479 /* newsOne.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newsOne.json; sourceTree = "<group>"; };
+		542DD53F26F4EEE600078479 /* newsTwo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newsTwo.json; sourceTree = "<group>"; };
+		542DD54126F4EEEA00078479 /* newsThree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newsThree.json; sourceTree = "<group>"; };
 		543BB96426D386A1006E8BF6 /* FacultyElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyElement.swift; sourceTree = "<group>"; };
 		543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowStreckyHeader.swift; sourceTree = "<group>"; };
 		543E678626E66B5F001BCE77 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
@@ -134,6 +146,8 @@
 		54BFA46526D8C1E00050FD61 /* ProfileInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInfo.swift; sourceTree = "<group>"; };
 		54BFA46C26D8DCC10050FD61 /* CollectionImportantFaculty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionImportantFaculty.swift; sourceTree = "<group>"; };
 		54BFA46E26D938C10050FD61 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		54D3FD6126F4D69300DC80D9 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		54D3FD6326F4D6DB00DC80D9 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
 		54DD5C8F26E86B710010C23A /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		54DD5C9326E96EB60010C23A /* Tab+NavBarConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tab+NavBarConfig.swift"; sourceTree = "<group>"; };
 		54DD5C9726E970180010C23A /* CrendentialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrendentialView.swift; sourceTree = "<group>"; };
@@ -149,6 +163,10 @@
 		54DD5CAD26E9D8AE0010C23A /* TableViewForPDFs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewForPDFs.swift; sourceTree = "<group>"; };
 		54FB725726F3F66900A279E9 /* AddHomeWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHomeWorkViewController.swift; sourceTree = "<group>"; };
 		54FB725926F3F9B700A279E9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		54FB725B26F46CBC00A279E9 /* HomeworkViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkViewCell.swift; sourceTree = "<group>"; };
+		54FB725C26F46CBC00A279E9 /* HomeworkViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeworkViewCell.xib; sourceTree = "<group>"; };
+		54FB726126F4803F00A279E9 /* PDFViewGacetaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewGacetaController.swift; sourceTree = "<group>"; };
+		54FB726326F480A600A279E9 /* OfficialContactsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficialContactsCollectionViewController.swift; sourceTree = "<group>"; };
 		AEC167A22779B682CFF65C87 /* Pods-PocketFI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketFI.debug.xcconfig"; path = "Target Support Files/Pods-PocketFI/Pods-PocketFI.debug.xcconfig"; sourceTree = "<group>"; };
 		DB20BD68B032299AB8F7962B /* libPods-PocketFI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PocketFI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA64804DDE30A1D95ECC84C /* Pods-PocketFI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketFI.release.xcconfig"; path = "Target Support Files/Pods-PocketFI/Pods-PocketFI.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				543BB96426D386A1006E8BF6 /* FacultyElement.swift */,
+				54D3FD6126F4D69300DC80D9 /* News.swift */,
 			);
 			path = Faculty;
 			sourceTree = "<group>";
@@ -249,6 +268,7 @@
 				545AF2AF26CD7787003C7CEC /* AppDelegate.swift */,
 				545AF2B126CD7787003C7CEC /* SceneDelegate.swift */,
 				545AF2B826CD7789003C7CEC /* Assets.xcassets */,
+				54FB726526F4846500A279E9 /* AssetsLottie */,
 				543BB96026D38651006E8BF6 /* Model */,
 				545AF2E026CD787A003C7CEC /* View */,
 				545AF2E126CD788D003C7CEC /* Controller */,
@@ -353,6 +373,7 @@
 				547AD0B626D047B700859A7C /* WelcomeCollectionReusableView.swift */,
 				545AF2EA26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift */,
 				54BFA46C26D8DCC10050FD61 /* CollectionImportantFaculty.swift */,
+				54D3FD6326F4D6DB00DC80D9 /* NewsCell.swift */,
 			);
 			path = Faculty;
 			sourceTree = "<group>";
@@ -401,7 +422,9 @@
 				546681E326D430E40020CEEF /* MapFacultyViewController.swift */,
 				540BE09526EE75120026C6B4 /* NewsVController.swift */,
 				540BE09726EE753E0026C6B4 /* ArchitectureViewController.swift */,
+				54FB726126F4803F00A279E9 /* PDFViewGacetaController.swift */,
 				540BE09926EE75A90026C6B4 /* TeachersViewController.swift */,
+				54FB726326F480A600A279E9 /* OfficialContactsCollectionViewController.swift */,
 			);
 			path = Faculty;
 			sourceTree = "<group>";
@@ -421,11 +444,23 @@
 				54DD5CAD26E9D8AE0010C23A /* TableViewForPDFs.swift */,
 				54DD5CAB26E9D8720010C23A /* PDFViewController.swift */,
 				540BE08B26EE45990026C6B4 /* HomeWorkVC.swift */,
+				54FB725B26F46CBC00A279E9 /* HomeworkViewCell.swift */,
+				54FB725C26F46CBC00A279E9 /* HomeworkViewCell.xib */,
 				54FB725726F3F66900A279E9 /* AddHomeWorkViewController.swift */,
 				540BE08F26EE634D0026C6B4 /* Calendar.swift */,
 				540BE09326EE74FD0026C6B4 /* ScheduleVController.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		54FB726526F4846500A279E9 /* AssetsLottie */ = {
+			isa = PBXGroup;
+			children = (
+				542DD53D26F4EEDF00078479 /* newsOne.json */,
+				542DD53F26F4EEE600078479 /* newsTwo.json */,
+				542DD54126F4EEEA00078479 /* newsThree.json */,
+			);
+			name = AssetsLottie;
 			sourceTree = "<group>";
 		};
 		A7F8D12F2DC8DBD40D16BD5C /* Pods */ = {
@@ -553,9 +588,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				54AA9D0326F39C5E009B2A16 /* GoogleService-Info.plist in Resources */,
+				54FB725E26F46CBC00A279E9 /* HomeworkViewCell.xib in Resources */,
 				545AF2BC26CD7789003C7CEC /* LaunchScreen.storyboard in Resources */,
+				542DD54226F4EEEA00078479 /* newsThree.json in Resources */,
 				545AF2B926CD7789003C7CEC /* Assets.xcassets in Resources */,
+				542DD54026F4EEE600078479 /* newsTwo.json in Resources */,
 				545AF2B726CD7787003C7CEC /* Main.storyboard in Resources */,
+				542DD53E26F4EEDF00078479 /* newsOne.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -632,9 +671,11 @@
 				547AD0B726D047B700859A7C /* WelcomeCollectionReusableView.swift in Sources */,
 				543BB96526D386A1006E8BF6 /* FacultyElement.swift in Sources */,
 				545AF2EF26CDAC17003C7CEC /* ProfileCollectionViewCell.swift in Sources */,
+				54FB725D26F46CBC00A279E9 /* HomeworkViewCell.swift in Sources */,
 				545AF2B026CD7787003C7CEC /* AppDelegate.swift in Sources */,
 				54DD5C9026E86B710010C23A /* Alerts.swift in Sources */,
 				54DD5CAC26E9D8720010C23A /* PDFViewController.swift in Sources */,
+				54FB726226F4803F00A279E9 /* PDFViewGacetaController.swift in Sources */,
 				54AA9D0626F3CCE8009B2A16 /* ClassesModules.xcdatamodeld in Sources */,
 				543E678926E6980A001BCE77 /* CredentialService.swift in Sources */,
 				540BE09626EE75120026C6B4 /* NewsVController.swift in Sources */,
@@ -644,9 +685,11 @@
 				54DD5C9826E970190010C23A /* CrendentialView.swift in Sources */,
 				546681E226D428A60020CEEF /* RoundedByCorners.swift in Sources */,
 				543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */,
+				54D3FD6226F4D69300DC80D9 /* News.swift in Sources */,
 				540BE09C26EF2C350026C6B4 /* CodeDayCellView.swift in Sources */,
 				54DD5CAA26E9BB540010C23A /* UIViewStyles.swift in Sources */,
 				545AF2F126CDAC69003C7CEC /* ClassesCollectionViewCell.swift in Sources */,
+				54D3FD6426F4D6DB00DC80D9 /* NewsCell.swift in Sources */,
 				54BFA46626D8C1E00050FD61 /* ProfileInfo.swift in Sources */,
 				54DD5C9E26E98C080010C23A /* APIEndPoints.swift in Sources */,
 				54BFA46F26D938C10050FD61 /* UIImageView.swift in Sources */,
@@ -660,6 +703,7 @@
 				545AF2E726CDA88E003C7CEC /* ProfileViewController.swift in Sources */,
 				54DD5CAE26E9D8AE0010C23A /* TableViewForPDFs.swift in Sources */,
 				540BE09A26EE75A90026C6B4 /* TeachersViewController.swift in Sources */,
+				54FB726426F480A600A279E9 /* OfficialContactsCollectionViewController.swift in Sources */,
 				540BE09226EE656B0026C6B4 /* Homework.swift in Sources */,
 				54FB725A26F3F9B700A279E9 /* CustomButton.swift in Sources */,
 				540BE09826EE753E0026C6B4 /* ArchitectureViewController.swift in Sources */,

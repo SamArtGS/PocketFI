@@ -36,7 +36,7 @@ class HomeWorkViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(HomeworkViewCell.self, forCellReuseIdentifier: "cell")
         setConstraints()
         setBarButtons()
         getAllItems()
@@ -54,7 +54,7 @@ class HomeWorkViewController: UIViewController {
         
     }
     
-    func saveInDatabase(title: String, date: Date, subject: String){
+    func saveInDatabase(title: String, date: Date, subject: String) -> Bool{
         let newHW = HomeworkToDoList(context: context)
         newHW.title = title
         newHW.dateScheduled = date
@@ -63,15 +63,19 @@ class HomeWorkViewController: UIViewController {
         do{
             try context.save()
             getAllItems()
+            return true
         }catch{
             mostrarAlerta(title: "Error", message: "Error al guardar la tarea")
+            return false
         }
     }
     
-    func deleteFromDatabase(item: HomeworkToDoList){
+    func deleteFromDatabase(item: HomeworkToDoList?){
+        guard let item = item else { return }
         context.delete(item)
         do{
             try context.save()
+            getAllItems()
         }catch{
             mostrarAlerta(title: "Error", message: "Error al remover la tarea")
         }
@@ -107,82 +111,50 @@ class HomeWorkViewController: UIViewController {
             self.navigationItem.rightBarButtonItems = [BarButtonItemRight]
         }
     }
-    
-    
-
-    @objc func didTapAdd() {
-        let vc = AddHomeWorkViewController(title: "Nueva tarea")
-
-        vc.navigationItem.largeTitleDisplayMode = .always
-        
-        
-//        vc.completion = { title, body, date in
-//        DispatchQueue.main.async {
-//                self.navigationController?.popToRootViewController(animated: true)
-//                let new = MyReminder(title: title, date: date, identifier: "id_\(title)")
-//                self.models.append(new)
-//                self.table.reloadData()
-//
-//                let content = UNMutableNotificationContent()
-//                content.title = title
-//                content.sound = .default
-//                content.body = body
-//
-//                let targetDate = date
-//                let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second],
-//                                                                                                          from: targetDate),
-//                                                            repeats: false)
-//
-//                let request = UNNotificationRequest(identifier: "some_long_id", content: content, trigger: trigger)
-//                UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
-//                    if error != nil {
-//                        print("something went wrong")
-//                    }
-//                })
-//            }
-//        }
-        present(vc, animated: true) { [weak self] in
-            
-            
-            self?.tableView.reloadData()
-        }
-
-    }
-
-    @objc func didTapTest() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound], completionHandler: { success, error in
-            if success {
-                self.scheduleTest()
-            }
-            else if error != nil {
-                print("error")
-            }
-        })
-    }
-
-    func scheduleTest() {
-        let content = UNMutableNotificationContent()
-        content.title = "Alerta"
-        content.sound = .default
-        content.body = "Alguna cosa"
-        let targetDate = Date().addingTimeInterval(10)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second],
-                                            from: targetDate), repeats: false)
-
-        let request = UNNotificationRequest(identifier: "some_long_id", content: content, trigger: trigger)
-        UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
-            if error != nil {
-                print("Algo salió mal")
-            }
-        })
-    }
-
 }
 
-extension HomeWorkViewController: UITableViewDelegate {
+
+extension HomeWorkViewController: UITableViewDelegate, AddHomeWorkDelegate{
+    
+    @objc func didTapAdd() {
+        addHomeWork()
+    }
+    
+    func saveHomeWorkInDatabase(title: String, body: String, date: Date){
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.sound = .default
+        content.body = body
+        
+        if saveInDatabase(title: title, date: date, subject: body){
+            let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day,
+                                                                                                       .hour, .minute, .second],
+                                                                                                      from: date),
+                                                                                                      repeats: false)
+            let request = UNNotificationRequest(identifier: "\(Int.random(in: 20210900...20220900))", content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
+                if error != nil {
+                    debugPrint("La notificación no pudo ser creada")
+                }
+              }
+            )
+        }
+    }
+    
+    func addHomeWork() {
+        let vc = AddHomeWorkViewController(title: "Nueva tarea")
+        vc.navigationItem.largeTitleDisplayMode = .always
+        vc.delegate = self
+        present(vc, animated: true)
+    }
+    
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
     }
 
 }
@@ -199,18 +171,33 @@ extension HomeWorkViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = models[indexPath.row].title
-        let date = models[indexPath.row].dateScheduled
-
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd, MMM, YYYY"
-        cell.detailTextLabel?.text = formatter.string(from: date ?? Date())
-
-        cell.textLabel?.font = UIFont(name: "Arial", size: 25)
-        cell.detailTextLabel?.font = UIFont(name: "Arial", size: 22)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeworkViewCell
+        cell.homework = models[indexPath.row]
         return cell
     }
 }
 
+extension HomeWorkViewController{
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let editAction = UIContextualAction(style: .normal, title: "Editar") {(action, view, completion) in
+            
+            
+
+        }
+        editAction.backgroundColor = .systemYellow
+        return UISwipeActionsConfiguration(actions: [editAction])
+    }
+
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self](action, view, completion) in
+            
+            let cell = tableView.cellForRow(at: indexPath) as! HomeworkViewCell
+            self?.deleteFromDatabase(item: cell.homework)
+            
+            completion(true)
+        }
+        deleteAction.backgroundColor = .systemRed
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+}

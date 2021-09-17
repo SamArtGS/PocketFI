@@ -37,7 +37,7 @@ class FacultyViewController: UIViewController {
     }
     
     @IBAction func showNotifications(_ sender: Any) {
-        navigationController?.pushViewController(Notifications(), animated: true)
+        //navigationController?.pushViewController(Notifications(), animated: true)
     }
     
 }
@@ -99,14 +99,20 @@ extension FacultyViewController: UICollectionViewDelegateFlowLayout{
             
             guard let typedHeaderView = headerView as? WelcomeCollectionReusableView
                 else { return headerView }
-            typedHeaderView.imagenWelcome.image = UIImage(named: "welcome"+randomImageSelector)
             
+            if self.traitCollection.userInterfaceStyle == .dark {
+                typedHeaderView.imagenWelcome.image = UIImage(named: "welcome")
+            } else {
+                typedHeaderView.imagenWelcome.image = UIImage(named: "welcome"+randomImageSelector)
+            }
             return typedHeaderView
             
         default:
            return UICollectionReusableView()
         }
-        
+    }
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        facultyCollection.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -132,7 +138,8 @@ extension FacultyViewController: UICollectionViewDelegateFlowLayout{
             case .iPhoneXr, .iPhoneX, .iPhoneMax:
                 return CGSize(width: view.frame.width, height: 200)
             }
-        }
+    }
+    
 }
 
 extension FacultyViewController{

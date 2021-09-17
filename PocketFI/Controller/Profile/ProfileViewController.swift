@@ -69,6 +69,15 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout{
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        switch CheckIphoneModel.checkIphoneModel() {
+            case .iPhoneRegular,.iPhonePequeño, .iPhonePlus:
+                return CGSize(width: view.frame.width, height: 380)
+            case .iPhoneXr, .iPhoneX, .iPhoneMax:
+                return CGSize(width: view.frame.width, height: 430)
+            }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (view.frame.width)/1.1, height: 80)
     }

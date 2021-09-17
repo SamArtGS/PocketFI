@@ -76,7 +76,6 @@ class PDFViewController: UIViewController{
                             
                         }
                     } else {
-                        print("HUBO ERROR en URL")
                         self.dismiss(animated: true)
                         self.activityIndicator.stopAnimating()
                         self.navigationController?.popViewController(animated: true)
@@ -127,7 +126,6 @@ class PDFViewController: UIViewController{
                 try? fm.removeItem(at: self.pdffileurl)
                 try? fm.moveItem(at: url, to: self.pdffileurl)
                 DispatchQueue.main.async {
-                    print(self.pdffileurl)
                     let doc = PDFDocument(url: self.pdffileurl)
                     self.pdfView.document = doc
                     self.pdfView.autoScales = true

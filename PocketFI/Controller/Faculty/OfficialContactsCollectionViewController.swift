@@ -1,19 +1,23 @@
 //
-//  ArchitectureViewController.swift
+//  OfficialContactsCollectionViewController.swift
 //  PocketFI
 //
-//  Created by Samuel Arturo Garrido Sánchez on 9/12/21.
+//  Created by Samuel Arturo Garrido Sánchez on 9/17/21.
 //
 
 import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class ArchitectureViewController: UICollectionViewController {
+class OfficialContactsCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
@@ -33,7 +37,7 @@ class ArchitectureViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
 

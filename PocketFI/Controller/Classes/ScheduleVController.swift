@@ -190,8 +190,6 @@ class ScheduleVController:  UIViewController {
         
         scheduler.reloadData()
         setConstraints()
-        
-        
     }
     
     func setConstraints(){
@@ -223,12 +221,11 @@ class ScheduleVController:  UIViewController {
 extension ScheduleVController : ElliotableDelegate, ElliotableDataSource {
     
     func elliotable(elliotable: Elliotable, didSelectCourse selectedCourse: ElliottEvent) {
-        print("Nada")
+        mostrarAlerta(title: selectedCourse.courseName, message: "\(selectedCourse.startTime) - \(selectedCourse.endTime)")
     }
     
     func elliotable(elliotable: Elliotable, didLongSelectCourse longSelectedCourse: ElliottEvent) {
-        print(longSelectedCourse.professor)
-        print("Nada x2 x2")
+
     }
     
     func elliotable(elliotable: Elliotable, at textPerIndex: Int) -> String {

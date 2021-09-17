@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-@objc(Homework)
+@objc(HomeworkToDoList)
 public class HomeworkToDoList: NSManagedObject {
 
 }

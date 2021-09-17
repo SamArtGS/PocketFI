@@ -66,6 +66,8 @@ struct DataClasses: Equatable, Hashable{
         Resource(id: 4, imageIcon: "horario", resourceTitle: "Horario"),
         Resource(id: 5, imageIcon: "calendar", resourceTitle: "Calendario"),
         Resource(id: 6, imageIcon: "asesoria", resourceTitle: "Asesorías"),
-        Resource(id: 7, imageIcon: "examenes", resourceTitle: "Exámenes pasados")
+        Resource(id: 7, imageIcon: "examenes", resourceTitle: "Exámenes pasados", resources: [
+            PDFelement(id: 1, name: "Sist. Termodinámicos y Electrom. - Serie 2", size: 0, link: "http://dcb.ingenieria.unam.mx/wp-content/themes/tempera-child/CoordinacionesAcademicas/FQ/TEM/Series/serie2_STEM_y_FTEM.pdf")
+        ])
     ]
 }

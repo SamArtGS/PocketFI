@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
       didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
       let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
       let token = tokenParts.joined()
-      print("Device Token: \(token)")
+      debugPrint("Device Token: \(token)")
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {

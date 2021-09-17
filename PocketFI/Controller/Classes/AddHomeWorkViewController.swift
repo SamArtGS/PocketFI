@@ -7,8 +7,13 @@
 
 import UIKit
 
+protocol AddHomeWorkDelegate : AnyObject{
+    func saveHomeWorkInDatabase(title: String, body: String, date: Date)
+}
 
 class AddHomeWorkViewController: UIViewController{
+    
+    weak var delegate: AddHomeWorkDelegate?
     
     private let buttonAccept:UIButton = {
         let boton = UIButton(type: .system)
@@ -36,6 +41,7 @@ class AddHomeWorkViewController: UIViewController{
     
     private let image: UIImageView = {
         let image = UIImageView(image: UIImage(named: "icons8-task_planning"))
+        image.contentMode = .scaleAspectFit
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
@@ -111,7 +117,7 @@ class AddHomeWorkViewController: UIViewController{
     
     func setConstraints(){
         buttonDismiss.addTarget(self, action: #selector(dismissViewController), for: .touchUpInside)
-        
+        buttonAccept.addTarget(self, action: #selector(writeElements), for: .touchUpInside)
         view.addSubview(buttonDismiss)
         view.addSubview(stackView)
         stackView.addArrangedSubview(image)
@@ -121,26 +127,20 @@ class AddHomeWorkViewController: UIViewController{
         stackView.addArrangedSubview(dateTimePicker)
         stackView.addArrangedSubview(buttonAccept)
         
-        
-        
         NSLayoutConstraint.activate([
             
             buttonDismiss.topAnchor.constraint(equalTo: view.topAnchor, constant: 15),
             buttonDismiss.trailingAnchor.constraint(equalTo: view.trailingAnchor,constant: -10),
             buttonDismiss.widthAnchor.constraint(equalToConstant: 80),
             buttonDismiss.heightAnchor.constraint(equalToConstant: 20),
-            
             titleTextField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
             subjectTextField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
-            
             stackView.topAnchor.constraint(equalTo: buttonDismiss.bottomAnchor, constant: 20),
             stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
             buttonDismiss.widthAnchor.constraint(equalToConstant: 80),
             buttonDismiss.heightAnchor.constraint(equalToConstant: 20),
-            
             buttonAccept.widthAnchor.constraint(equalToConstant: 100),
-            buttonAccept.heightAnchor.constraint(equalToConstant: 30)
+            buttonAccept.heightAnchor.constraint(equalToConstant: 40)
             
         ])
         
@@ -148,9 +148,12 @@ class AddHomeWorkViewController: UIViewController{
     }
     
     @objc func dismissViewController(){
-        self.dismiss(animated: true) {
-            print("Hola")
-        }
+        self.dismiss(animated: true)
+    }
+    
+    @objc func writeElements(){
+        delegate?.saveHomeWorkInDatabase(title: titleTextField.text ?? "", body: subjectTextField.text ?? "", date: dateTimePicker.date)
+        self.dismiss(animated: true)
     }
     
 }
@@ -163,8 +166,9 @@ extension AddHomeWorkViewController: UITextFieldDelegate{
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            textField.resignFirstResponder()
-            return true
+        titleTextField.endEditing(true)
+        subjectTextField.endEditing(true)
+        return true
     }
     
     

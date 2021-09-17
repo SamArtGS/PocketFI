@@ -55,8 +55,14 @@ extension ClassesViewController: UICollectionViewDelegate, UICollectionViewDataS
             navigationController?.pushViewController(ScheduleVController(title: "Horario"), animated: true)
             break
         case 4:
+            //Calendario
             break
         case 5:
+            //Asesorías
+            break
+        case 6:
+            guard let resources = resources[index].resources else { return }
+            navigationController?.pushViewController(TableViewForPDFs(titulo: "Exámenes pasados", lista: resources), animated: true)
             break
         default:
             break
