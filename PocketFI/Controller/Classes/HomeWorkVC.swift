@@ -10,7 +10,7 @@ import UIKit
 
 class HomeWorkViewController: UIViewController {
 
-    var models = [HomeworkToDo]()
+    var models = [HomeworkToDoList]()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -39,10 +39,19 @@ class HomeWorkViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         setConstraints()
         setBarButtons()
+        getAllItems()
     }
 
     func getAllItems(){
-        let items = try? context.fetch(HomeworkToDoList.fetchRequest())
+        do{
+            models = try context.fetch(HomeworkToDoList.fetchRequest())
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }catch{
+            mostrarAlerta(title: "Error", message: "No se pudo cargar las tareas")
+        }
+        
     }
     
     func saveInDatabase(title: String, date: Date, subject: String){
@@ -53,6 +62,7 @@ class HomeWorkViewController: UIViewController {
         
         do{
             try context.save()
+            getAllItems()
         }catch{
             mostrarAlerta(title: "Error", message: "Error al guardar la tarea")
         }
@@ -189,128 +199,18 @@ extension HomeWorkViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = models[indexPath.row].title
-        let date = models[indexPath.row].date
+        let date = models[indexPath.row].dateScheduled
 
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMM, dd, YYYY"
-        cell.detailTextLabel?.text = formatter.string(from: date)
+        formatter.dateFormat = "dd, MMM, YYYY"
+        cell.detailTextLabel?.text = formatter.string(from: date ?? Date())
 
         cell.textLabel?.font = UIFont(name: "Arial", size: 25)
         cell.detailTextLabel?.font = UIFont(name: "Arial", size: 22)
         return cell
     }
-    
-    
-
 }
 
-class AddHomeWorkViewController: UIViewController{
-    
-    private let stackView: UIStackView = {
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.distribution = .fillEqually
-        stack.alignment = .center
-        stack.spacing = 0
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        return stack
-    }()
-    
-    let titleTextField: UITextField = {
-        let textField = UITextField()
-        textField.borderStyle  = .line
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        return textField
-    }()
-    
-    let noteTextField: UITextField = {
-        let textField = UITextField()
-        textField.borderStyle  = .line
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        return textField
-    }()
-    
-    let picker: UIPickerView = {
-        let pickerView = UIPickerView()
-        pickerView.translatesAutoresizingMaskIntoConstraints = false
-        return pickerView
-    }()
-    
-    let dateTimePicker: UIDatePicker = {
-        let datePicker = UIDatePicker()
-        datePicker.translatesAutoresizingMaskIntoConstraints = false
-        datePicker.calendar = .current
-        return datePicker
-    }()
-    
-    init(title: String){
-        super.init(nibName: nil, bundle: nil)
-        self.title = title
-        view.backgroundColor = .gray1
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setConstraints(){
-        view.addSubview(stackView)
-        stackView.addArrangedSubview(titleTextField)
-        stackView.addArrangedSubview(noteTextField)
-        stackView.addArrangedSubview(dateTimePicker)
-        
-        
-        
-        
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: view.topAnchor),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-        
-        ])
-        
-        
-    }
-    
-}
-
-
-extension AddHomeWorkViewController: UITextFieldDelegate{
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.titleTextField.text = ""
-        self.noteTextField.text = ""
-        self.titleTextField.endEditing(true)
-        self.noteTextField.endEditing(true)
-    }
-
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            textField.resignFirstResponder()
-            return true
-    }
-    
-    
-    @objc override func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height - view.safeAreaInsets.bottom
-                
-            }
-        }
-    }
-
-    @objc override func keyboardWillHide(notification: NSNotification) {
-        if self.view.frame.origin.y != 0 {
-            self.view.frame.origin.y = 0
-            
-        }
-    }
-    
-    func showAlert(title: String, message: String){
-        let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertVC.addAction(okAction)
-        present(alertVC, animated: true, completion: nil)
-    }
-}

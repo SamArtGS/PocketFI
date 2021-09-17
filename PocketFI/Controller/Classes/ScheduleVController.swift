@@ -177,8 +177,8 @@ class ScheduleVController:  UIViewController {
         scheduler.courseItemHeight = 70.0
         scheduler.borderWidth = 1
         scheduler.borderColor = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.0)
-        scheduler.symbolFontColor = .blackLetter!
-        scheduler.symbolTimeFontColor = .blackLetter!
+        scheduler.symbolFontColor = .blackLetter
+        scheduler.symbolTimeFontColor = .blackLetter
         return scheduler
     }()
 

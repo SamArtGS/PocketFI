@@ -62,6 +62,8 @@
 		54DD5CAA26E9BB540010C23A /* UIViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CA926E9BB540010C23A /* UIViewStyles.swift */; };
 		54DD5CAC26E9D8720010C23A /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CAB26E9D8720010C23A /* PDFViewController.swift */; };
 		54DD5CAE26E9D8AE0010C23A /* TableViewForPDFs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DD5CAD26E9D8AE0010C23A /* TableViewForPDFs.swift */; };
+		54FB725826F3F66900A279E9 /* AddHomeWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB725726F3F66900A279E9 /* AddHomeWorkViewController.swift */; };
+		54FB725A26F3F9B700A279E9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54FB725926F3F9B700A279E9 /* CustomButton.swift */; };
 		6EC54B9F9F367DC3FC4FEE8F /* libPods-PocketFI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DB20BD68B032299AB8F7962B /* libPods-PocketFI.a */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +147,8 @@
 		54DD5CA926E9BB540010C23A /* UIViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewStyles.swift; sourceTree = "<group>"; };
 		54DD5CAB26E9D8720010C23A /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		54DD5CAD26E9D8AE0010C23A /* TableViewForPDFs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewForPDFs.swift; sourceTree = "<group>"; };
+		54FB725726F3F66900A279E9 /* AddHomeWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHomeWorkViewController.swift; sourceTree = "<group>"; };
+		54FB725926F3F9B700A279E9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		AEC167A22779B682CFF65C87 /* Pods-PocketFI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketFI.debug.xcconfig"; path = "Target Support Files/Pods-PocketFI/Pods-PocketFI.debug.xcconfig"; sourceTree = "<group>"; };
 		DB20BD68B032299AB8F7962B /* libPods-PocketFI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PocketFI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA64804DDE30A1D95ECC84C /* Pods-PocketFI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketFI.release.xcconfig"; path = "Target Support Files/Pods-PocketFI/Pods-PocketFI.release.xcconfig"; sourceTree = "<group>"; };
@@ -309,6 +313,7 @@
 				54DD5CA326E99ADF0010C23A /* ObserverHideShowKeyboard.swift */,
 				54DD5CA926E9BB540010C23A /* UIViewStyles.swift */,
 				540BE08726ED8AE20026C6B4 /* StringCaseSensitive.swift */,
+				54FB725926F3F9B700A279E9 /* CustomButton.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -416,6 +421,7 @@
 				54DD5CAD26E9D8AE0010C23A /* TableViewForPDFs.swift */,
 				54DD5CAB26E9D8720010C23A /* PDFViewController.swift */,
 				540BE08B26EE45990026C6B4 /* HomeWorkVC.swift */,
+				54FB725726F3F66900A279E9 /* AddHomeWorkViewController.swift */,
 				540BE08F26EE634D0026C6B4 /* Calendar.swift */,
 				540BE09326EE74FD0026C6B4 /* ScheduleVController.swift */,
 			);
@@ -646,6 +652,7 @@
 				54BFA46F26D938C10050FD61 /* UIImageView.swift in Sources */,
 				540BE08E26EE47BD0026C6B4 /* Data.swift in Sources */,
 				540BE08826ED8AE20026C6B4 /* StringCaseSensitive.swift in Sources */,
+				54FB725826F3F66900A279E9 /* AddHomeWorkViewController.swift in Sources */,
 				540BE08A26ED9A830026C6B4 /* CheckiPhoneVersion.swift in Sources */,
 				547AD0B326D0352800859A7C /* NavigationLarge.swift in Sources */,
 				54DD5CA126E98F620010C23A /* LogInViewController.swift in Sources */,
@@ -654,6 +661,7 @@
 				54DD5CAE26E9D8AE0010C23A /* TableViewForPDFs.swift in Sources */,
 				540BE09A26EE75A90026C6B4 /* TeachersViewController.swift in Sources */,
 				540BE09226EE656B0026C6B4 /* Homework.swift in Sources */,
+				54FB725A26F3F9B700A279E9 /* CustomButton.swift in Sources */,
 				540BE09826EE753E0026C6B4 /* ArchitectureViewController.swift in Sources */,
 				545AF2E926CDA89A003C7CEC /* ClassesViewController.swift in Sources */,
 				54BFA46D26D8DCC10050FD61 /* CollectionImportantFaculty.swift in Sources */,

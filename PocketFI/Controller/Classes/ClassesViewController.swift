@@ -15,6 +15,7 @@ class ClassesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .always
         Materials.showsVerticalScrollIndicator = false
         Materials.delegate = self
         Materials.dataSource = self
