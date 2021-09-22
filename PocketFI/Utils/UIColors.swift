@@ -21,3 +21,25 @@ extension UIColor{
     static let OrangeYellowCrayola = UIColor(named: "OrangeYellowCrayola")!
     static let RussianViolet = UIColor(named: "RussianViolet")!
 }
+enum elementMarker {
+    case building
+    case monument
+    case sportSite
+    case meals
+    case extras
+    
+    func getColorMarket() -> UIColor{
+        switch self {
+        case .building:
+            return .Emerald
+        case .monument:
+            return .Magnolia
+        case .sportSite:
+            return .RussianViolet
+        case .meals:
+            return .OrangeYellowCrayola
+        case .extras:
+            return .UsafaBlue
+        }
+    }
+}

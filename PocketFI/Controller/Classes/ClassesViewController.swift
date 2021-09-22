@@ -62,7 +62,7 @@ extension ClassesViewController: UICollectionViewDelegate, UICollectionViewDataS
             break
         case 6:
             guard let resources = resources[index].resources else { return }
-            navigationController?.pushViewController(TableViewForPDFs(titulo: "Exámenes pasados", lista: resources), animated: true)
+            navigationController?.pushViewController(TableViewForPDFs(titulo: "Manual de prácticas", lista: resources), animated: true)
             break
         default:
             break

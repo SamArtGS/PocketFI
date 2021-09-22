@@ -9,10 +9,33 @@ import UIKit
 import Lottie
 
 class CellNews: UICollectionViewCell {
+    
+    private var lottieImage: AnimationView? = nil
 
     var noticia: Noticia? {
         didSet{
+            guard let noticia = noticia else { return }
+            
+            addSubview(box)
+            box.addSubview(stack)
+
+            lottieImage = imageNew(noticia.lottie ?? "newsOne")
+            guard let lottieImage = lottieImage else { return }
+            stack.addArrangedSubview(lottieImage)
+            stack.addArrangedSubview(textTopic)
+            box.sendSubviewToBack(lottieImage)
+            box.addShadow(opacy: 0.3)
+            lottieImage.play()
+            
+            textTopic.text = noticia.titulo
+            
             initConstraints()
+            NSLayoutConstraint.activate([
+                lottieImage.leadingAnchor.constraint(equalTo: box.leadingAnchor),
+                lottieImage.trailingAnchor.constraint(equalTo: box.trailingAnchor)
+            ])
+            
+            
         }
     }
     
@@ -27,17 +50,18 @@ class CellNews: UICollectionViewCell {
         return view
     }()
     
-    private let imageNew: AnimationView = {
-        let imageView = AnimationView(name: "newsOne")
+    
+    
+    private let imageNew: (String) ->  AnimationView = { lottie in
+        let imageView = AnimationView(name: lottie)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
-        imageView.loopMode = .loop
+        imageView.loopMode = .repeat(4)
         imageView.animationSpeed = 1
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 10
-        imageView.play()
         return imageView
-   }()
+   }
     
     private let stack: UIStackView = {
         let stack = UIStackView()
@@ -63,12 +87,7 @@ class CellNews: UICollectionViewCell {
     
     
     func initConstraints(){
-        addSubview(box)
-        box.addSubview(stack)
-        stack.addArrangedSubview(imageNew)
-        stack.addArrangedSubview(textTopic)
-        box.sendSubviewToBack(imageNew)
-        box.addShadow(opacy: 0.3)
+        
         
         textTopic.text = "Protocolos para el regreso a clases seguro :("
         
@@ -83,8 +102,6 @@ class CellNews: UICollectionViewCell {
             stack.trailingAnchor.constraint(equalTo: box.trailingAnchor),
             stack.bottomAnchor.constraint(equalTo: box.bottomAnchor),
             
-            imageNew.leadingAnchor.constraint(equalTo: box.leadingAnchor),
-            imageNew.trailingAnchor.constraint(equalTo: box.trailingAnchor),
             textTopic.heightAnchor.constraint(equalTo: box.heightAnchor,multiplier: 0.4),
             textTopic.widthAnchor.constraint(equalTo: box.widthAnchor, multiplier: 0.9)
         

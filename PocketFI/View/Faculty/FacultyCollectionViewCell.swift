@@ -12,7 +12,6 @@ class FacultyCollectionViewCell: UICollectionViewCell {
     var element: FacultyElement? {
         didSet{
             guard let unwrap = element else { return }
-            
             if unwrap.labelText == "Mapa"{
                 let imageView = UIImageView(image: UIImage(named: "mapBackground"))
                 imageView.translatesAutoresizingMaskIntoConstraints = false

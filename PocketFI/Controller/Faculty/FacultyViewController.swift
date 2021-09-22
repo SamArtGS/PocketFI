@@ -76,6 +76,16 @@ extension FacultyViewController: UICollectionViewDataSource{
 
 extension FacultyViewController: UICollectionViewDelegateFlowLayout{
     
+    override func viewDidLayoutSubviews() {
+        guard let cell = facultyCollection.cellForItem(at: IndexPath(item: 0, section: 0)) as? CollectionImportantFaculty else { return }
+        
+        guard let indexPath = cell.colectionView?.indexPathsForVisibleItems.first else {
+            return
+        }
+        guard let cell2 = cell.colectionView?.cellForItem(at: indexPath) as? CellNews else { return }
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if UIDevice().userInterfaceIdiom == .phone {
@@ -101,7 +111,7 @@ extension FacultyViewController: UICollectionViewDelegateFlowLayout{
                 else { return headerView }
             
             if self.traitCollection.userInterfaceStyle == .dark {
-                typedHeaderView.imagenWelcome.image = UIImage(named: "welcome")
+                typedHeaderView.imagenWelcome.image = UIImage(named: "biblioteca-central")
             } else {
                 typedHeaderView.imagenWelcome.image = UIImage(named: "welcome"+randomImageSelector)
             }

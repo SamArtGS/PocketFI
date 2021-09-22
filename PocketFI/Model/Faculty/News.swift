@@ -15,12 +15,12 @@ struct Noticia {
     let id: Int
     let fecha: Date
     let titulo: String
-    let miniatura: UIImage?
+    let miniatura: String?
     let texto: String
     let lottie: String?
-    let imagenes: [UIImage]?
+    let imagenes: [String]?
     
-    init(id: Int, fecha: Date, titulo: String, miniatura: UIImage? = nil, texto: String, lottie: String? = nil, imagenes: [UIImage]? = nil) {
+    init(id: Int, fecha: Date, titulo: String, miniatura: String = "", texto: String, lottie: String = "", imagenes: [String] = []) {
         self.id = id
         self.fecha = fecha
         self.titulo = titulo

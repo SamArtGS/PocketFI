@@ -19,7 +19,7 @@ extension UIView{
     }
     func sizeLetters() -> Float {
         switch UIScreen.main.nativeBounds.height {
-            case 1136: //5,5s,SE
+            case 1136: //5, 5s, SE
                 return 20
             case 1334: //6,7,8
                 return 23

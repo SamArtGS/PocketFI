@@ -10,6 +10,7 @@ import UIKit
 class CollectionImportantFaculty: UICollectionViewCell{
     
     var delegate: CellNewsDelegate?
+    var colectionView: UICollectionView?
     
     var elements: [Noticia]? {
         didSet{
@@ -18,18 +19,20 @@ class CollectionImportantFaculty: UICollectionViewCell{
     }
     
     func setConstraints(){
-        let coleccionView = addCollection()
-        addSubview(coleccionView)
-        
-        NSLayoutConstraint.activate([
-            coleccionView.topAnchor.constraint(equalTo: topAnchor),
-            coleccionView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            coleccionView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            coleccionView.bottomAnchor.constraint(equalTo: bottomAnchor),
-        ])
-        
+        if let colectionalView = addCollection(){
+            self.colectionView = colectionalView
+            addSubview(colectionalView)
+            
+            NSLayoutConstraint.activate([
+                colectionalView.topAnchor.constraint(equalTo: topAnchor),
+                colectionalView.leadingAnchor.constraint(equalTo: leadingAnchor),
+                colectionalView.trailingAnchor.constraint(equalTo: trailingAnchor),
+                colectionalView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            ])
+        }
     }
-    func addCollection() -> UICollectionView {
+    
+    func addCollection() -> UICollectionView? {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let coleccionView = UICollectionView(frame: self.frame, collectionViewLayout: layout)
@@ -43,6 +46,7 @@ class CollectionImportantFaculty: UICollectionViewCell{
         return coleccionView
     }
 
+
 }
 
 extension CollectionImportantFaculty: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -52,13 +56,13 @@ extension CollectionImportantFaculty: UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return DataClasses.news.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellMini", for: indexPath) as! CellNews
-        cell.initConstraints()
+        cell.noticia = DataClasses.news[indexPath.item]
         return cell
     }
     
@@ -76,4 +80,5 @@ extension CollectionImportantFaculty: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
+    
 }
