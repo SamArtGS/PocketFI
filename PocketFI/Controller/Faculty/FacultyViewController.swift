@@ -67,6 +67,8 @@ extension FacultyViewController: UICollectionViewDataSource{
         switch indexPath.item {
         case 3:
             navigationController?.pushViewController(MapFacultyViewController(), animated: true)
+        case 4:
+            navigationController?.pushViewController(PDFViewGacetaController(), animated: true)
         default:
             return
         }
