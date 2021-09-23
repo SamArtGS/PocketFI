@@ -11,11 +11,6 @@ class WelcomeCollectionReusableView: UICollectionReusableView {
         
     @IBOutlet var imagenWelcome: UIImageView!
     
-    
-    override func draw(_ rect: CGRect) {
-        
-    }
-    
     override func layoutSubviews() {
         super.layoutSubviews()
     }

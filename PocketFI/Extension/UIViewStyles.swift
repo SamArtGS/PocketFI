@@ -56,9 +56,13 @@ extension UIViewController{
         let menuBarItem = UIBarButtonItem(customView: button)
         menuBarItem.customView?.translatesAutoresizingMaskIntoConstraints = false
         menuBarItem.customView?.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        menuBarItem.customView?.widthAnchor.constraint(equalToConstant: 30).isActive = true
+        menuBarItem.customView?.widthAnchor.constraint(equalToConstant: 25).isActive = true
 
         return menuBarItem
+    }
+    
+    @objc func salir(){
+        self.dismiss(animated: true)
     }
     
 }

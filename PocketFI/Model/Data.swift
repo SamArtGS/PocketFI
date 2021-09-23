@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Elliotable
 
 struct DataClasses: Equatable, Hashable{
     
@@ -111,8 +112,236 @@ struct DataClasses: Equatable, Hashable{
 extension DataClasses{
     
     static let news:[Noticia] = [
-        Noticia(id: 1, fecha: Date(), titulo: "Noticia de último minuto", miniatura: "icons8-task_planning", texto: "BLABLABLABBLABA", lottie: "newsOne", imagenes: [
-            ""
-        ])
+        Noticia(id: 1, fecha: Date(),
+                titulo: "Protocolos para un regreso seguro a clases organizado. Infórmate.",
+                miniatura: "unam-covid",
+                textos: ["""
+                    #PRESENTACIÓN# \n Estos lineamientos tienen como objetivo establecer las medidas específicas sobre promoción y protección de la salud de la co- munidad universitaria que deberán ser implementadas en todas las entidades y dependencias en la reanudación de actividades laborales, *sociales, educativas, deportivas* y culturales de forma ordenada, paulatina y progresiva, procurando en todo momento la protección del Derecho Humano a la salud.
+                    """,
+                    """
+                        #PRESENTACIÓN# \n Estos lineamientos tienen como objetivo establecer las medidas específicas sobre promoción y protección de la salud de la co- munidad universitaria que deberán ser implementadas en todas las entidades y dependencias en la reanudación de actividades laborales, *sociales, educativas, deportivas* y culturales de forma ordenada, paulatina y progresiva, procurando en todo momento la protección del Derecho Humano a la salud.
+                        """
+                ],
+                lottie: "covid",
+                imagenes: [
+                    "biblioteca-central",
+                    "biblioteca-central"]
+        ),
+        Noticia(id: 2, fecha: Date(),
+                titulo: "Mira las novedades en tu aplicación Pocket FI",
+                miniatura: "biblioteca-central",
+                textos: ["""
+                    #PRESENTACIÓN# \n Estos lineamientos tienen como objetivo establecer las medidas específicas sobre promoción y protección de la salud de la co- munidad universitaria que deberán ser implementadas en todas las entidades y dependencias en la reanudación de actividades laborales, *sociales, educativas, deportivas* y culturales de forma ordenada, paulatina y progresiva, procurando en todo momento la protección del Derecho Humano a la salud.
+                    """,
+                    """
+                        #PRESENTACIÓN# \n Estos lineamientos tienen como objetivo establecer las medidas específicas sobre promoción y protección de la salud de la co- munidad universitaria que deberán ser implementadas en todas las entidades y dependencias en la reanudación de actividades laborales, *sociales, educativas, deportivas* y culturales de forma ordenada, paulatina y progresiva, procurando en todo momento la protección del Derecho Humano a la salud.
+                        """
+                ],
+                lottie: "appAnimation",
+                imagenes: [
+                    "biblioteca-central",
+                    "biblioteca-central",
+                    "biblioteca-central"
+                ]
+        ),
+        Noticia(id: 3, fecha: Date(),
+                titulo: "Recomendaciones para la concentración en tus clases en línea",
+                miniatura: "biblioteca-central",
+                textos: ["""
+                    #PRESENTACIÓN# \n Estos lineamientos tienen como objetivo establecer las medidas específicas sobre promoción y protección de la salud de la co- munidad universitaria que deberán ser implementadas en todas las entidades y dependencias en la reanudación de actividades laborales, *sociales, educativas, deportivas* y culturales de forma ordenada, paulatina y progresiva, procurando en todo momento la protección del Derecho Humano a la salud.
+                    """,
+                    """
+                        #PRESENTACIÓN# \n Estos lineamientos tienen como objetivo establecer las medidas específicas sobre promoción y protección de la salud de la co- munidad universitaria que deberán ser implementadas en todas las entidades y dependencias en la reanudación de actividades laborales, *sociales, educativas, deportivas* y culturales de forma ordenada, paulatina y progresiva, procurando en todo momento la protección del Derecho Humano a la salud.
+                        """
+                ],
+                lottie: "elearning",
+                imagenes: [
+                    "biblioteca-central",
+                    "biblioteca-central",
+                    "biblioteca-central"
+                ]
+        ),
+        Noticia(id: 4, fecha: Date(),
+                titulo: "Descubre nuevas fuentes de consulta de libros para tus estudios",
+                miniatura: "screen1",
+                textos: ["""
+                    #PRESENTACIÓN# \n Estos lineamientos tienen como objetivo establecer las medidas específicas sobre promoción y protección de la salud de la co- munidad universitaria que deberán ser implementadas en todas las entidades y dependencias en la reanudación de actividades laborales, *sociales, educativas, deportivas* y culturales de forma ordenada, paulatina y progresiva, procurando en todo momento la protección del Derecho Humano a la salud.
+                    """,
+                    """
+                        #PRESENTACIÓN# \n Estos lineamientos tienen como objetivo establecer las medidas específicas sobre promoción y protección de la salud de la co- munidad universitaria que deberán ser implementadas en todas las entidades y dependencias en la reanudación de actividades laborales, *sociales, educativas, deportivas* y culturales de forma ordenada, paulatina y progresiva, procurando en todo momento la protección del Derecho Humano a la salud.
+                        """
+                ],
+                lottie: "newsThree",
+                imagenes: [
+                    "biblioteca-central",
+                    "biblioteca-central",
+                    "biblioteca-central"
+                ]
+        ),
+        Noticia(id: 5, fecha: Date(),
+                titulo: "Recomendaciones para saber elegir tu forma de titulación",
+                miniatura: "screen1",
+                textos: ["""
+                    #PRESENTACIÓN# \n Estos lineamientos tienen como objetivo establecer las medidas específicas sobre promoción y protección de la salud de la co- munidad universitaria que deberán ser implementadas en todas las entidades y dependencias en la reanudación de actividades laborales, *sociales, educativas, deportivas* y culturales de forma ordenada, paulatina y progresiva, procurando en todo momento la protección del Derecho Humano a la salud.
+                    """,
+                    """
+                        #PRESENTACIÓN# \n Estos lineamientos tienen como objetivo establecer las medidas específicas sobre promoción y protección de la salud de la co- munidad universitaria que deberán ser implementadas en todas las entidades y dependencias en la reanudación de actividades laborales, *sociales, educativas, deportivas* y culturales de forma ordenada, paulatina y progresiva, procurando en todo momento la protección del Derecho Humano a la salud.
+                        """
+                ],
+                lottie: "newsOne",
+                imagenes: [
+                    "biblioteca-central",
+                    "biblioteca-central",
+                    "biblioteca-central"
+                ]
+        )
     ]
+    
+    
+    static var eventsCalendar: [ElliottEvent] = [
+        ElliottEvent(courseId: "2948",
+                     courseName: "Computación Gráfica Avanzada",
+                     roomName: "Y009",
+                     professor: "Reynaldo Ávila",
+                     courseDay: .tuesday,
+                     startTime: "7:00",
+                     endTime: "9:00",
+                     backgroundColor: .systemRed),
+        
+        ElliottEvent(courseId: "2948",
+                     courseName: "Computación Gráfica Avanzada",
+                     roomName: "Y009",
+                     professor: "Reynaldo Ávila",
+                     courseDay: .thursday,
+                     startTime: "7:00",
+                     endTime: "9:00",
+                     backgroundColor: .systemRed),
+        
+        ElliottEvent(courseId: "1959",
+                     courseName: "Sistemas Distribuidos",
+                     roomName: "A112",
+                     professor: "Guadalupe Lizeth",
+                     courseDay: .tuesday,
+                     startTime: "9:00",
+                     endTime: "11:00",
+                     backgroundColor: .systemBlue),
+        
+        ElliottEvent(courseId: "1959",
+                     courseName: "Sistemas Distribuidos",
+                     roomName: "A112",
+                     professor: "Guadalupe Lizeth",
+                     courseDay: .thursday,
+                     startTime: "9:00",
+                     endTime: "11:00",
+                     backgroundColor: .systemBlue),
+        
+        ElliottEvent(courseId: "2930",
+                     courseName: "Criptografía",
+                     roomName: "B112",
+                     professor: "Rocío Aldeco",
+                     courseDay: .tuesday,
+                     startTime: "13:00",
+                     endTime: "15:00",
+                     backgroundColor: .systemPurple),
+        
+        ElliottEvent(courseId: "2930",
+                     courseName: "Criptografía",
+                     roomName: "B112",
+                     professor: "Rocío Aldeco",
+                     courseDay: .thursday,
+                     startTime: "13:00",
+                     endTime: "15:00",
+                     backgroundColor: .systemPurple),
+        
+        ElliottEvent(courseId: "2933",
+                     courseName: "Minería de Datos",
+                     roomName: "Y112",
+                     professor: "Guillermo Molero",
+                     courseDay: .tuesday,
+                     startTime: "16:00",
+                     endTime: "18:00",
+                     backgroundColor: .systemGreen),
+        
+        ElliottEvent(courseId: "2933",
+                     courseName: "Minería de Datos",
+                     roomName: "Y112",
+                     professor: "Guillermo Molero",
+                     courseDay: .thursday,
+                     startTime: "16:00",
+                     endTime: "18:00",
+                     backgroundColor: .systemGreen),
+        
+        ElliottEvent(courseId: "1858",
+                     courseName: "Sistemas Embebidos",
+                     roomName: "Y112",
+                     professor: "Ayesha Román",
+                     courseDay: .tuesday,
+                     startTime: "19:00",
+                     endTime: "21:00",
+                     backgroundColor: .systemOrange),
+        
+        ElliottEvent(courseId: "1858",
+                     courseName: "Sistemas Embebidos",
+                     roomName: "Y112",
+                     professor: "Ayesha Román",
+                     courseDay: .thursday,
+                     startTime: "19:00",
+                     endTime: "21:00",
+                     backgroundColor: .systemOrange),
+        
+        ElliottEvent(courseId: "6858",
+                     courseName: "Lab. Sistemas Embebidos",
+                     roomName: "Y112",
+                     professor: "Pedro Rincón",
+                     courseDay: .friday,
+                     startTime: "18:00",
+                     endTime: "20:00",
+                     backgroundColor: .systemOrange),
+        
+        ElliottEvent(courseId: "1867",
+                     courseName: "O y Arq. de Computadoras",
+                     roomName: "Y112",
+                     professor: "Pedro Rincón",
+                     courseDay: .monday,
+                     startTime: "19:00",
+                     endTime: "21:00",
+                     backgroundColor: .magenta),
+        
+        ElliottEvent(courseId: "1867",
+                     courseName: "O y Arq. de Computadoras",
+                     roomName: "Y112",
+                     professor: "Pedro Rincón",
+                     courseDay: .wednesday,
+                     startTime: "19:00",
+                     endTime: "21:00",
+                     backgroundColor: .magenta),
+        
+        ElliottEvent(courseId: "1867",
+                     courseName: "Lab. O y Arq. de Computadoras",
+                     roomName: "Y112",
+                     professor: "Pedro Rincón",
+                     courseDay: .wednesday,
+                     startTime: "17:00",
+                     endTime: "19:00",
+                     backgroundColor: .oroUnam),
+        
+        ElliottEvent(courseId: "2954",
+                     courseName: "Seguridad Inf. Avanzada",
+                     roomName: "Y112",
+                     professor: "César Pineda",
+                     courseDay: .friday,
+                     startTime: "7:00",
+                     endTime: "10:00",
+                     backgroundColor: .systemTeal),
+        
+        ElliottEvent(courseId: "2954",
+                     courseName: "Lab. Seguridad Inf. Avanzada",
+                     roomName: "Y112",
+                     professor: "César Pineda",
+                     courseDay: .saturday,
+                     startTime: "7:00",
+                     endTime: "9:00",
+                     backgroundColor: .blue)
+    ]
+
 }

@@ -12,18 +12,8 @@ class FacultyCollectionViewCell: UICollectionViewCell {
     var element: FacultyElement? {
         didSet{
             guard let unwrap = element else { return }
-            if unwrap.labelText == "Mapa"{
-                let imageView = UIImageView(image: UIImage(named: "mapBackground"))
-                imageView.translatesAutoresizingMaskIntoConstraints = false
-                imageView.contentMode = .scaleToFill
-                imageView.clipsToBounds = true
-                imageView.layer.cornerRadius = 15
-                box = imageView
-            }else{
-                box.layer.borderWidth = 0.5
-                box.layer.borderColor = UIColor.gray.cgColor
-                
-            }
+            box.layer.borderWidth = 0.5
+            box.layer.borderColor = UIColor.gray.cgColor
             imageicon.image = unwrap.image
             textTopic.text = unwrap.labelText
         }
@@ -50,7 +40,6 @@ class FacultyCollectionViewCell: UICollectionViewCell {
     
     private let textTopic : UILabel = {
         let etiqueta = UILabel()
-        
         etiqueta.lineBreakMode = .byWordWrapping
         etiqueta.numberOfLines = 0
         etiqueta.textColor = .blackLetter

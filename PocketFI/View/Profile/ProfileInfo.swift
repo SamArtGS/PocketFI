@@ -27,12 +27,10 @@ class ProfileInfo: UICollectionReusableView {
     
     private let card: CrendentialView = {
        let card = CrendentialView()
-        card.backgroundColor = .white
         card.layer.cornerRadius = 15
         card.clipsToBounds = true
         card.translatesAutoresizingMaskIntoConstraints = false
         card.addShadow(opacy: 0.7)
-        
         return card
     }()
     
@@ -102,6 +100,7 @@ class ProfileInfo: UICollectionReusableView {
             
             card.widthAnchor.constraint(equalTo: fondoBlur.widthAnchor, constant: -50),
             card.heightAnchor.constraint(equalTo: card.widthAnchor, multiplier: 0.6),
+            
             botonWallet.widthAnchor.constraint(equalTo: card.widthAnchor, multiplier: 0.8),
             botonWallet.heightAnchor.constraint(equalToConstant: 40),
         ])

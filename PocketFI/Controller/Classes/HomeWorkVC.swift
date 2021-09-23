@@ -59,7 +59,7 @@ class HomeWorkViewController: UIViewController {
         newHW.title = title
         newHW.dateScheduled = date
         newHW.subject = subject
-        
+        newHW.didDone = false
         do{
             try context.save()
             getAllItems()
@@ -81,10 +81,11 @@ class HomeWorkViewController: UIViewController {
         }
     }
     
-    func updateFromDatabase(item: HomeworkToDoList, newTitle: String, newDate: Date, newSubject: String){
+    func updateFromDatabase(item: HomeworkToDoList, newTitle: String, newDate: Date, newSubject: String, isDone: Bool){
         item.title = newTitle
         item.dateScheduled = newDate
         item.subject = newSubject
+        item.didDone = isDone
         do{
             try context.save()
         }catch{
@@ -173,18 +174,27 @@ extension HomeWorkViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeworkViewCell
         cell.homework = models[indexPath.row]
+        
+        if models[indexPath.row].didDone{
+            cell.backgroundColor = .cyan.withAlphaComponent(0.4)
+        }
+        
+        
         return cell
     }
 }
 
 extension HomeWorkViewController{
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let editAction = UIContextualAction(style: .normal, title: "Editar") {(action, view, completion) in
+        let editAction = UIContextualAction(style: .normal, title: "Listo") {[weak self](action, view, completion) in
+            let cell = tableView.cellForRow(at: indexPath) as! HomeworkViewCell
+            cell.backgroundColor = .cyan.withAlphaComponent(0.4)
             
+            self?.updateFromDatabase(item: cell.homework!, newTitle: (cell.homework?.title!)!, newDate: (cell.homework?.dateScheduled!)!, newSubject: cell.homework!.subject!, isDone: true)
             
-
+            completion(true)
         }
-        editAction.backgroundColor = .systemYellow
+        editAction.backgroundColor = .Emerald
         return UISwipeActionsConfiguration(actions: [editAction])
     }
 
@@ -194,6 +204,7 @@ extension HomeWorkViewController{
             
             let cell = tableView.cellForRow(at: indexPath) as! HomeworkViewCell
             self?.deleteFromDatabase(item: cell.homework)
+
             
             completion(true)
         }

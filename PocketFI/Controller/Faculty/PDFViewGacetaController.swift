@@ -10,6 +10,10 @@ import UIKit
 
 class PDFViewGacetaController: UIViewController {
     
+    deinit {
+        print("SE reclama la gaceta")
+    }
+    
     private let webView: WKWebView = {
         let webView = WKWebView()
         webView.translatesAutoresizingMaskIntoConstraints = false
@@ -36,10 +40,12 @@ class PDFViewGacetaController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.largeTitleDisplayMode = .never
+        navigationController?.tabBarController?.tabBar.isHidden = true
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationItem.largeTitleDisplayMode = .automatic
+        navigationController?.tabBarController?.tabBar.isHidden = false
     }
     
 }

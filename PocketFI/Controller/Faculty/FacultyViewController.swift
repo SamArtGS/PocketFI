@@ -25,6 +25,9 @@ class FacultyViewController: UIViewController {
     ]
     
     
+    let news = DataClasses.news
+    
+    
     // MARK: Life Cycle VC
     
     override func viewDidLoad() {
@@ -53,7 +56,8 @@ extension FacultyViewController: UICollectionViewDataSource{
         case 0:
             collectionView.register(CollectionImportantFaculty.self, forCellWithReuseIdentifier: "newsCell")
             let cell = facultyCollection.dequeueReusableCell(withReuseIdentifier: "newsCell", for: indexPath) as! CollectionImportantFaculty
-            cell.setConstraints()
+            cell.delegate = self
+            cell.elements = news
             return cell
         default:
             let cell = facultyCollection.dequeueReusableCell(withReuseIdentifier: "facultyCell", for: indexPath) as! FacultyCollectionViewCell
@@ -73,20 +77,26 @@ extension FacultyViewController: UICollectionViewDataSource{
             return
         }
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
     
 }
 
-extension FacultyViewController: UICollectionViewDelegateFlowLayout{
-    
-    override func viewDidLayoutSubviews() {
-        guard let cell = facultyCollection.cellForItem(at: IndexPath(item: 0, section: 0)) as? CollectionImportantFaculty else { return }
-        
-        guard let indexPath = cell.colectionView?.indexPathsForVisibleItems.first else {
-            return
-        }
-        guard let cell2 = cell.colectionView?.cellForItem(at: indexPath) as? CellNews else { return }
-        
+extension FacultyViewController: CellNewsDelegate{
+    func didSelectNewAt(new: Noticia?) {
+        let vc = NewsVController(newAdded: new)
+        vc.modalTransitionStyle = .coverVertical
+        present(vc, animated: true)
     }
+}
+
+
+extension FacultyViewController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         

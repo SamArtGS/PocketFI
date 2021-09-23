@@ -10,10 +10,13 @@ import MapKit
 
 class MapFacultyViewController: UIViewController {
     
+    deinit {
+        print("SE reclama el mapa")
+    }
     
     private let mapView: MKMapView = {
         let mapView = MKMapView()
-        mapView.centerToLocation(CLLocation(latitude: 19.331445, longitude: -99.184339))
+        //mapView.centerToLocation(CLLocation(latitude: 19.331445, longitude: -99.184339))
         mapView.translatesAutoresizingMaskIntoConstraints = false
         return mapView
     }()
@@ -54,26 +57,5 @@ class MapFacultyViewController: UIViewController {
         super.viewWillDisappear(animated)
         navigationItem.largeTitleDisplayMode = .automatic
     }
-    
-    
 
-}
-//extension UINavigationController{
-//
-//    open override func viewDidLayoutSubviews() {
-//        navigationController?.navigationBar.backgroundColor = UIColor(named: "AzulUNAM")
-//        navigationController?.navigationBar.tintColor = .white
-//    }
-//}
-private extension MKMapView {
-  func centerToLocation(
-    _ location: CLLocation,
-    regionRadius: CLLocationDistance = 1000
-  ) {
-    let coordinateRegion = MKCoordinateRegion(
-      center: location.coordinate,
-      latitudinalMeters: regionRadius,
-      longitudinalMeters: regionRadius)
-    setRegion(coordinateRegion, animated: true)
-  }
 }

@@ -34,19 +34,8 @@ class CustomUILabel: UILabel{
     func colocarFormatosConRegex(texto: String, interlineado:Float = 0){
         
         let formatos: [Formato] = [
-            Formato(simbolo: "£", color: self.textColor, fuente: .Roboto(.boldItalic, size: font.pointSize)),  // Con * se pone las Negrita Negro
-            
-            Formato(simbolo: "*", color: self.textColor, fuente: .Roboto(.boldItalic, size: font.pointSize)),  // Con * se pone las Negrita Negro
-            Formato(simbolo: "¿", color: .black, fuente: .Roboto(.regular, size: font.pointSize-7)),  // Con * se pone las Negrita Negro,
-            Formato(simbolo: "$", color: .systemRed, fuente: .Roboto(.bold, size: font.pointSize)),    // Con ~ se pone las Negrita Azul
-            Formato(simbolo: "#", color: .azulUnam, fuente: .Roboto(.bold, size: font.pointSize)),
-            Formato(simbolo: "~", color: .Magnolia, fuente: .Roboto(.bold, size: font.pointSize)),
-            Formato(simbolo: "&", color: .Emerald, fuente: .Roboto(.bold, size: (font.pointSize - 6))),
-            Formato(simbolo: "%", color: .RussianViolet, fuente: .Roboto(.bold, size: font.pointSize  - 6)),
-            Formato(simbolo: "º", color: self.textColor, fuente: .Roboto(.italic, size: font.pointSize-3)),
-            Formato(simbolo: "ª", color: self.textColor, fuente: .Roboto(.boldItalic, size: font.pointSize-3)),
-            
-            Formato(simbolo: "¢", color: self.textColor, fuente: .Roboto(.regular, size: font.pointSize-3)),
+            Formato(simbolo: "*", color: textColor, fuente: .Roboto(.bold, size: font.pointSize)),
+            Formato(simbolo: "#", color: textColor, fuente: .Roboto(.bold, size: font.pointSize+10)),
         ]
         
         var textoSinSimbolos: String = texto

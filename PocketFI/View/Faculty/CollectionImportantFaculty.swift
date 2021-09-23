@@ -9,30 +9,41 @@ import UIKit
 
 class CollectionImportantFaculty: UICollectionViewCell{
     
-    var delegate: CellNewsDelegate?
-    var colectionView: UICollectionView?
+    weak var delegate: CellNewsDelegate?
     
+    
+    var colectionView: UICollectionView?
     var elements: [Noticia]? {
         didSet{
             setConstraints()
         }
     }
     
-    func setConstraints(){
-        if let colectionalView = addCollection(){
-            self.colectionView = colectionalView
-            addSubview(colectionalView)
-            
-            NSLayoutConstraint.activate([
-                colectionalView.topAnchor.constraint(equalTo: topAnchor),
-                colectionalView.leadingAnchor.constraint(equalTo: leadingAnchor),
-                colectionalView.trailingAnchor.constraint(equalTo: trailingAnchor),
-                colectionalView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            ])
-        }
+    override init(frame: CGRect) {
+       super.init(frame: frame)
+       colectionView = addCollection()
+       print("Se crea el carrousel")
+   }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
-    func addCollection() -> UICollectionView? {
+    
+    
+    func setConstraints(){
+        guard let colectionView = colectionView else { return }
+        addSubview(colectionView)
+            
+        NSLayoutConstraint.activate([
+            colectionView.topAnchor.constraint(equalTo: topAnchor),
+            colectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            colectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            colectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
+        ])
+    }
+    
+    func addCollection() -> UICollectionView {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let coleccionView = UICollectionView(frame: self.frame, collectionViewLayout: layout)
@@ -49,21 +60,27 @@ class CollectionImportantFaculty: UICollectionViewCell{
 
 }
 
-extension CollectionImportantFaculty: UICollectionViewDelegate, UICollectionViewDataSource{
+extension CollectionImportantFaculty: UICollectionViewDataSource{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return DataClasses.news.count
+        return elements?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellMini", for: indexPath) as! CellNews
-        cell.noticia = DataClasses.news[indexPath.item]
+        cell.noticia = elements?[indexPath.item]
         return cell
+    }
+}
+
+extension CollectionImportantFaculty: UICollectionViewDelegate{
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectNewAt(new: elements?[indexPath.item])
     }
     
 }

@@ -7,8 +7,8 @@
 
 import UIKit
 
-protocol CellNewsDelegate {
-    func didSelectNewAt(new: Noticia)
+protocol CellNewsDelegate: AnyObject {
+    func didSelectNewAt(new: Noticia?)
 }
 
 struct Noticia {
@@ -16,16 +16,16 @@ struct Noticia {
     let fecha: Date
     let titulo: String
     let miniatura: String?
-    let texto: String
+    let textos: [String]
     let lottie: String?
     let imagenes: [String]?
     
-    init(id: Int, fecha: Date, titulo: String, miniatura: String = "", texto: String, lottie: String = "", imagenes: [String] = []) {
+    init(id: Int, fecha: Date, titulo: String, miniatura: String = "", textos: [String], lottie: String = "", imagenes: [String] = []) {
         self.id = id
         self.fecha = fecha
         self.titulo = titulo
         self.miniatura = miniatura
-        self.texto = texto
+        self.textos = textos
         self.lottie = lottie
         self.imagenes = imagenes
     }

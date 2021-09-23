@@ -2,10 +2,11 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20E232" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="HomeworkToDoList" representedClassName=".HomeworkToDoList" syncable="YES">
         <attribute name="dateScheduled" optional="YES" attributeType="Date" usesScalarValueType="NO" spotlightIndexingEnabled="YES"/>
+        <attribute name="didDone" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="subject" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="HomeworkToDoList" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="HomeworkToDoList" positionX="-63" positionY="-18" width="128" height="89"/>
     </elements>
 </model>

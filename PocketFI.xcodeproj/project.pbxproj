@@ -18,9 +18,16 @@
 		540BE09826EE753E0026C6B4 /* ArchitectureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE09726EE753E0026C6B4 /* ArchitectureViewController.swift */; };
 		540BE09A26EE75A90026C6B4 /* TeachersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE09926EE75A90026C6B4 /* TeachersViewController.swift */; };
 		540BE09C26EF2C350026C6B4 /* CodeDayCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540BE09B26EF2C350026C6B4 /* CodeDayCellView.swift */; };
+		540C2E0826FAF9CC00164CA5 /* CurricularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540C2E0726FAF9CC00164CA5 /* CurricularProgress.swift */; };
+		540C2E0A26FAF9EC00164CA5 /* ConstancesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540C2E0926FAF9EC00164CA5 /* ConstancesViewController.swift */; };
+		540C2E0C26FAFA0B00164CA5 /* SocialServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540C2E0B26FAFA0B00164CA5 /* SocialServiceViewController.swift */; };
+		540C2E0E26FAFA1700164CA5 /* JobOffersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540C2E0D26FAFA1700164CA5 /* JobOffersViewController.swift */; };
+		540C2E1026FB82F800164CA5 /* ScanQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540C2E0F26FB82F800164CA5 /* ScanQRViewController.swift */; };
+		540C2E1E26FBD58F00164CA5 /* appAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 540C2E1D26FBD58F00164CA5 /* appAnimation.json */; };
+		540C2E2026FBD59500164CA5 /* elearning.json in Resources */ = {isa = PBXBuildFile; fileRef = 540C2E1F26FBD59500164CA5 /* elearning.json */; };
+		540C2E2326FBE9F800164CA5 /* covid.json in Resources */ = {isa = PBXBuildFile; fileRef = 540C2E2226FBE9F800164CA5 /* covid.json */; };
+		5411D08226FBEDB200C2109B /* newsThree.json in Resources */ = {isa = PBXBuildFile; fileRef = 5411D08126FBEDB200C2109B /* newsThree.json */; };
 		542DD53E26F4EEDF00078479 /* newsOne.json in Resources */ = {isa = PBXBuildFile; fileRef = 542DD53D26F4EEDF00078479 /* newsOne.json */; };
-		542DD54026F4EEE600078479 /* newsTwo.json in Resources */ = {isa = PBXBuildFile; fileRef = 542DD53F26F4EEE600078479 /* newsTwo.json */; };
-		542DD54226F4EEEA00078479 /* newsThree.json in Resources */ = {isa = PBXBuildFile; fileRef = 542DD54126F4EEEA00078479 /* newsThree.json */; };
 		542DD54426F4FD8700078479 /* RegexAttributedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542DD54326F4FD8700078479 /* RegexAttributedLabel.swift */; };
 		542DD54626F4FDA100078479 /* Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542DD54526F4FDA100078479 /* Format.swift */; };
 		542DD54826F4FDF200078479 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542DD54726F4FDF200078479 /* Fonts.swift */; };
@@ -134,9 +141,16 @@
 		540BE09726EE753E0026C6B4 /* ArchitectureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureViewController.swift; sourceTree = "<group>"; };
 		540BE09926EE75A90026C6B4 /* TeachersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersViewController.swift; sourceTree = "<group>"; };
 		540BE09B26EF2C350026C6B4 /* CodeDayCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDayCellView.swift; sourceTree = "<group>"; };
+		540C2E0726FAF9CC00164CA5 /* CurricularProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurricularProgress.swift; sourceTree = "<group>"; };
+		540C2E0926FAF9EC00164CA5 /* ConstancesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstancesViewController.swift; sourceTree = "<group>"; };
+		540C2E0B26FAFA0B00164CA5 /* SocialServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialServiceViewController.swift; sourceTree = "<group>"; };
+		540C2E0D26FAFA1700164CA5 /* JobOffersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobOffersViewController.swift; sourceTree = "<group>"; };
+		540C2E0F26FB82F800164CA5 /* ScanQRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRViewController.swift; sourceTree = "<group>"; };
+		540C2E1D26FBD58F00164CA5 /* appAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = appAnimation.json; sourceTree = "<group>"; };
+		540C2E1F26FBD59500164CA5 /* elearning.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = elearning.json; sourceTree = "<group>"; };
+		540C2E2226FBE9F800164CA5 /* covid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = covid.json; sourceTree = "<group>"; };
+		5411D08126FBEDB200C2109B /* newsThree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newsThree.json; sourceTree = "<group>"; };
 		542DD53D26F4EEDF00078479 /* newsOne.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newsOne.json; sourceTree = "<group>"; };
-		542DD53F26F4EEE600078479 /* newsTwo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newsTwo.json; sourceTree = "<group>"; };
-		542DD54126F4EEEA00078479 /* newsThree.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newsThree.json; sourceTree = "<group>"; };
 		542DD54326F4FD8700078479 /* RegexAttributedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexAttributedLabel.swift; sourceTree = "<group>"; };
 		542DD54526F4FDA100078479 /* Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Format.swift; sourceTree = "<group>"; };
 		542DD54726F4FDF200078479 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -516,9 +530,9 @@
 			isa = PBXGroup;
 			children = (
 				545AF2E426CDA877003C7CEC /* FacultyViewController.swift */,
+				540BE09526EE75120026C6B4 /* NewsVController.swift */,
 				546681DF26D425BA0020CEEF /* Notifications.swift */,
 				546681E326D430E40020CEEF /* MapFacultyViewController.swift */,
-				540BE09526EE75120026C6B4 /* NewsVController.swift */,
 				540BE09726EE753E0026C6B4 /* ArchitectureViewController.swift */,
 				54FB726126F4803F00A279E9 /* PDFViewGacetaController.swift */,
 				540BE09926EE75A90026C6B4 /* TeachersViewController.swift */,
@@ -531,6 +545,10 @@
 			isa = PBXGroup;
 			children = (
 				545AF2E626CDA88E003C7CEC /* ProfileViewController.swift */,
+				540C2E0726FAF9CC00164CA5 /* CurricularProgress.swift */,
+				540C2E0926FAF9EC00164CA5 /* ConstancesViewController.swift */,
+				540C2E0B26FAFA0B00164CA5 /* SocialServiceViewController.swift */,
+				540C2E0D26FAFA1700164CA5 /* JobOffersViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -547,6 +565,7 @@
 				54FB725726F3F66900A279E9 /* AddHomeWorkViewController.swift */,
 				540BE08F26EE634D0026C6B4 /* Calendar.swift */,
 				540BE09326EE74FD0026C6B4 /* ScheduleVController.swift */,
+				540C2E0F26FB82F800164CA5 /* ScanQRViewController.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -556,9 +575,11 @@
 			children = (
 				542DD54926F4FE2900078479 /* Roboto */,
 				542DD56426F4FE3800078479 /* Lato */,
+				540C2E1D26FBD58F00164CA5 /* appAnimation.json */,
+				540C2E2226FBE9F800164CA5 /* covid.json */,
+				5411D08126FBEDB200C2109B /* newsThree.json */,
+				540C2E1F26FBD59500164CA5 /* elearning.json */,
 				542DD53D26F4EEDF00078479 /* newsOne.json */,
-				542DD53F26F4EEE600078479 /* newsTwo.json */,
-				542DD54126F4EEEA00078479 /* newsThree.json */,
 			);
 			name = ExtraAssets;
 			sourceTree = "<group>";
@@ -687,6 +708,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				540C2E2326FBE9F800164CA5 /* covid.json in Resources */,
 				542DD55F26F4FE2900078479 /* LICENSE.txt in Resources */,
 				542DD57226F4FE3800078479 /* Lato-Thin.ttf in Resources */,
 				542DD56126F4FE2900078479 /* Roboto-Bold.ttf in Resources */,
@@ -701,19 +723,20 @@
 				542DD55E26F4FE2900078479 /* Roboto-Italic.ttf in Resources */,
 				542DD57426F4FE3800078479 /* Lato-Black.ttf in Resources */,
 				542DD56226F4FE2900078479 /* Roboto-Thin.ttf in Resources */,
+				540C2E2026FBD59500164CA5 /* elearning.json in Resources */,
 				542DD57326F4FE3800078479 /* Lato-Bold.ttf in Resources */,
 				542DD55A26F4FE2900078479 /* Roboto-MediumItalic.ttf in Resources */,
 				545AF2BC26CD7789003C7CEC /* LaunchScreen.storyboard in Resources */,
 				542DD57626F4FE3800078479 /* Lato-BlackItalic.ttf in Resources */,
 				542DD56326F4FE2900078479 /* Roboto-Black.ttf in Resources */,
 				542DD57726F4FE3800078479 /* OFL.txt in Resources */,
-				542DD54226F4EEEA00078479 /* newsThree.json in Resources */,
 				542DD57A26F4FE3800078479 /* Lato-ThinItalic.ttf in Resources */,
 				545AF2B926CD7789003C7CEC /* Assets.xcassets in Resources */,
-				542DD54026F4EEE600078479 /* newsTwo.json in Resources */,
 				542DD57926F4FE3800078479 /* Lato-Light.ttf in Resources */,
 				545AF2B726CD7787003C7CEC /* Main.storyboard in Resources */,
 				542DD56026F4FE2900078479 /* Roboto-BlackItalic.ttf in Resources */,
+				5411D08226FBEDB200C2109B /* newsThree.json in Resources */,
+				540C2E1E26FBD58F00164CA5 /* appAnimation.json in Resources */,
 				542DD53E26F4EEDF00078479 /* newsOne.json in Resources */,
 				542DD57126F4FE3800078479 /* Lato-LightItalic.ttf in Resources */,
 				542DD55726F4FE2900078479 /* Roboto-Medium.ttf in Resources */,
@@ -787,9 +810,11 @@
 			files = (
 				546681E026D425BA0020CEEF /* Notifications.swift in Sources */,
 				54AA9D0926F3CE58009B2A16 /* Homework+CoreDataClass copy.swift in Sources */,
+				540C2E1026FB82F800164CA5 /* ScanQRViewController.swift in Sources */,
 				54DD5CA426E99ADF0010C23A /* ObserverHideShowKeyboard.swift in Sources */,
 				545AF2EB26CDAB8E003C7CEC /* FacultyCollectionViewCell.swift in Sources */,
 				54DD5CA826E9AEB00010C23A /* Resource.swift in Sources */,
+				540C2E0E26FAFA1700164CA5 /* JobOffersViewController.swift in Sources */,
 				547AD0B126D025F700859A7C /* PrincipalTabBar.swift in Sources */,
 				543E678726E66B5F001BCE77 /* Student.swift in Sources */,
 				547AD0B726D047B700859A7C /* WelcomeCollectionReusableView.swift in Sources */,
@@ -798,6 +823,7 @@
 				54FB725D26F46CBC00A279E9 /* HomeworkViewCell.swift in Sources */,
 				545AF2B026CD7787003C7CEC /* AppDelegate.swift in Sources */,
 				54DD5C9026E86B710010C23A /* Alerts.swift in Sources */,
+				540C2E0C26FAFA0B00164CA5 /* SocialServiceViewController.swift in Sources */,
 				54DD5CAC26E9D8720010C23A /* PDFViewController.swift in Sources */,
 				54FB726226F4803F00A279E9 /* PDFViewGacetaController.swift in Sources */,
 				54AA9D0626F3CCE8009B2A16 /* ClassesModules.xcdatamodeld in Sources */,
@@ -810,9 +836,11 @@
 				54DD5C9826E970190010C23A /* CrendentialView.swift in Sources */,
 				546681E226D428A60020CEEF /* RoundedByCorners.swift in Sources */,
 				543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */,
+				540C2E0A26FAF9EC00164CA5 /* ConstancesViewController.swift in Sources */,
 				54D3FD6226F4D69300DC80D9 /* News.swift in Sources */,
 				540BE09C26EF2C350026C6B4 /* CodeDayCellView.swift in Sources */,
 				54DD5CAA26E9BB540010C23A /* UIViewStyles.swift in Sources */,
+				540C2E0826FAF9CC00164CA5 /* CurricularProgress.swift in Sources */,
 				545AF2F126CDAC69003C7CEC /* ClassesCollectionViewCell.swift in Sources */,
 				54D3FD6426F4D6DB00DC80D9 /* NewsCell.swift in Sources */,
 				54BFA46626D8C1E00050FD61 /* ProfileInfo.swift in Sources */,

@@ -19,5 +19,5 @@ extension HomeworkToDoList {
     @NSManaged public var title: String?
     @NSManaged public var dateScheduled: Date?
     @NSManaged public var subject: String?
-
+    @NSManaged public var didDone: Bool
 }
