@@ -116,10 +116,30 @@ extension DataClasses{
                 titulo: "Protocolos para un regreso seguro a clases organizado. Infórmate.",
                 miniatura: "unam-covid",
                 textos: ["""
-                    #PRESENTACIÓN# \n Estos lineamientos tienen como objetivo establecer las medidas específicas sobre promoción y protección de la salud de la co- munidad universitaria que deberán ser implementadas en todas las entidades y dependencias en la reanudación de actividades laborales, *sociales, educativas, deportivas* y culturales de forma ordenada, paulatina y progresiva, procurando en todo momento la protección del Derecho Humano a la salud.
+                    #PRESENTACIÓN# \n\n\n Estos lineamientos tienen como objetivo establecer las medidas específicas sobre promoción y protección de la salud de la co- munidad universitaria que deberán ser implementadas en todas las entidades y dependencias en la reanudación de actividades laborales, *sociales, educativas, deportivas* y culturales de forma ordenada, paulatina y progresiva, procurando en todo momento la protección del Derecho Humano a la salud.
+                    
+                    
+                    En consecuencia y con el fin de lograr un retorno a las actividades laborales seguro, responsable y confiable, se ha tomado en cuenta la estructura y particularidades de esta Casa de Estudios y los Lineamientos Técnicos Específicos para la Reapertura de las Actividades Económicas, publicados en el Diario Oficial de la Federación el 29 de mayo de 2020.
+                    
+                    
+                    La Universidad Nacional Autónoma de México *regresa a labores de manera gradual*, y seguirá atenta al comportamiento de la pandemia observando todas las medidas de seguridad para los integrantes de su comunidad.
+                    
+                    
+                    La aplicación de estos lineamientos *es de caracter obligatorio* y general para toda la Comunidad Universitaria. Se basan en los siguientes principios rectores:
+                    
+
+                    - *Privilegiar la salud y la vida.*
+                    - *Solidaridad y no discriminacion.*
+                    - *Responsabilidad compartida.*
+                    
                     """,
                     """
                         #PRESENTACIÓN# \n Estos lineamientos tienen como objetivo establecer las medidas específicas sobre promoción y protección de la salud de la co- munidad universitaria que deberán ser implementadas en todas las entidades y dependencias en la reanudación de actividades laborales, *sociales, educativas, deportivas* y culturales de forma ordenada, paulatina y progresiva, procurando en todo momento la protección del Derecho Humano a la salud.
+                        
+                        En consecuencia y con el fin de lograr un retorno a las actividades laborales seguro, responsable y confiable, se ha tomado en cuenta la estructura y particularidades de esta Casa de Estudios y los Lineamientos Técnicos Específicos para la Reapertura de las Actividades Económicas, publicados en el Diario Oficial de la Federación el 29 de mayo de 2020.
+                        
+                        
+                        La Universidad Nacional Autónoma de México *regresa a labores de manera gradual*, y seguirá atenta al comportamiento de la pandemia observando todas las medidas de seguridad para los integrantes de su comunidad.
                         """
                 ],
                 lottie: "covid",
@@ -131,7 +151,12 @@ extension DataClasses{
                 titulo: "Mira las novedades en tu aplicación Pocket FI",
                 miniatura: "biblioteca-central",
                 textos: ["""
-                    #PRESENTACIÓN# \n Estos lineamientos tienen como objetivo establecer las medidas específicas sobre promoción y protección de la salud de la co- munidad universitaria que deberán ser implementadas en todas las entidades y dependencias en la reanudación de actividades laborales, *sociales, educativas, deportivas* y culturales de forma ordenada, paulatina y progresiva, procurando en todo momento la protección del Derecho Humano a la salud.
+                    #PRESENTACIÓN# \n \n Estos lineamientos tienen como objetivo establecer las medidas específicas sobre promoción y protección de la salud de la co- munidad universitaria que deberán ser implementadas en todas las entidades y dependencias en la reanudación de actividades laborales, *sociales, educativas, deportivas* y culturales de forma ordenada, paulatina y progresiva, procurando en todo momento la protección del Derecho Humano a la salud.
+                    
+                    En consecuencia y con el fin de lograr un retorno a las actividades laborales seguro, responsable y confiable, se ha tomado en cuenta la estructura y particularidades de esta Casa de Estudios y los Lineamientos Técnicos Específicos para la Reapertura de las Actividades Económicas, publicados en el Diario Oficial de la Federación el 29 de mayo de 2020.
+                    
+                    
+                    La Universidad Nacional Autónoma de México *regresa a labores de manera gradual*, y seguirá atenta al comportamiento de la pandemia observando todas las medidas de seguridad para los integrantes de su comunidad.
                     """,
                     """
                         #PRESENTACIÓN# \n Estos lineamientos tienen como objetivo establecer las medidas específicas sobre promoción y protección de la salud de la co- munidad universitaria que deberán ser implementadas en todas las entidades y dependencias en la reanudación de actividades laborales, *sociales, educativas, deportivas* y culturales de forma ordenada, paulatina y progresiva, procurando en todo momento la protección del Derecho Humano a la salud.

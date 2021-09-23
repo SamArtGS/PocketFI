@@ -50,7 +50,7 @@ class NewsVController: UIViewController {
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
         etiqueta.numberOfLines = 0
         etiqueta.textAlignment = .justified
-        etiqueta.contentMode = .scaleAspectFit
+        etiqueta.contentMode = .topLeft
         return etiqueta
     }()
     
