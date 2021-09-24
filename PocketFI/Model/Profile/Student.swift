@@ -8,20 +8,12 @@
 import Foundation
 
 struct Student {
-    let id: String
+    let id: Int
     let name: String
     let ap_pat: String
     let ap_mat: String
-    let anioIngreso: String
+    let anioIngreso: Date
     let numCuenta: String
-    var pendientes: [Tareas]?
-    var notificaciones: [NotificacionsStudent]?
-}
-
-struct NotificacionsStudent{
-    
-}
-
-struct Tareas {
-    
+    let imagePerfil: String
+    let carrera: String
 }

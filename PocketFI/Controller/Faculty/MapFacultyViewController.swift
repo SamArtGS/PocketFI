@@ -8,15 +8,13 @@
 import UIKit
 import MapKit
 
+
 class MapFacultyViewController: UIViewController {
     
-    deinit {
-        print("SE reclama el mapa")
-    }
+    let pines = DataClasses.pines
     
     private let mapView: MKMapView = {
         let mapView = MKMapView()
-        //mapView.centerToLocation(CLLocation(latitude: 19.331445, longitude: -99.184339))
         mapView.translatesAutoresizingMaskIntoConstraints = false
         return mapView
     }()
@@ -24,8 +22,10 @@ class MapFacultyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(mapView)
+        mapView.delegate = self
         setNavConfig(title: "Mapa Facultad")
         keepOnUniversity()
+        placePins() 
         NSLayoutConstraint.activate([
             mapView.topAnchor.constraint(equalTo: view.topAnchor),
             mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -58,4 +58,40 @@ class MapFacultyViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .automatic
     }
 
+}
+
+class MKMarkerAnnotationViewCustom: MKMarkerAnnotationView{
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+extension MapFacultyViewController: MKMapViewDelegate{
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "MyMarker")
+        
+        pines.forEach { element in
+            if element.title == annotation.title{
+                annotationView.glyphImage = element.imageIcon
+                annotationView.markerTintColor = element.color
+            }
+        }
+        
+        return annotationView
+    }
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+       
+    }
+    
+    
+    func placePins() {
+        for pin in pines{
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = pin.coordinator
+            annotation.title = pin.title
+            mapView.addAnnotation(annotation)
+        }
+    }
 }

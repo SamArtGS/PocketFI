@@ -111,7 +111,7 @@ struct DataClasses: Equatable, Hashable{
 
 extension DataClasses{
     
-    static let news:[Noticia] = [[
+    static let news:[Noticia] = [
         Noticia(id: 1, fecha: Date(),
                 titulo: "Protocolos para un regreso seguro a clases organizado. Infórmate.",
                 miniatura: "unam-covid",
@@ -487,4 +487,53 @@ extension DataClasses{
                      backgroundColor: .blue)
     ]
 
+    
+    static let pines:[MapElement] = [
+        MapElement(id: 1, title: "Edificio A - Dirección", lugar: "Principal", latitude: 19.331583763412336, longitude: -99.18409966798718, icon: "icons8-building", color: .Emerald),
+        MapElement(id: 1, title: "Edificio B", lugar: "Principal", latitude: 19.33119897956509, longitude: -99.18471814202648, icon: "icons8-building", color: .MaximumRed),
+        MapElement(id: 1, title: "Edificio C - Lab. C. Tierra", lugar: "Principal", latitude: 19.33125471187487, longitude: -99.18513627342764, icon: "icons8-earth_planet", color: .UsafaBlue),
+        MapElement(id: 1, title: "Edificio D - Lab. eléctrica", lugar: "Principal", latitude: 19.33160442236602,  longitude: -99.18468120642494, icon: "icons8-electricity", color: .UsafaBlue),
+        MapElement(id: 1, title: "Edificio E - USECAD", lugar: "Principal", latitude: 19.33132715420095,  longitude: -99.1847207611059, icon: "icons8-read_online", color: .Emerald),
+        MapElement(id: 1, title: "Edificio F - Lab. Metalurgia", lugar: "Principal", latitude: 19.331492448740633, longitude:  -99.18522084528648, icon: "icons8-metal", color: .UsafaBlue),
+        MapElement(id: 1, title: "Edificio G - Lab. Básicas", lugar: "Anexo", latitude: 19.326865206634686,  longitude: -99.18284254795424, icon: "icons8-experiment", color: .Magnolia),
+        MapElement(id: 1, title: "Edificio H - Lab. Básicas", lugar: "Anexo", latitude: 19.326859762503243,  longitude: -99.18249639280592, icon: "icons8-experiment", color: .Magnolia),
+        
+        MapElement(id: 1, title: "Edificio I", lugar: "Anexo", latitude: 19.326471413991754,  longitude: -99.18262908561277, icon: "icons8-building", color: .MaximumRed),
+        
+        MapElement(id: 1, title: "Edificio J", lugar: "Anexo", latitude: 19.32628109832485, longitude: -99.18322261927328, icon: "icons8-building", color: .MaximumRed),
+        
+        MapElement(id: 1, title: "Edificio K", lugar: "Anexo", latitude: 19.32588982344713,  longitude: -99.18284652664296, icon: "icons8-building", color: .MaximumRed),
+        
+        MapElement(id: 1, title: "Edificio L - Biblioteca Anexo", lugar: "Anexo", latitude: 19.32549887235692, longitude: -99.1826404313479, icon: "icons8-books", color: .oroUnam),
+        
+        MapElement(id: 1, title: "Edificio M - Auditorio Sotero Prieto", lugar: "Anexo", latitude: 19.32596574301903,  longitude: -99.18242398441028, icon: "icons8-public_speaking", color: .OrangeYellowCrayola),
+        
+        MapElement(id: 1, title: "Edificio N - Lab. Termofluidos", lugar: "Anexo", latitude: 19.326535877965334,   longitude: -99.18192538563703, icon: "icons8-experiment", color: .UsafaBlue),
+        
+        MapElement(id: 1, title: "Edificio O - Lab. Mecánica", lugar: "Anexo", latitude: 19.32699735851887,  longitude: -99.18208827260233, icon: "icons8-engineering", color: .UsafaBlue),
+        
+        MapElement(id: 1, title: "Edificio P - DIE", lugar: "Anexo", latitude: 19.32764741153987, longitude: -99.18235289293223, icon: "icons8-building", color: .MaximumRed),
+        
+        MapElement(id: 1, title: "Edificio Q - Labs. DIE", lugar: "Anexo", latitude: 19.327989426347244,  longitude: -99.18211680692724, icon: "icons8-electronics", color: .UsafaBlue),
+        
+        MapElement(id: 1, title: "Edificio R - DICYG", lugar: "Anexo", latitude: 19.32712654357685,  longitude: -99.18135534643226, icon: "icons8-engineer", color: .MaximumRed),
+        
+        MapElement(id: 1, title: "Edificio S", lugar: "Anexo", latitude: 19.3277321308708,  longitude: -99.18161803367725, icon: "icons8-building", color: .MaximumRed),
+        
+        MapElement(id: 1, title: "Edificio T - Posgrado", lugar: "Anexo", latitude: 19.328114936188694, longitude: -99.18164463491725, icon: "icons8-building", color: .MaximumRed),
+        
+        MapElement(id: 1, title: "Edificio U - Posgrado y Tutorías", lugar: "Anexo", latitude: 19.328469500969774,  longitude: -99.18145177592726, icon: "icons8-building", color: .MaximumRed),
+        
+        MapElement(id: 1, title: "Edificio V - Lab. Posgrado", lugar: "Anexo", latitude: 19.328083558737376,   longitude: -99.18138194767224, icon: "icons8-experiment", color: .UsafaBlue),
+        
+        MapElement(id: 1, title: "Edificio W - Biblioteca Posgrado", lugar: "Anexo", latitude: 19.328478914183556, longitude: -99.18078009461726, icon: "icons8-books", color: .oroUnam),
+        
+        MapElement(id: 1, title: "Edificio X - CIA", lugar: "Anexo", latitude: 19.32634993061704,  longitude: -99.18212322612133, icon: "icons8-services", color: .Emerald),
+        
+        MapElement(id: 1, title: "Edificio Y", lugar: "Anexo", latitude: 19.325329702718044, longitude: -99.1831309902529, icon: "icons8-building", color: .MaximumRed),
+        
+        MapElement(id: 1, title: "Auditorio Javier Barros Sierra", lugar: "Principal", latitude: 19.33106465348346, longitude:  -99.18401485969281, icon: "icons8-public_speaking", color: .OrangeYellowCrayola),
+        
+        MapElement(id: 1, title: "Auditorio Raúl Marshall", lugar: "Anexo", latitude: 19.32854565499009, longitude: -99.18116460352029, icon: "icons8-public_speaking", color: .OrangeYellowCrayola)
+    ]
 }

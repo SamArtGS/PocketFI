@@ -19,7 +19,7 @@ class ProfileInfo: UICollectionReusableView {
     private let fondoBlur:UIImageView = {
        let image = UIImageView(image: UIImage(named: "imageCard"))
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.addBlurEffect()
+        image.addBlurEffect(alpha: 0.8)
         image.isUserInteractionEnabled = true
         image.contentMode = .scaleAspectFill
         return image
@@ -39,7 +39,7 @@ class ProfileInfo: UICollectionReusableView {
         stack.axis = .vertical
         stack.distribution = .fill
         stack.alignment = .center
-        stack.spacing = 10
+        stack.spacing = 5
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
@@ -76,10 +76,14 @@ class ProfileInfo: UICollectionReusableView {
     
     override func draw(_ rect: CGRect) {
         self.isUserInteractionEnabled = true
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd HH:mm"
+        let someDateTime = formatter.date(from: "2018/10/08 22:31")
+        card.student = Student(id: 1, name: "Samuel Arturo", ap_pat: "Garrido", ap_mat: "Sánchez", anioIngreso: someDateTime ?? Date(), numCuenta: "418046193", imagePerfil: "DemoCardProfile", carrera: "Ingeniería en Computación")
+        
         botonWallet.addTarget(self, action: #selector(addCredential), for: .touchUpInside)
         botonWallet.isUserInteractionEnabled = true
         addSubview(fondoBlur)
-
         
         fondoBlur.addSubview(stack)
         
