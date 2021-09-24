@@ -46,6 +46,14 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.item {
+        case 0:
+            navigationController?.pushViewController(CurricularProgress(), animated: true)
+        default:
+            return
+        }
+    }
     
     
 }
