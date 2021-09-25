@@ -17,9 +17,27 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>To make an QR Scan</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Roboto-Italic.ttf</string>
+		<string>Roboto-BoldItalic.ttf</string>
+		<string>Lato-Light.ttf</string>
+		<string>Lato-BlackItalic.ttf</string>
+		<string>Lato-Regular.ttf</string>
+		<string>Lato-Black.ttf</string>
+		<string>Lato-Bold.ttf</string>
+		<string>Lato-Italic.ttf</string>
+		<string>Roboto-MediumItalic.ttf</string>
+		<string>Roboto-Bold.ttf</string>
+		<string>Roboto-Regular.ttf</string>
+		<string>Roboto-Light.ttf</string>
+		<string>Roboto-Medium.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -55,23 +73,5 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Roboto-Italic.ttf</string>
-		<string>Roboto-BoldItalic.ttf</string>
-		<string>Lato-Light.ttf</string>
-		<string>Lato-BlackItalic.ttf</string>
-		<string>Lato-Regular.ttf</string>
-		<string>Lato-Black.ttf</string>
-		<string>Lato-Bold.ttf</string>
-		<string>Lato-Italic.ttf</string>
-		<string>Roboto-MediumItalic.ttf</string>
-		<string>Roboto-Bold.ttf</string>
-		<string>Roboto-Regular.ttf</string>
-		<string>Roboto-Light.ttf</string>
-		<string>Roboto-Medium.ttf</string>
-	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>To make an QR Scan</string>
 </dict>
 </plist>
