@@ -59,7 +59,7 @@ class CrendentialView: UIView {
     
     private let InitText: CustomUILabel = {
         let etiqueta = CustomUILabel()
-        etiqueta.font = .Roboto(.regular, size: 14)
+        etiqueta.font = .Roboto(.regular, size: 13)
         etiqueta.text = "*Universidad Nacional Autónoma de Mexico*\nFacultad de Ingeniería"
         etiqueta.lineBreakMode = .byWordWrapping
         etiqueta.numberOfLines = 0
@@ -74,9 +74,9 @@ class CrendentialView: UIView {
     
     private let fullName: UILabel = {
         let etiqueta = UILabel()
-        etiqueta.font = .Roboto(.bold, size: 20)
+        etiqueta.font = .Roboto(.bold, size: 18)
         etiqueta.lineBreakMode = .byWordWrapping
-        etiqueta.numberOfLines = 0
+        etiqueta.numberOfLines = 2
         etiqueta.textColor = .white
         etiqueta.addShadow(opacy: 0.4)
         etiqueta.translatesAutoresizingMaskIntoConstraints = false
@@ -153,14 +153,14 @@ class CrendentialView: UIView {
             InitText.topAnchor.constraint(equalTo: topAnchor,constant: 5),
             InitText.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 5),
             InitText.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -30),
-            InitText.heightAnchor.constraint(equalToConstant: 60),
+            InitText.heightAnchor.constraint(equalToConstant: 40),
             
             imageStudent.centerYAnchor.constraint(equalTo: centerYAnchor),
             imageStudent.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             imageStudent.widthAnchor.constraint(equalToConstant:  70),
             imageStudent.heightAnchor.constraint(equalToConstant: 70),
             
-            stack.topAnchor.constraint(equalTo: InitText.bottomAnchor, constant: 30),
+            stack.topAnchor.constraint(equalTo: InitText.bottomAnchor, constant: 10),
             stack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             stack.trailingAnchor.constraint(equalTo: imageStudent.leadingAnchor, constant: 5),
             stack.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10),

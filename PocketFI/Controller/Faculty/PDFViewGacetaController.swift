@@ -10,10 +10,6 @@ import UIKit
 
 class PDFViewGacetaController: UIViewController {
     
-    deinit {
-        print("SE reclama la gaceta")
-    }
-    
     private let webView: WKWebView = {
         let webView = WKWebView()
         webView.translatesAutoresizingMaskIntoConstraints = false

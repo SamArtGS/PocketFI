@@ -17,7 +17,6 @@ extension ProfileViewController: PKAddPassesViewControllerDelegate{
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         let task : URLSessionDataTask = session.dataTask(with: request as URLRequest, completionHandler: {[weak self] (data, response, error) in
-            print("Entró al task")
             do {
               let pass = try PKPass(data: data ?? Data())
               let passLibrary = PKPassLibrary()

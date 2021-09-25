@@ -46,6 +46,7 @@ class ScheduleVController:  UIViewController {
         
         scheduler.reloadData()
         setConstraints()
+        setBarButtons()
     }
     
     func setConstraints(){
@@ -71,6 +72,23 @@ class ScheduleVController:  UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.myOrientation = .portrait
         UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+    }
+    
+    func setBarButtons(){
+        if #available(iOS 13.0, *) {
+            let BarButtonItemRight = UIBarButtonItem(image: UIImage(systemName: "qrcode"), style: .plain, target: self, action: #selector(didTapScan))
+            
+            self.navigationItem.rightBarButtonItems = [BarButtonItemRight]
+        } else {
+            let BarButtonItemRight = UIBarButtonItem(image: UIImage(named: "icons8-qr_code"), style: .plain, target: self, action: #selector(didTapScan))
+            self.navigationItem.rightBarButtonItems = [BarButtonItemRight]
+        }
+    }
+    
+    @objc func didTapScan(){
+        present(ScannerViewController(), animated: true) {
+            
+        }
     }
 
 }

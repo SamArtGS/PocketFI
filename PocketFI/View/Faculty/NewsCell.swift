@@ -51,10 +51,6 @@ class CellNews: UICollectionViewCell {
         }
     }
     
-    deinit {
-        print("deberia limiarse")
-    }
-    
     private let box: UIView = {
         let view = UIView()
         view.contentMode = .scaleAspectFit

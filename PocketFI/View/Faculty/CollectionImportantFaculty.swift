@@ -11,7 +11,6 @@ class CollectionImportantFaculty: UICollectionViewCell{
     
     weak var delegate: CellNewsDelegate?
     
-    
     var colectionView: UICollectionView?
     var elements: [Noticia]? {
         didSet{
@@ -22,7 +21,6 @@ class CollectionImportantFaculty: UICollectionViewCell{
     override init(frame: CGRect) {
        super.init(frame: frame)
        colectionView = addCollection()
-       print("Se crea el carrousel")
    }
     
     required init?(coder: NSCoder) {

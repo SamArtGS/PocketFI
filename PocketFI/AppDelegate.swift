@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         UNUserNotificationCenter.current()
           .requestAuthorization(
             options: [.alert, .sound, .badge]) { [weak self] granted, _ in
-            print("Permission granted: \(granted)")
+            
             guard granted else { return }
             self?.getNotificationSettings()
           }
@@ -44,7 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-      print("Failed to register: \(error)")
+      
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -110,7 +110,6 @@ extension AppDelegate: MessagingDelegate, UNUserNotificationCenterDelegate{
             guard success else{
                 return
             }
-            debugPrint("APN Registrado")
         }
     }
     

@@ -20,6 +20,14 @@ class ClassesViewController: UIViewController {
         Materials.delegate = self
         Materials.dataSource = self
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.largeTitleDisplayMode = .always
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationItem.largeTitleDisplayMode = .automatic
+    }
 }
 
 extension ClassesViewController: UICollectionViewDelegate, UICollectionViewDataSource{
@@ -55,12 +63,9 @@ extension ClassesViewController: UICollectionViewDelegate, UICollectionViewDataS
             navigationController?.pushViewController(ScheduleVController(title: "Horario"), animated: true)
             break
         case 4:
-            //Calendario
+            navigationController?.pushViewController(CalendarViewController(), animated: true)
             break
         case 5:
-            //Asesorías
-            break
-        case 6:
             guard let resources = resources[index].resources else { return }
             navigationController?.pushViewController(TableViewForPDFs(titulo: "Manual de prácticas", lista: resources), animated: true)
             break

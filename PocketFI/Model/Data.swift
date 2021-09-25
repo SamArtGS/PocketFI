@@ -81,7 +81,7 @@ struct DataClasses: Equatable, Hashable{
         ]),
         Resource(id: 4, imageIcon: "horario", resourceTitle: "Horario"),
         Resource(id: 5, imageIcon: "calendar", resourceTitle: "Calendario"),
-        Resource(id: 6, imageIcon: "asesoria", resourceTitle: "Calendario"),
+        Resource(id: 6, imageIcon: "asesoria", resourceTitle: "Asesorías"),
         Resource(id: 7, imageIcon: "examenes", resourceTitle: "Exámenes pasados", resources: [
             PDFelement(id: 1, name: "Algebra. Primer final A 2018-2", size: 0, link: "http://dcb.ingenieria.unam.mx/wp-content/themes/tempera-child/CoordinacionesAcademicas/M/A/Examenes/1EF2018-2_A.pdf"),
             PDFelement(id: 2, name: "Algebra. Primer final B 2018-2", size: 0, link: "http://dcb.ingenieria.unam.mx/wp-content/themes/tempera-child/CoordinacionesAcademicas/M/A/Examenes/1EF2018-2_B.pdf"),
@@ -149,8 +149,10 @@ extension DataClasses{
         ),
         Noticia(id: 2, fecha: Date(),
                 titulo: "Mira las novedades en tu aplicación Pocket FI",
-                miniatura: "biblioteca-central",
+                miniatura: "madding",
                 textos: ["""
+                    #Aplicación Pocket FI#
+                    
                     *21 de septiembre de 2021*
                     El Pokémon singular Zarude aparece por primera vez en Pokémon GO para celebrar el lanzamiento mundial de la película Pokémon Los secretos de la selva.
                     *16 de septiembre de 2021*
@@ -192,7 +194,7 @@ extension DataClasses{
         ),
         Noticia(id: 3, fecha: Date(),
                 titulo: "Recomendaciones para la concentración en tus clases en línea",
-                miniatura: "biblioteca-central",
+                miniatura: "laloc",
                 textos: ["""
                     Como habrás notado, muchos institutos en Lima han cambiado sus clases regulares por una modalidad virtual. El éxito durante el estudio a distancia se encuentra ligado a tu capacidad de concentrarte. Tal vez, al igual que muchas otras personas, sueles tener problemas de concentración al estudiar desde casa.
 
@@ -255,7 +257,7 @@ extension DataClasses{
         ),
         Noticia(id: 4, fecha: Date(),
                 titulo: "Descubre nuevas fuentes de consulta de libros para tus estudios",
-                miniatura: "screen1",
+                miniatura: "books",
                 textos: ["""
                     Descubre las fuentes de información que la Biblioteca pone a tu alcance: bases de datos, libros y revistas digitales, estudios de caso, vídeos, imágenes, atlas humanos y portales digitales.
                     *Digitalia Catalan*
@@ -297,7 +299,7 @@ extension DataClasses{
         ),
         Noticia(id: 5, fecha: Date(),
                 titulo: "Recomendaciones para saber elegir tu forma de titulación",
-                miniatura: "screen1",
+                miniatura: "graduado",
                 textos: ["""
                     *Tesis o Tesina*
                     Desarrollo de una tesis individual o grupal(máximo 5 integrantes). Se debe contar con algún académico perteneciente a la UNAM.

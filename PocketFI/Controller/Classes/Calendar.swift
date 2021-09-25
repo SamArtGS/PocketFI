@@ -10,9 +10,10 @@ import JTAppleCalendar
 
 class CalendarViewController: UIViewController{
     
-    private var calendarView: JTACMonthView = {
-        let calendarView = JTACMonthView()
-        return calendarView
-    }()
+    override func viewDidLoad() {
+        view.backgroundColor = .gray1
+        super.viewDidLoad()
+        
+    }
     
 }

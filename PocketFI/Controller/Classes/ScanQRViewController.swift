@@ -84,14 +84,17 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
             guard let stringValue = readableObject.stringValue else { return }
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            dismiss(animated: true)
             found(code: stringValue)
+        }else{
+            dismiss(animated: true)
         }
-
-        dismiss(animated: true)
     }
 
     func found(code: String) {
-        print(code)
+        DispatchQueue.main.async {
+            self.mostrarAlerta(title: "QR", message: code)
+        }
     }
 
     override var prefersStatusBarHidden: Bool {

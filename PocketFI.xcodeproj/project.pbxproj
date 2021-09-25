@@ -57,6 +57,8 @@
 		542DD57926F4FE3800078479 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 542DD56E26F4FE3800078479 /* Lato-Light.ttf */; };
 		542DD57A26F4FE3800078479 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 542DD56F26F4FE3800078479 /* Lato-ThinItalic.ttf */; };
 		542DD57C26F5268400078479 /* MapsMarkers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542DD57B26F5268400078479 /* MapsMarkers.swift */; };
+		543AAA8C26FE983C008DB4F8 /* InfraestructureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543AAA8B26FE983C008DB4F8 /* InfraestructureViewController.swift */; };
+		543AAA8E26FE9B39008DB4F8 /* TeachersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543AAA8D26FE9B39008DB4F8 /* TeachersCollectionViewController.swift */; };
 		543BB96526D386A1006E8BF6 /* FacultyElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BB96426D386A1006E8BF6 /* FacultyElement.swift */; };
 		543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */; };
 		543E678726E66B5F001BCE77 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E678626E66B5F001BCE77 /* Student.swift */; };
@@ -181,6 +183,8 @@
 		542DD56E26F4FE3800078479 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		542DD56F26F4FE3800078479 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		542DD57B26F5268400078479 /* MapsMarkers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsMarkers.swift; sourceTree = "<group>"; };
+		543AAA8B26FE983C008DB4F8 /* InfraestructureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfraestructureViewController.swift; sourceTree = "<group>"; };
+		543AAA8D26FE9B39008DB4F8 /* TeachersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersCollectionViewController.swift; sourceTree = "<group>"; };
 		543BB96426D386A1006E8BF6 /* FacultyElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacultyElement.swift; sourceTree = "<group>"; };
 		543BB96626D416B1006E8BF6 /* FlowStreckyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowStreckyHeader.swift; sourceTree = "<group>"; };
 		543E678626E66B5F001BCE77 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
@@ -540,6 +544,8 @@
 				54FB726126F4803F00A279E9 /* PDFViewGacetaController.swift */,
 				540BE09926EE75A90026C6B4 /* TeachersViewController.swift */,
 				54FB726326F480A600A279E9 /* OfficialContactsCollectionViewController.swift */,
+				543AAA8B26FE983C008DB4F8 /* InfraestructureViewController.swift */,
+				543AAA8D26FE9B39008DB4F8 /* TeachersCollectionViewController.swift */,
 			);
 			path = Faculty;
 			sourceTree = "<group>";
@@ -824,6 +830,7 @@
 				543BB96526D386A1006E8BF6 /* FacultyElement.swift in Sources */,
 				545AF2EF26CDAC17003C7CEC /* ProfileCollectionViewCell.swift in Sources */,
 				54FB725D26F46CBC00A279E9 /* HomeworkViewCell.swift in Sources */,
+				543AAA8C26FE983C008DB4F8 /* InfraestructureViewController.swift in Sources */,
 				545AF2B026CD7787003C7CEC /* AppDelegate.swift in Sources */,
 				54DD5C9026E86B710010C23A /* Alerts.swift in Sources */,
 				540C2E0C26FAFA0B00164CA5 /* SocialServiceViewController.swift in Sources */,
@@ -841,6 +848,7 @@
 				546681E226D428A60020CEEF /* RoundedByCorners.swift in Sources */,
 				543BB96726D416B1006E8BF6 /* FlowStreckyHeader.swift in Sources */,
 				540C2E0A26FAF9EC00164CA5 /* ConstancesViewController.swift in Sources */,
+				543AAA8E26FE9B39008DB4F8 /* TeachersCollectionViewController.swift in Sources */,
 				54D3FD6226F4D69300DC80D9 /* News.swift in Sources */,
 				540BE09C26EF2C350026C6B4 /* CodeDayCellView.swift in Sources */,
 				54DD5CAA26E9BB540010C23A /* UIViewStyles.swift in Sources */,
