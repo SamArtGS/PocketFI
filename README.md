@@ -1,6 +1,7 @@
 <p>
   <img src="img/icono.png" align = "right"  width="90" height="80" />
 </p>
+
 # PocketFI
 
 * Garrido Sánchez Samuel Arturo
@@ -58,7 +59,8 @@ universidad.
  <img src="img/scr7.png"   width="150" />
   <img src="img/scr12.png"   width="150" />
 
-#### Banners de noticias
+#### Banners de noticias
+
  <img src="img/scr13.png"   width="180" />
   <img src="img/scr14.png"   width="180" />
 
