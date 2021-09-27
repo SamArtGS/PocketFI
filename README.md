@@ -54,36 +54,47 @@ universidad.
 
 #### Pantallas principales
 
+<p align="center">
+
 <img src="img/scr1.png"   width="150" />
 <img src="img/scr4.png"   width="150" />
- <img src="img/scr7.png"   width="150" />
-  <img src="img/scr12.png"   width="150" />
+<img src="img/scr7.png"   width="150" />
+<img src="img/scr12.png"   width="150" />
+  
+</p>
 
 #### Banners de noticias
 
- <img src="img/scr13.png"   width="180" />
-  <img src="img/scr14.png"   width="180" />
+<p align="center">
 
-#### Credencial estudiantil en Wallet
+<img src="img/scr13.png"   width="180" />
+<img src="img/scr14.png"   width="180" />
+  
+</p>
 
+#### Credencial estudiantil en Wallet y mapa guía
+
+<p align="center">
 <img src="img/scr15.png"   width="180" />
-
-#### Mapa de Guía
-
 <img src="img/scr3.png"   width="180" />
-
+</p>
+  
 #### Material para el estudiante: Series, manuales de prácticas, horario y tareas.
- 
- <img src="img/scr5.png"   width="140" />
- <img src="img/scr6.png"   width="140" />
- <img src="img/scr8.png"   width="140" />
- <img src="img/scr9.png"   width="140" />
- <img src="img/scr10.png"   width="140" />
- <img src="img/scr11.png"   width="140" />
-  <img src="img/scr16.png"   width="140" />
+
+<p align="center">
+<img src="img/scr5.png"   width="140" />
+<img src="img/scr6.png"   width="140" />
+<img src="img/scr8.png"   width="140" />
+<img src="img/scr9.png"   width="140" />
+<img src="img/scr10.png"   width="140" />
+<img src="img/scr11.png"   width="140" />
+<img src="img/scr16.png"   width="140" />
+</p>
+
 
 ### Modo oscuro
 
+<p align="center">
 <img src="img/scr20.png"   width="130" />
 <img src="img/scr21.png"   width="130" />
 <img src="img/scr22.png"   width="130" />
@@ -94,6 +105,8 @@ universidad.
 <img src="img/scr27.png"   width="130" />
 <img src="img/scr28.png"   width="130" />
 <img src="img/scr29.png"   width="130" />
+</p>
+
 
 ### Uso de instruments
 
